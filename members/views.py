@@ -8,6 +8,15 @@ from rest_framework import status
 from .serializers import PassportBase64ImageSerializer
 from .ocr_utils import extract_passport_data
 
+from logging_config import setup_logging
+import logging
+
+setup_logging()
+logger = logging.getLogger(__name__)
+
+logger.info("Logging started!")
+
+
 class PassportOCRView(APIView):
     def post(self, request):
         # print("Received request data:", request.data)
