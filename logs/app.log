@@ -59,3 +59,318 @@
 2025-07-23 07:27:29,148 [DEBUG] PIL.Image: Importing XpmImagePlugin
 2025-07-23 07:27:29,150 [DEBUG] PIL.Image: Importing XVThumbImagePlugin
 2025-07-23 07:27:29,157 [DEBUG] pytesseract: ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_quoulfu4.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_rag1rwtp', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-07-23 16:55:58,876 [INFO] members.views: Logging started!
+2025-07-23 17:15:00,783 [INFO] members.views: Logging started!
+2025-07-23 17:21:09,136 [INFO] members.views: serializer is valid
+2025-07-23 17:21:10,058 [INFO] root: Using PassportEye OCR for passport data extraction
+2025-07-23 17:21:10,156 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-07-23 17:21:10,156 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-07-23 17:21:10,162 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-07-23 17:21:10,164 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-07-23 17:21:10,164 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-07-23 17:21:10,164 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-07-23 17:21:10,164 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-07-23 17:21:10,164 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-07-23 17:21:10,172 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-07-23 17:21:10,172 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-07-23 17:21:11,838 [DEBUG] PIL.Image: Importing AvifImagePlugin
+2025-07-23 17:21:12,002 [DEBUG] PIL.Image: Importing BlpImagePlugin
+2025-07-23 17:21:12,018 [DEBUG] PIL.Image: Importing BmpImagePlugin
+2025-07-23 17:21:12,018 [DEBUG] PIL.Image: Importing BufrStubImagePlugin
+2025-07-23 17:21:12,028 [DEBUG] PIL.Image: Importing CurImagePlugin
+2025-07-23 17:21:12,035 [DEBUG] PIL.Image: Importing DcxImagePlugin
+2025-07-23 17:21:12,068 [DEBUG] PIL.Image: Importing DdsImagePlugin
+2025-07-23 17:21:12,081 [DEBUG] PIL.Image: Importing EpsImagePlugin
+2025-07-23 17:21:12,088 [DEBUG] PIL.Image: Importing FitsImagePlugin
+2025-07-23 17:21:12,110 [DEBUG] PIL.Image: Importing FliImagePlugin
+2025-07-23 17:21:12,114 [DEBUG] PIL.Image: Importing FpxImagePlugin
+2025-07-23 17:21:12,121 [DEBUG] PIL.Image: Image: failed to import FpxImagePlugin: No module named 'olefile'
+2025-07-23 17:21:12,122 [DEBUG] PIL.Image: Importing FtexImagePlugin
+2025-07-23 17:21:12,126 [DEBUG] PIL.Image: Importing GbrImagePlugin
+2025-07-23 17:21:12,127 [DEBUG] PIL.Image: Importing GifImagePlugin
+2025-07-23 17:21:12,127 [DEBUG] PIL.Image: Importing GribStubImagePlugin
+2025-07-23 17:21:12,134 [DEBUG] PIL.Image: Importing Hdf5StubImagePlugin
+2025-07-23 17:21:12,134 [DEBUG] PIL.Image: Importing IcnsImagePlugin
+2025-07-23 17:21:12,167 [DEBUG] PIL.Image: Importing IcoImagePlugin
+2025-07-23 17:21:12,174 [DEBUG] PIL.Image: Importing ImImagePlugin
+2025-07-23 17:21:12,183 [DEBUG] PIL.Image: Importing ImtImagePlugin
+2025-07-23 17:21:12,193 [DEBUG] PIL.Image: Importing IptcImagePlugin
+2025-07-23 17:21:12,205 [DEBUG] PIL.Image: Importing JpegImagePlugin
+2025-07-23 17:21:12,205 [DEBUG] PIL.Image: Importing Jpeg2KImagePlugin
+2025-07-23 17:21:12,205 [DEBUG] PIL.Image: Importing McIdasImagePlugin
+2025-07-23 17:21:12,212 [DEBUG] PIL.Image: Importing MicImagePlugin
+2025-07-23 17:21:12,222 [DEBUG] PIL.Image: Image: failed to import MicImagePlugin: No module named 'olefile'
+2025-07-23 17:21:12,222 [DEBUG] PIL.Image: Importing MpegImagePlugin
+2025-07-23 17:21:12,231 [DEBUG] PIL.Image: Importing MpoImagePlugin
+2025-07-23 17:21:12,286 [DEBUG] PIL.Image: Importing MspImagePlugin
+2025-07-23 17:21:12,292 [DEBUG] PIL.Image: Importing PalmImagePlugin
+2025-07-23 17:21:12,317 [DEBUG] PIL.Image: Importing PcdImagePlugin
+2025-07-23 17:21:12,326 [DEBUG] PIL.Image: Importing PcxImagePlugin
+2025-07-23 17:21:12,326 [DEBUG] PIL.Image: Importing PdfImagePlugin
+2025-07-23 17:21:12,366 [DEBUG] PIL.Image: Importing PixarImagePlugin
+2025-07-23 17:21:12,383 [DEBUG] PIL.Image: Importing PngImagePlugin
+2025-07-23 17:21:12,390 [DEBUG] PIL.Image: Importing PpmImagePlugin
+2025-07-23 17:21:12,390 [DEBUG] PIL.Image: Importing PsdImagePlugin
+2025-07-23 17:21:12,424 [DEBUG] PIL.Image: Importing QoiImagePlugin
+2025-07-23 17:21:12,442 [DEBUG] PIL.Image: Importing SgiImagePlugin
+2025-07-23 17:21:12,457 [DEBUG] PIL.Image: Importing SpiderImagePlugin
+2025-07-23 17:21:12,471 [DEBUG] PIL.Image: Importing SunImagePlugin
+2025-07-23 17:21:12,481 [DEBUG] PIL.Image: Importing TgaImagePlugin
+2025-07-23 17:21:12,490 [DEBUG] PIL.Image: Importing TiffImagePlugin
+2025-07-23 17:21:12,490 [DEBUG] PIL.Image: Importing WebPImagePlugin
+2025-07-23 17:21:12,665 [DEBUG] PIL.Image: Importing WmfImagePlugin
+2025-07-23 17:21:12,669 [DEBUG] PIL.Image: Importing XbmImagePlugin
+2025-07-23 17:21:12,673 [DEBUG] PIL.Image: Importing XpmImagePlugin
+2025-07-23 17:21:12,678 [DEBUG] PIL.Image: Importing XVThumbImagePlugin
+2025-07-23 17:21:12,698 [DEBUG] pytesseract: ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_do7uh3h0.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_lvqfjt4i', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-07-23 17:21:13,936 [INFO] members.utils.extract_passport_passport_eye: PassportEye Extraction Successful
+2025-07-23 17:21:13,936 [SUCCESS] members.views: Passport data extracted successfully
+2025-07-23 17:21:25,269 [INFO] members.views: serializer is valid
+2025-07-23 17:21:25,649 [INFO] root: Using PassportEye OCR for passport data extraction
+2025-07-23 17:21:25,684 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-07-23 17:21:25,684 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-07-23 17:21:25,686 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-07-23 17:21:25,686 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-07-23 17:21:25,686 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-07-23 17:21:25,690 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-07-23 17:21:25,690 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-07-23 17:21:25,690 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-07-23 17:21:25,690 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-07-23 17:21:25,690 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-07-23 17:21:25,972 [DEBUG] pytesseract: ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_agyel62s.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_z6nrsgmk', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-07-23 17:21:26,682 [INFO] members.utils.extract_passport_passport_eye: PassportEye Extraction Successful
+2025-07-23 17:21:26,689 [SUCCESS] members.views: Passport data extracted successfully
+2025-07-23 17:22:25,648 [INFO] members.views: serializer is valid
+2025-07-23 17:22:25,952 [INFO] root: Using PassportEye OCR for passport data extraction
+2025-07-23 17:22:25,987 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-07-23 17:22:25,987 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-07-23 17:22:25,988 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-07-23 17:22:25,988 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-07-23 17:22:25,988 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-07-23 17:22:25,990 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-07-23 17:22:25,990 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-07-23 17:22:25,990 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-07-23 17:22:25,990 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-07-23 17:22:25,990 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-07-23 17:22:26,248 [DEBUG] pytesseract: ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_7tmhp5j6.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_nzqw08fu', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-07-23 17:22:26,896 [INFO] members.utils.extract_passport_passport_eye: PassportEye Extraction Successful
+2025-07-23 17:22:26,898 [SUCCESS] members.views: Passport data extracted successfully
+2025-07-23 17:22:31,711 [INFO] members.views: serializer is valid
+2025-07-23 17:22:32,194 [INFO] root: Using PassportEye OCR for passport data extraction
+2025-07-23 17:22:32,243 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-07-23 17:22:32,243 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-07-23 17:22:32,243 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-07-23 17:22:32,243 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-07-23 17:22:32,249 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-07-23 17:22:32,249 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-07-23 17:22:32,249 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-07-23 17:22:32,251 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-07-23 17:22:32,251 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-07-23 17:22:32,251 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-07-23 17:22:32,572 [DEBUG] pytesseract: ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_82gglcx3.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_brjxycro', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-07-23 17:22:33,419 [INFO] members.utils.extract_passport_passport_eye: PassportEye Extraction Successful
+2025-07-23 17:22:33,419 [SUCCESS] members.views: Passport data extracted successfully
+2025-07-23 23:20:36,890 [INFO] members.views: Logging started!
+2025-07-23 23:26:32,149 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\passport_oct\members\views.py changed, reloading.
+2025-07-23 23:26:35,892 [INFO] members.views: Logging started!
+2025-07-23 23:26:48,395 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\passport_oct\members\views.py changed, reloading.
+2025-07-23 23:26:52,162 [INFO] members.views: Logging started!
+2025-07-23 23:29:12,177 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\passport_oct\members\views.py changed, reloading.
+2025-07-23 23:29:15,352 [INFO] members.views: Logging started!
+2025-07-23 23:32:41,023 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\passport_oct\members\views.py changed, reloading.
+2025-07-23 23:32:44,738 [INFO] members.views: Logging started!
+2025-07-23 23:32:55,016 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\passport_oct\members\views.py changed, reloading.
+2025-07-23 23:32:58,741 [INFO] members.views: Logging started!
+2025-07-23 23:33:18,685 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\passport_oct\members\views.py changed, reloading.
+2025-07-23 23:33:21,715 [INFO] members.views: Logging started!
+2025-07-23 23:33:26,768 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\passport_oct\members\views.py changed, reloading.
+2025-07-23 23:33:29,904 [INFO] members.views: Logging started!
+2025-07-23 23:33:32,965 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\passport_oct\members\views.py changed, reloading.
+2025-07-23 23:33:36,740 [INFO] members.views: Logging started!
+2025-07-23 23:33:57,631 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\passport_oct\members\views.py changed, reloading.
+2025-07-23 23:34:00,711 [INFO] members.views: Logging started!
+2025-07-23 23:34:12,970 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\passport_oct\members\views.py changed, reloading.
+2025-07-23 23:34:16,038 [INFO] members.views: Logging started!
+2025-07-23 23:34:19,971 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\passport_oct\members\views.py changed, reloading.
+2025-07-23 23:34:23,216 [INFO] members.views: Logging started!
+2025-07-23 23:34:27,169 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\passport_oct\members\views.py changed, reloading.
+2025-07-23 23:34:30,318 [INFO] members.views: Logging started!
+2025-07-23 23:35:47,525 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\passport_oct\members\urls.py changed, reloading.
+2025-07-23 23:35:51,000 [INFO] members.views: Logging started!
+2025-07-23 23:35:53,935 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\passport_oct\members\urls.py changed, reloading.
+2025-07-23 23:35:57,300 [INFO] members.views: Logging started!
+2025-07-23 23:44:32,486 [ERROR] django.request: Internal Server Error: /api/passport-ocr/
+Traceback (most recent call last):
+  File "D:\Star tamizha info tech\codetez\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Star tamizha info tech\codetez\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Star tamizha info tech\codetez\env\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Star tamizha info tech\codetez\env\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Star tamizha info tech\codetez\env\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Star tamizha info tech\codetez\env\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Star tamizha info tech\codetez\env\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "D:\Star tamizha info tech\codetez\env\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Star tamizha info tech\codetez\passport_oct\members\views.py", line 32, in post
+    print(type(request.data['image_base64']))
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+KeyError: 'image_base64'
+2025-07-23 23:45:51,553 [INFO] members.views: Received request data for multiple images
+2025-07-23 23:45:51,801 [INFO] members.views: [0] Image decoded successfully
+2025-07-23 23:45:51,924 [INFO] root: Using PassportEye OCR for passport data extraction
+2025-07-23 23:45:51,948 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-07-23 23:45:51,948 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-07-23 23:45:51,948 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-07-23 23:45:51,949 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-07-23 23:45:51,949 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-07-23 23:45:51,949 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-07-23 23:45:51,949 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-07-23 23:45:51,950 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-07-23 23:45:51,950 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-07-23 23:45:51,950 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-07-23 23:45:52,661 [DEBUG] PIL.Image: Importing AvifImagePlugin
+2025-07-23 23:45:52,773 [DEBUG] PIL.Image: Importing BlpImagePlugin
+2025-07-23 23:45:52,789 [DEBUG] PIL.Image: Importing BmpImagePlugin
+2025-07-23 23:45:52,789 [DEBUG] PIL.Image: Importing BufrStubImagePlugin
+2025-07-23 23:45:52,799 [DEBUG] PIL.Image: Importing CurImagePlugin
+2025-07-23 23:45:52,803 [DEBUG] PIL.Image: Importing DcxImagePlugin
+2025-07-23 23:45:52,836 [DEBUG] PIL.Image: Importing DdsImagePlugin
+2025-07-23 23:45:52,844 [DEBUG] PIL.Image: Importing EpsImagePlugin
+2025-07-23 23:45:52,847 [DEBUG] PIL.Image: Importing FitsImagePlugin
+2025-07-23 23:45:52,866 [DEBUG] PIL.Image: Importing FliImagePlugin
+2025-07-23 23:45:52,868 [DEBUG] PIL.Image: Importing FpxImagePlugin
+2025-07-23 23:45:52,877 [DEBUG] PIL.Image: Image: failed to import FpxImagePlugin: No module named 'olefile'
+2025-07-23 23:45:52,878 [DEBUG] PIL.Image: Importing FtexImagePlugin
+2025-07-23 23:45:52,880 [DEBUG] PIL.Image: Importing GbrImagePlugin
+2025-07-23 23:45:52,882 [DEBUG] PIL.Image: Importing GifImagePlugin
+2025-07-23 23:45:52,882 [DEBUG] PIL.Image: Importing GribStubImagePlugin
+2025-07-23 23:45:52,884 [DEBUG] PIL.Image: Importing Hdf5StubImagePlugin
+2025-07-23 23:45:52,888 [DEBUG] PIL.Image: Importing IcnsImagePlugin
+2025-07-23 23:45:52,921 [DEBUG] PIL.Image: Importing IcoImagePlugin
+2025-07-23 23:45:52,926 [DEBUG] PIL.Image: Importing ImImagePlugin
+2025-07-23 23:45:52,928 [DEBUG] PIL.Image: Importing ImtImagePlugin
+2025-07-23 23:45:52,931 [DEBUG] PIL.Image: Importing IptcImagePlugin
+2025-07-23 23:45:52,933 [DEBUG] PIL.Image: Importing JpegImagePlugin
+2025-07-23 23:45:52,933 [DEBUG] PIL.Image: Importing Jpeg2KImagePlugin
+2025-07-23 23:45:52,933 [DEBUG] PIL.Image: Importing McIdasImagePlugin
+2025-07-23 23:45:52,938 [DEBUG] PIL.Image: Importing MicImagePlugin
+2025-07-23 23:45:52,941 [DEBUG] PIL.Image: Image: failed to import MicImagePlugin: No module named 'olefile'
+2025-07-23 23:45:52,942 [DEBUG] PIL.Image: Importing MpegImagePlugin
+2025-07-23 23:45:52,955 [DEBUG] PIL.Image: Importing MpoImagePlugin
+2025-07-23 23:45:53,009 [DEBUG] PIL.Image: Importing MspImagePlugin
+2025-07-23 23:45:53,013 [DEBUG] PIL.Image: Importing PalmImagePlugin
+2025-07-23 23:45:53,016 [DEBUG] PIL.Image: Importing PcdImagePlugin
+2025-07-23 23:45:53,020 [DEBUG] PIL.Image: Importing PcxImagePlugin
+2025-07-23 23:45:53,021 [DEBUG] PIL.Image: Importing PdfImagePlugin
+2025-07-23 23:45:53,048 [DEBUG] PIL.Image: Importing PixarImagePlugin
+2025-07-23 23:45:53,059 [DEBUG] PIL.Image: Importing PngImagePlugin
+2025-07-23 23:45:53,059 [DEBUG] PIL.Image: Importing PpmImagePlugin
+2025-07-23 23:45:53,059 [DEBUG] PIL.Image: Importing PsdImagePlugin
+2025-07-23 23:45:53,094 [DEBUG] PIL.Image: Importing QoiImagePlugin
+2025-07-23 23:45:53,100 [DEBUG] PIL.Image: Importing SgiImagePlugin
+2025-07-23 23:45:53,138 [DEBUG] PIL.Image: Importing SpiderImagePlugin
+2025-07-23 23:45:53,149 [DEBUG] PIL.Image: Importing SunImagePlugin
+2025-07-23 23:45:53,151 [DEBUG] PIL.Image: Importing TgaImagePlugin
+2025-07-23 23:45:53,156 [DEBUG] PIL.Image: Importing TiffImagePlugin
+2025-07-23 23:45:53,156 [DEBUG] PIL.Image: Importing WebPImagePlugin
+2025-07-23 23:45:53,237 [DEBUG] PIL.Image: Importing WmfImagePlugin
+2025-07-23 23:45:53,242 [DEBUG] PIL.Image: Importing XbmImagePlugin
+2025-07-23 23:45:53,246 [DEBUG] PIL.Image: Importing XpmImagePlugin
+2025-07-23 23:45:53,248 [DEBUG] PIL.Image: Importing XVThumbImagePlugin
+2025-07-23 23:45:53,251 [DEBUG] pytesseract: ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_e71rq5d9.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_ybzbrwl1', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-07-23 23:45:53,804 [INFO] members.utils.extract_passport_passport_eye: PassportEye Extraction Successful
+2025-07-23 23:45:53,805 [INFO] root: [0] Data extracted successfully
+2025-07-23 23:45:53,808 [INFO] members.views: [1] Image decoded successfully
+2025-07-23 23:45:53,932 [INFO] root: Using PassportEye OCR for passport data extraction
+2025-07-23 23:45:53,944 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-07-23 23:45:53,945 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-07-23 23:45:53,945 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-07-23 23:45:53,945 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-07-23 23:45:53,946 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-07-23 23:45:53,946 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-07-23 23:45:53,946 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-07-23 23:45:53,947 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-07-23 23:45:53,947 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-07-23 23:45:53,947 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-07-23 23:45:54,097 [DEBUG] pytesseract: ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_u5g_yevp.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_2pctele0', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-07-23 23:45:54,474 [DEBUG] pytesseract: ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_vz80l2i1.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_nh7tbhhs', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-07-23 23:45:54,782 [DEBUG] pytesseract: ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_2mmwnoxp.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_dwe4vxwo', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-07-23 23:45:55,089 [INFO] members.utils.extract_passport_passport_eye: PassportEye Extraction Successful
+2025-07-23 23:45:55,089 [INFO] root: [1] Data extracted successfully
+2025-07-23 23:45:55,089 [INFO] members.views: All images processed
+2025-07-23 23:46:19,869 [INFO] members.views: serializer is valid
+2025-07-23 23:46:19,988 [INFO] root: Using PassportEye OCR for passport data extraction
+2025-07-23 23:46:20,001 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-07-23 23:46:20,001 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-07-23 23:46:20,002 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-07-23 23:46:20,002 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-07-23 23:46:20,002 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-07-23 23:46:20,002 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-07-23 23:46:20,003 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-07-23 23:46:20,004 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-07-23 23:46:20,005 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-07-23 23:46:20,006 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-07-23 23:46:20,119 [DEBUG] pytesseract: ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_c5txs6qf.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_rz6szdn0', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-07-23 23:46:20,390 [INFO] members.utils.extract_passport_passport_eye: PassportEye Extraction Successful
+2025-07-23 23:46:20,390 [SUCCESS] members.views: Passport data extracted successfully
+2025-07-23 23:48:35,734 [INFO] members.views: serializer is valid
+2025-07-23 23:48:35,903 [INFO] root: Using PassportEye OCR for passport data extraction
+2025-07-23 23:48:35,937 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-07-23 23:48:35,938 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-07-23 23:48:35,939 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-07-23 23:48:35,939 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-07-23 23:48:35,941 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-07-23 23:48:35,944 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-07-23 23:48:35,945 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-07-23 23:48:35,945 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-07-23 23:48:35,946 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-07-23 23:48:35,946 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-07-23 23:48:36,153 [DEBUG] pytesseract: ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_067tw4ii.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_16qhgmeo', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-07-23 23:48:36,830 [INFO] members.utils.extract_passport_passport_eye: PassportEye Extraction Successful
+2025-07-23 23:48:36,830 [SUCCESS] members.views: Passport data extracted successfully
+2025-07-23 23:49:03,045 [INFO] members.views: Received request data for multiple images
+2025-07-23 23:49:03,047 [INFO] members.views: [0] Image decoded successfully
+2025-07-23 23:49:03,221 [INFO] root: Using PassportEye OCR for passport data extraction
+2025-07-23 23:49:03,242 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-07-23 23:49:03,242 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-07-23 23:49:03,243 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-07-23 23:49:03,243 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-07-23 23:49:03,243 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-07-23 23:49:03,244 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-07-23 23:49:03,244 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-07-23 23:49:03,244 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-07-23 23:49:03,244 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-07-23 23:49:03,245 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-07-23 23:49:03,459 [DEBUG] pytesseract: ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_9xq8rhcd.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_szb9b1_1', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-07-23 23:49:03,988 [INFO] members.utils.extract_passport_passport_eye: PassportEye Extraction Successful
+2025-07-23 23:49:03,989 [INFO] root: [0] Data extracted successfully
+2025-07-23 23:49:03,992 [INFO] members.views: [1] Image decoded successfully
+2025-07-23 23:49:04,209 [INFO] root: Using PassportEye OCR for passport data extraction
+2025-07-23 23:49:04,235 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-07-23 23:49:04,235 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-07-23 23:49:04,235 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-07-23 23:49:04,235 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-07-23 23:49:04,235 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-07-23 23:49:04,237 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-07-23 23:49:04,237 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-07-23 23:49:04,237 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-07-23 23:49:04,237 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-07-23 23:49:04,238 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-07-23 23:49:04,483 [DEBUG] pytesseract: ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_cf0t1g1t.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_02lxr1q3', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-07-23 23:49:04,966 [DEBUG] pytesseract: ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_49b98p4p.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_sldi5m88', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-07-23 23:49:05,487 [DEBUG] pytesseract: ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_mqcwu5c6.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_ps2ip3tl', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-07-23 23:49:06,162 [INFO] members.utils.extract_passport_passport_eye: PassportEye Extraction Successful
+2025-07-23 23:49:06,163 [INFO] root: [1] Data extracted successfully
+2025-07-23 23:49:06,163 [INFO] members.views: All images processed

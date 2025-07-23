@@ -11,6 +11,10 @@ import cv2
 import numpy as np
 from passporteye import read_mrz
 from datetime import datetime
+from logging_config import setup_logging
+import logging
+setup_logging()
+logger = logging.getLogger(__name__)
 
 
 def extract_clean_address(text):
@@ -61,7 +65,7 @@ def extract_text_from_base64_image(base64_string):
 
 
 def extract_using_tesseract(passport_file, temp_file_path):
-    print("🔍 Using Tesseract OCR")
+    # print("🔍 Using Tesseract OCR")
     
     image = cv2.imread(temp_file_path)
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -284,17 +288,12 @@ def extract_using_tesseract(passport_file, temp_file_path):
                 # data['passport_number'] = passport_number
                 passport_data['date_of_birth'] = dob
                 passport_data['expiry_date'] = expiry_date
-                
-            
-                
+                logger.info("tesseract Extraction Successful")
 
         except Exception as e:
-            print("❌ MRZ Name Parse Error:", e)
+            logger.error("❌ tesseract Name Parse Error: %s", e)
 
-    # return JsonResponse(passport_data)
-
-    # ✨ Add extraction logic here
-
+    logger.info("Passport data extraction completed using Tesseract OCR")
     return passport_data
 
 

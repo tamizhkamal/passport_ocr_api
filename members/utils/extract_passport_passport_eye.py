@@ -1,6 +1,13 @@
 from passporteye import read_mrz
 from datetime import datetime
 
+from logging_config import setup_logging
+import logging
+
+setup_logging()
+logger = logging.getLogger(__name__)
+
+
 def extract_using_passporteye(temp_file_path):
     print("📸 Using PassportEye OCR")
     # image = cv2.imread(temp_file_path)
@@ -30,6 +37,7 @@ def extract_using_passporteye(temp_file_path):
         "dateOfIssue": None,
         "footerText": mrz_data.get('raw_text')
     }
+    logger.info("PassportEye Extraction Successful")
 
     return passport_data
 

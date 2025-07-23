@@ -15,8 +15,15 @@ from passporteye import read_mrz
 from datetime import datetime
 
 from members.utils.extract_passport_passport_eye import extract_using_passporteye
+from members.utils.extract_using_tesseract import extract_using_tesseract
+
 
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+from logging_config import setup_logging
+import logging
+setup_logging()
+logger = logging.getLogger(__name__)
+
 
 
 
@@ -36,9 +43,11 @@ def extract_passport_data(passport_file):
 
     if use_tesseract:
         print("🔍 Using Tesseract OCR")
+        logging.info("Using Tesseract OCR for passport data extraction")
         return extract_using_tesseract(passport_file, temp_file_path)
     else:
         print("📸 Using PassportEye OCR")
+        logging.info("Using PassportEye OCR for passport data extraction")
         return extract_using_passporteye(temp_file_path)
 
 
