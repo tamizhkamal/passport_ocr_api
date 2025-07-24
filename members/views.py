@@ -1,5 +1,6 @@
 import base64
 from io import BytesIO
+import os
 from urllib import request
 from PIL import Image
 from rest_framework.views import APIView
@@ -87,3 +88,73 @@ class UploadMultipleBase64ImagesView(APIView):
                 })
         logger.info("All images processed")
         return Response({'results': extracted_results}, status=status.HTTP_200_OK)
+    
+
+
+import base64
+import io
+from PIL import Image  # Pillow library
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+from members.ocr_utils import extract_passport_data
+import difflib
+import os
+
+class ComparePassportOCRView(APIView):
+    def post(self, request, *args, **kwargs):
+        print("Received request to OCR comparison")
+
+        base64_image = request.data.get("images_base64")
+        passport_file = request.FILES.get("passport_file")  # ✅ uncommented and added back
+
+        print("Received base64_image:", base64_image)
+
+        if not passport_file and not base64_image:
+            return Response({"error": "passport_file or images_base64 is required"}, status=status.HTTP_400_BAD_REQUEST)
+
+        # Convert base64 to PIL.Image
+        if base64_image:
+            try:
+                if "," in base64_image:
+                    base64_image = base64_image.split(",")[1]
+
+                image_data = base64.b64decode(base64_image)
+                image = Image.open(io.BytesIO(image_data))
+                passport_file = image  # Now this is PIL.Image
+            except Exception as e:
+                return Response({"error": "Invalid base64 image", "details": str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
+        elif passport_file:
+            try:
+                image = Image.open(passport_file)
+                passport_file = image
+            except Exception as e:
+                return Response({"error": "Uploaded file is not a valid image", "details": str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
+        # Now passport_file is PIL.Image — safe to pass
+        original_flag = os.environ.get("TESSERACT_OCT", "")
+        try:
+            os.environ["TESSERACT_OCT"] = "true"
+            tesseract_data = extract_passport_data(passport_file)
+
+            os.environ["TESSERACT_OCT"] = "false"
+            passporteye_data = extract_passport_data(passport_file)
+        finally:
+            os.environ["TESSERACT_OCT"] = original_flag
+
+        comparison = {}
+        all_keys = set(tesseract_data.keys()) | set(passporteye_data.keys())
+        for key in all_keys:
+            val1 = str(tesseract_data.get(key, "")).strip()
+            val2 = str(passporteye_data.get(key, "")).strip()
+            is_match = val1.lower() == val2.lower()
+            similarity = difflib.SequenceMatcher(None, val1, val2).ratio()
+            comparison[key] = {
+                "tesseract": val1,
+                "passporteye": val2,
+                "match": is_match,
+                "similarity": round(similarity, 2)
+            }
+
+        return Response({"comparison_result": comparison}, status=status.HTTP_200_OK)
