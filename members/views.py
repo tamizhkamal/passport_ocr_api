@@ -240,3 +240,69 @@ class CrossLanguagePassportCompareAPIView(APIView):
             "comparison_result": result,
             "note": "Arabic ↔ English OCR verification completed"
         }, status=status.HTTP_200_OK)
+
+
+
+import base64
+import io
+import tempfile
+from PIL import Image
+import pytesseract
+from passporteye import read_mrz
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+
+class CrossLanguage_Passport_CompareAPIView(APIView):
+    def post(self, request, *args, **kwargs):
+        base64_image = request.data.get("images_base64")
+
+        if not base64_image:
+            return Response({"error": "images_base64 is required"}, status=status.HTTP_400_BAD_REQUEST)
+
+        try:
+            # Strip base64 header if present
+            if "," in base64_image:
+                base64_image = base64_image.split(",")[1]
+
+            # Decode and convert to image
+            image_data = base64.b64decode(base64_image)
+            image = Image.open(io.BytesIO(image_data)).convert("RGB")
+        except Exception as e:
+            return Response({"error": "Invalid base64 image", "details": str(e)}, status=400)
+
+        try:
+            # Save image to temp file
+            with tempfile.NamedTemporaryFile(suffix=".jpg", delete=False) as temp_file:
+                image.save(temp_file, format="JPEG")
+                temp_path = temp_file.name
+
+            # MRZ extraction using passporteye
+            mrz = read_mrz(temp_path)
+            mrz_data = mrz.to_dict() if mrz else {}
+
+            english_name = ""
+            if mrz_data:
+                given_names = mrz_data.get("names", "")
+                surname = mrz_data.get("surname", "")
+                english_name = f"{given_names} {surname}".strip()
+
+            # Arabic text extraction using pytesseract
+            arabic_text = pytesseract.image_to_string(image, lang="ara").strip()
+
+            # Basic check for Arabic word "name" in text
+            arabic_keywords = ["الاسم", "اسم", "اللقب"]  # try to cover more keywords
+            arabic_name_found = any(keyword in arabic_text for keyword in arabic_keywords)
+
+            result = {
+                "english_mrz_data": mrz_data,
+                "arabic_text": arabic_text,
+                "english_name_extracted": english_name,
+                "arabic_keyword_found": arabic_name_found,
+                "comparison_status": "Matched" if english_name and arabic_name_found else "Mismatch or Not Found"
+            }
+
+            return Response(result, status=200)
+
+        except Exception as e:
+            return Response({"error": "Processing failed", "details": str(e)}, status=500)
