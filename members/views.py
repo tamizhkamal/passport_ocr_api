@@ -158,3 +158,85 @@ class ComparePassportOCRView(APIView):
             }
 
         return Response({"comparison_result": comparison}, status=status.HTTP_200_OK)
+
+# views.py
+
+import base64
+import io
+from PIL import Image
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+import os
+import difflib
+
+from members.ocr_utils import extract_passport_data
+from .utils.translate_utils import translate_key_to_english, translate_key_to_arabic
+
+
+def normalize_data(input_data, to_lang="en"):
+    """Convert all keys to English-standard for uniform comparison"""
+    normalized = {}
+    for key, value in input_data.items():
+        if to_lang == "en":
+            normalized_key = translate_key_to_english(key)
+        else:
+            normalized_key = translate_key_to_arabic(key)
+        normalized[normalized_key] = value
+    return normalized
+# views.py
+
+class CrossLanguagePassportCompareAPIView(APIView):
+    def post(self, request, *args, **kwargs):
+        base64_image = request.data.get("images_base64")
+
+        if not base64_image:
+            return Response({"error": "images_base64 is required"}, status=status.HTTP_400_BAD_REQUEST)
+
+        # Convert base64 to PIL.Image
+        try:
+            if "," in base64_image:
+                base64_image = base64_image.split(",")[1]
+            image_data = base64.b64decode(base64_image)
+            image = Image.open(io.BytesIO(image_data))
+        except Exception as e:
+            return Response({"error": "Invalid base64 image", "details": str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
+        # Extract Arabic and English separately using env flags (mocking logic)
+        original_flag = os.environ.get("TESSERACT_OCT", "")
+        try:
+            os.environ["TESSERACT_OCT"] = "true"
+            arabic_data = extract_passport_data(image)
+
+            os.environ["TESSERACT_OCT"] = "false"
+            english_data = extract_passport_data(image)
+        finally:
+            os.environ["TESSERACT_OCT"] = original_flag
+
+        # Main comparison result
+        result = {}
+
+        all_keys = set(english_data.keys()) | set(arabic_data.keys())
+
+        for key in all_keys:
+            en_val = str(english_data.get(key, "") or "").strip()
+            ar_val = str(arabic_data.get(key, "") or "").strip()
+
+            translated_ar_key = translate_key_to_english(key)
+            translated_en_key = translate_key_to_arabic(key)
+
+            similarity = difflib.SequenceMatcher(None, en_val.lower(), ar_val.lower()).ratio()
+
+            result[key] = {
+                "english_value": en_val,
+                "arabic_value": ar_val,
+                "similarity": round(similarity, 2),
+                "english_field": translated_en_key,
+                "arabic_field": translated_ar_key,
+                "match": en_val.lower() == ar_val.lower()
+            }
+
+        return Response({
+            "comparison_result": result,
+            "note": "Arabic ↔ English OCR verification completed"
+        }, status=status.HTTP_200_OK)
