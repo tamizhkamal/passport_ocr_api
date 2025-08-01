@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: passport-ocr-api
+    env: docker
+    plan: free
+    branch: main
+    rootDir: .
+    dockerfilePath: Dockerfile
+    healthCheckPath: /

@@ -3074,3 +3074,4 @@ UnboundLocalError: cannot access local variable 'place_of_birth' where it is not
 2025-08-01 00:40:05,276 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 41 65536
 2025-08-01 00:40:05,356 [DEBUG] pytesseract: ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_98vvnvui_input.PNG', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_98vvnvui', 'txt']
 2025-08-01 00:40:06,116 [SUCCESS] members.views: Passport data extracted successfully
+2025-08-01 15:59:27,623 [INFO] members.views: Logging started!
