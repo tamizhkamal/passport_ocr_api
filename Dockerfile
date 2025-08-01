@@ -54,5 +54,4 @@ RUN apt-get update && apt-get install -y libgl1-mesa-glx
 # Expose the port that Django will run on
 EXPOSE 8000
 
-# Run the app with Gunicorn
-CMD ["gunicorn", "passport_oct.wsgi:application", "--bind", "0.0.0.0:8000"]
+CMD ["gunicorn", "passport_oct.wsgi:application", "--workers", "1", "--threads", "1", "--bind", "0.0.0.0:8000"]

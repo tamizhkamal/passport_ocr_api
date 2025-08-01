@@ -3075,3 +3075,88 @@ UnboundLocalError: cannot access local variable 'place_of_birth' where it is not
 2025-08-01 00:40:05,356 [DEBUG] pytesseract: ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_98vvnvui_input.PNG', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_98vvnvui', 'txt']
 2025-08-01 00:40:06,116 [SUCCESS] members.views: Passport data extracted successfully
 2025-08-01 15:59:27,623 [INFO] members.views: Logging started!
+2025-08-01 22:55:43,345 [INFO] members.views: Logging started!
+2025-08-01 22:56:15,107 [ERROR] django.security.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "D:\Star tamizha info tech\codetez\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Star tamizha info tech\codetez\env\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Star tamizha info tech\codetez\env\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\Star tamizha info tech\codetez\env\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2025-08-01 22:56:53,877 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\passport_oct\settings.py changed, reloading.
+2025-08-01 22:59:17,052 [INFO] members.views: Logging started!
+2025-08-01 22:59:23,329 [INFO] members.views: serializer is valid
+2025-08-01 22:59:23,470 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-01 22:59:23,470 [DEBUG] PIL.PngImagePlugin: STREAM b'pHYs' 41 9
+2025-08-01 22:59:23,470 [DEBUG] PIL.PngImagePlugin: STREAM b'iTXt' 62 1211
+2025-08-01 22:59:23,470 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 1285 536207
+2025-08-01 22:59:23,854 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-01 22:59:23,854 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 41 65536
+2025-08-01 22:59:23,854 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-01 22:59:23,854 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 41 65536
+2025-08-01 22:59:24,603 [DEBUG] PIL.Image: Importing AvifImagePlugin
+2025-08-01 22:59:24,720 [DEBUG] PIL.Image: Importing BlpImagePlugin
+2025-08-01 22:59:24,720 [DEBUG] PIL.Image: Importing BmpImagePlugin
+2025-08-01 22:59:24,720 [DEBUG] PIL.Image: Importing BufrStubImagePlugin
+2025-08-01 22:59:24,726 [DEBUG] PIL.Image: Importing CurImagePlugin
+2025-08-01 22:59:24,726 [DEBUG] PIL.Image: Importing DcxImagePlugin
+2025-08-01 22:59:24,760 [DEBUG] PIL.Image: Importing DdsImagePlugin
+2025-08-01 22:59:24,772 [DEBUG] PIL.Image: Importing EpsImagePlugin
+2025-08-01 22:59:24,774 [DEBUG] PIL.Image: Importing FitsImagePlugin
+2025-08-01 22:59:24,787 [DEBUG] PIL.Image: Importing FliImagePlugin
+2025-08-01 22:59:24,789 [DEBUG] PIL.Image: Importing FpxImagePlugin
+2025-08-01 22:59:24,814 [DEBUG] PIL.Image: Image: failed to import FpxImagePlugin: No module named 'olefile'
+2025-08-01 22:59:24,814 [DEBUG] PIL.Image: Importing FtexImagePlugin
+2025-08-01 22:59:24,821 [DEBUG] PIL.Image: Importing GbrImagePlugin
+2025-08-01 22:59:24,821 [DEBUG] PIL.Image: Importing GifImagePlugin
+2025-08-01 22:59:24,821 [DEBUG] PIL.Image: Importing GribStubImagePlugin
+2025-08-01 22:59:24,821 [DEBUG] PIL.Image: Importing Hdf5StubImagePlugin
+2025-08-01 22:59:24,821 [DEBUG] PIL.Image: Importing IcnsImagePlugin
+2025-08-01 22:59:24,821 [DEBUG] PIL.Image: Importing IcoImagePlugin
+2025-08-01 22:59:24,837 [DEBUG] PIL.Image: Importing ImImagePlugin
+2025-08-01 22:59:24,837 [DEBUG] PIL.Image: Importing ImtImagePlugin
+2025-08-01 22:59:24,853 [DEBUG] PIL.Image: Importing IptcImagePlugin
+2025-08-01 22:59:24,853 [DEBUG] PIL.Image: Importing JpegImagePlugin
+2025-08-01 22:59:24,853 [DEBUG] PIL.Image: Importing Jpeg2KImagePlugin
+2025-08-01 22:59:24,853 [DEBUG] PIL.Image: Importing McIdasImagePlugin
+2025-08-01 22:59:24,869 [DEBUG] PIL.Image: Importing MicImagePlugin
+2025-08-01 22:59:24,869 [DEBUG] PIL.Image: Image: failed to import MicImagePlugin: No module named 'olefile'
+2025-08-01 22:59:24,869 [DEBUG] PIL.Image: Importing MpegImagePlugin
+2025-08-01 22:59:24,889 [DEBUG] PIL.Image: Importing MpoImagePlugin
+2025-08-01 22:59:24,916 [DEBUG] PIL.Image: Importing MspImagePlugin
+2025-08-01 22:59:24,916 [DEBUG] PIL.Image: Importing PalmImagePlugin
+2025-08-01 22:59:24,936 [DEBUG] PIL.Image: Importing PcdImagePlugin
+2025-08-01 22:59:24,938 [DEBUG] PIL.Image: Importing PcxImagePlugin
+2025-08-01 22:59:24,938 [DEBUG] PIL.Image: Importing PdfImagePlugin
+2025-08-01 22:59:24,960 [DEBUG] PIL.Image: Importing PixarImagePlugin
+2025-08-01 22:59:24,970 [DEBUG] PIL.Image: Importing PngImagePlugin
+2025-08-01 22:59:24,976 [DEBUG] PIL.Image: Importing PpmImagePlugin
+2025-08-01 22:59:24,976 [DEBUG] PIL.Image: Importing PsdImagePlugin
+2025-08-01 22:59:24,996 [DEBUG] PIL.Image: Importing QoiImagePlugin
+2025-08-01 22:59:24,996 [DEBUG] PIL.Image: Importing SgiImagePlugin
+2025-08-01 22:59:25,002 [DEBUG] PIL.Image: Importing SpiderImagePlugin
+2025-08-01 22:59:25,004 [DEBUG] PIL.Image: Importing SunImagePlugin
+2025-08-01 22:59:25,006 [DEBUG] PIL.Image: Importing TgaImagePlugin
+2025-08-01 22:59:25,006 [DEBUG] PIL.Image: Importing TiffImagePlugin
+2025-08-01 22:59:25,012 [DEBUG] PIL.Image: Importing WebPImagePlugin
+2025-08-01 22:59:25,059 [DEBUG] PIL.Image: Importing WmfImagePlugin
+2025-08-01 22:59:25,070 [DEBUG] PIL.Image: Importing XbmImagePlugin
+2025-08-01 22:59:25,070 [DEBUG] PIL.Image: Importing XpmImagePlugin
+2025-08-01 22:59:25,075 [DEBUG] PIL.Image: Importing XVThumbImagePlugin
+2025-08-01 22:59:25,075 [DEBUG] pytesseract: ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess__e98umg2.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_ryv5_013', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-08-01 22:59:26,010 [DEBUG] pytesseract: ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_ps3wovz0.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_ndv3khv_', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-08-01 22:59:26,375 [WARNING] easyocr.easyocr: Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-01 22:59:31,115 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-01 22:59:31,115 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 41 65536
+2025-08-01 22:59:31,116 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-01 22:59:31,116 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 41 65536
+2025-08-01 22:59:40,001 [DEBUG] pytesseract: ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_grc9x0k2_input.PNG', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_grc9x0k2', '-l', 'eng', 'txt']
+2025-08-01 22:59:40,691 [INFO] members.utils.extract_passport_passport_eye: PassportEye + Tesseract OCR Extraction Complete
+2025-08-01 22:59:40,691 [SUCCESS] members.views: Passport data extracted successfully
