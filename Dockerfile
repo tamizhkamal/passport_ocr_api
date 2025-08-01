@@ -52,4 +52,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 8000
 
 # Run the app with Gunicorn
-CMD ["gunicorn", "passport_ocr_api.wsgi:application", "--bind", "0.0.0.0:8000"]
+CMD ["gunicorn", "passport_oct.wsgi:application", "--bind", "0.0.0.0:8000"]
