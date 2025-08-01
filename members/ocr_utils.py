@@ -18,7 +18,13 @@ from members.utils.extract_passport_passport_eye import extract_using_passportey
 from members.utils.extract_using_tesseract import extract_using_tesseract
 
 
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+import pytesseract
+import platform
+
+# Only for local development on Windows
+if platform.system() == 'Windows':
+    pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+
 from logging_config import setup_logging
 import logging
 setup_logging()

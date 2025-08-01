@@ -18,30 +18,38 @@
 # CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 
 
-# Dockerfile
-
+# Use official Python base image
 FROM python:3.11-slim
 
-# Install system packages
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
+    build-essential \
     tesseract-ocr \
-    libglib2.0-0 \
+    libtesseract-dev \
     libsm6 \
     libxext6 \
     libxrender-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Set working directory
+# Set work directory inside the container
 WORKDIR /app
 
 # Copy project files
 COPY . /app/
 
-# Install Python packages
+# Install Python dependencies
+RUN pip install --no-cache-dir --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Collect static files (optional)
+# Collect static files (if needed)
 RUN python manage.py collectstatic --noinput
 
-# Run gunicorn server
-CMD ["gunicorn", "passport_oct.wsgi:application", "--bind", "0.0.0.0:8000"]
+# Expose the port that Django will run on
+EXPOSE 8000
+
+# Run the app with Gunicorn
+CMD ["gunicorn", "passport_ocr_api.wsgi:application", "--bind", "0.0.0.0:8000"]
