@@ -36,10 +36,10 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Set work directory inside the container
-WORKDIR
+# WORKDIR
 
 # Copy project files
-COPY 
+# COPY 
 # Install Python dependencies
 RUN pip install --no-cache-dir --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
