@@ -1,26 +1,58 @@
-FROM python:3.10-slim
+# # Use official Python image
+# FROM python:3.11-slim
 
+# # Set work directory
+# WORKDIR /app
+
+# # Install dependencies
+# COPY requirements.txt .
+# RUN pip install --no-cache-dir -r requirements.txt
+
+# # Copy rest of the code
+# COPY . .
+
+# # Expose port (FastAPI default is 8000)
+# EXPOSE 8000
+
+# # Run the app
+# CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+
+
+# Use official Python base image
+FROM python:3.11-slim
+
+# Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-WORKDIR /app
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    tesseract-ocr \
+    libtesseract-dev \
+    libsm6 \
+    libxext6 \
+    libxrender-dev \
+    && rm -rf /var/lib/apt/lists/*
 
-# 👇 Add system-level dependency for OpenCV (cv2)
-RUN apt-get update && apt-get install -y libgl1-mesa-glx
+# Set work directory inside the container
+WORKDIR /
+
+# Copy project files
+COPY . /
 
 # Install Python dependencies
-COPY requirements.txt .
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir --upgrade pip
+RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+RUN apt-get update && apt-get install -y libgl1-mesa-glx
 
-ENV DJANGO_SETTINGS_MODULE=passport_oct.settings
 
-RUN mkdir -p /app/staticfiles
-ENV STATIC_ROOT=/app/staticfiles
-RUN python manage.py collectstatic --noinput
+# Collect static files (if needed)
+# RUN python manage.py collectstatic --noinput
 
+# Expose the port that Django will run on
 EXPOSE 8000
 
+# Run the app with Gunicorn
 CMD ["gunicorn", "passport_oct.wsgi:application", "--bind", "0.0.0.0:8000"]
