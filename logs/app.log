@@ -3160,3 +3160,72 @@ django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000
 2025-08-01 22:59:40,001 [DEBUG] pytesseract: ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_grc9x0k2_input.PNG', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_grc9x0k2', '-l', 'eng', 'txt']
 2025-08-01 22:59:40,691 [INFO] members.utils.extract_passport_passport_eye: PassportEye + Tesseract OCR Extraction Complete
 2025-08-01 22:59:40,691 [SUCCESS] members.views: Passport data extracted successfully
+2025-08-02 14:11:44,197 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\ocr_utils.py changed, reloading.
+2025-08-02 14:11:55,907 [INFO] members.views: Logging started!
+2025-08-02 14:12:23,197 [INFO] members.views: serializer is valid
+2025-08-02 14:12:23,337 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-02 14:12:23,337 [DEBUG] PIL.PngImagePlugin: STREAM b'pHYs' 41 9
+2025-08-02 14:12:23,337 [DEBUG] PIL.PngImagePlugin: STREAM b'iTXt' 62 1211
+2025-08-02 14:12:23,337 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 1285 536207
+2025-08-02 14:12:23,945 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-02 14:12:23,945 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 41 65536
+2025-08-02 14:12:23,945 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-02 14:12:23,945 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 41 65536
+2025-08-02 14:12:24,977 [DEBUG] PIL.Image: Importing AvifImagePlugin
+2025-08-02 14:12:25,127 [DEBUG] PIL.Image: Importing BlpImagePlugin
+2025-08-02 14:12:25,143 [DEBUG] PIL.Image: Importing BmpImagePlugin
+2025-08-02 14:12:25,143 [DEBUG] PIL.Image: Importing BufrStubImagePlugin
+2025-08-02 14:12:25,152 [DEBUG] PIL.Image: Importing CurImagePlugin
+2025-08-02 14:12:25,159 [DEBUG] PIL.Image: Importing DcxImagePlugin
+2025-08-02 14:12:25,180 [DEBUG] PIL.Image: Importing DdsImagePlugin
+2025-08-02 14:12:25,192 [DEBUG] PIL.Image: Importing EpsImagePlugin
+2025-08-02 14:12:25,197 [DEBUG] PIL.Image: Importing FitsImagePlugin
+2025-08-02 14:12:25,207 [DEBUG] PIL.Image: Importing FliImagePlugin
+2025-08-02 14:12:25,209 [DEBUG] PIL.Image: Importing FpxImagePlugin
+2025-08-02 14:12:25,213 [DEBUG] PIL.Image: Image: failed to import FpxImagePlugin: No module named 'olefile'
+2025-08-02 14:12:25,213 [DEBUG] PIL.Image: Importing FtexImagePlugin
+2025-08-02 14:12:25,217 [DEBUG] PIL.Image: Importing GbrImagePlugin
+2025-08-02 14:12:25,218 [DEBUG] PIL.Image: Importing GifImagePlugin
+2025-08-02 14:12:25,218 [DEBUG] PIL.Image: Importing GribStubImagePlugin
+2025-08-02 14:12:25,225 [DEBUG] PIL.Image: Importing Hdf5StubImagePlugin
+2025-08-02 14:12:25,227 [DEBUG] PIL.Image: Importing IcnsImagePlugin
+2025-08-02 14:12:25,237 [DEBUG] PIL.Image: Importing IcoImagePlugin
+2025-08-02 14:12:25,243 [DEBUG] PIL.Image: Importing ImImagePlugin
+2025-08-02 14:12:25,247 [DEBUG] PIL.Image: Importing ImtImagePlugin
+2025-08-02 14:12:25,267 [DEBUG] PIL.Image: Importing IptcImagePlugin
+2025-08-02 14:12:25,277 [DEBUG] PIL.Image: Importing JpegImagePlugin
+2025-08-02 14:12:25,277 [DEBUG] PIL.Image: Importing Jpeg2KImagePlugin
+2025-08-02 14:12:25,277 [DEBUG] PIL.Image: Importing McIdasImagePlugin
+2025-08-02 14:12:25,291 [DEBUG] PIL.Image: Importing MicImagePlugin
+2025-08-02 14:12:25,297 [DEBUG] PIL.Image: Image: failed to import MicImagePlugin: No module named 'olefile'
+2025-08-02 14:12:25,297 [DEBUG] PIL.Image: Importing MpegImagePlugin
+2025-08-02 14:12:25,299 [DEBUG] PIL.Image: Importing MpoImagePlugin
+2025-08-02 14:12:25,339 [DEBUG] PIL.Image: Importing MspImagePlugin
+2025-08-02 14:12:25,339 [DEBUG] PIL.Image: Importing PalmImagePlugin
+2025-08-02 14:12:25,350 [DEBUG] PIL.Image: Importing PcdImagePlugin
+2025-08-02 14:12:25,352 [DEBUG] PIL.Image: Importing PcxImagePlugin
+2025-08-02 14:12:25,352 [DEBUG] PIL.Image: Importing PdfImagePlugin
+2025-08-02 14:12:25,379 [DEBUG] PIL.Image: Importing PixarImagePlugin
+2025-08-02 14:12:25,379 [DEBUG] PIL.Image: Importing PngImagePlugin
+2025-08-02 14:12:25,379 [DEBUG] PIL.Image: Importing PpmImagePlugin
+2025-08-02 14:12:25,379 [DEBUG] PIL.Image: Importing PsdImagePlugin
+2025-08-02 14:12:25,392 [DEBUG] PIL.Image: Importing QoiImagePlugin
+2025-08-02 14:12:25,397 [DEBUG] PIL.Image: Importing SgiImagePlugin
+2025-08-02 14:12:25,404 [DEBUG] PIL.Image: Importing SpiderImagePlugin
+2025-08-02 14:12:25,413 [DEBUG] PIL.Image: Importing SunImagePlugin
+2025-08-02 14:12:25,417 [DEBUG] PIL.Image: Importing TgaImagePlugin
+2025-08-02 14:12:25,419 [DEBUG] PIL.Image: Importing TiffImagePlugin
+2025-08-02 14:12:25,421 [DEBUG] PIL.Image: Importing WebPImagePlugin
+2025-08-02 14:12:25,478 [DEBUG] PIL.Image: Importing WmfImagePlugin
+2025-08-02 14:12:25,482 [DEBUG] PIL.Image: Importing XbmImagePlugin
+2025-08-02 14:12:25,482 [DEBUG] PIL.Image: Importing XpmImagePlugin
+2025-08-02 14:12:25,487 [DEBUG] PIL.Image: Importing XVThumbImagePlugin
+2025-08-02 14:12:25,493 [DEBUG] pytesseract: ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_kxkgn7cq.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_1m04xb5y', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-08-02 14:12:26,427 [DEBUG] pytesseract: ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_x76y6lep.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_gaz4u4yp', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-08-02 14:12:26,846 [WARNING] easyocr.easyocr: Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-02 14:12:32,740 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-02 14:12:32,740 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 41 65536
+2025-08-02 14:12:32,740 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-02 14:12:32,740 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 41 65536
+2025-08-02 14:12:43,279 [INFO] members.utils.extract_passport_passport_eye: PassportEye + EasyOCR Extraction Complete
+2025-08-02 14:12:43,281 [SUCCESS] members.views: Passport data extracted successfully

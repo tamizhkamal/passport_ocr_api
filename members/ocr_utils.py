@@ -5,7 +5,7 @@ import tempfile
 import logging
 import pytesseract
 from members.utils.extract_passport_passport_eye import extract_using_passporteye
-from members.utils.extract_using_tesseract import extract_using_tesseract
+# from members.utils.extract_using_tesseract import extract_using_tesseract
 
 from logging_config import setup_logging
 setup_logging()
