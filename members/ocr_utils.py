@@ -33,9 +33,9 @@ def extract_passport_data(passport_file):
     # Check which OCR method to use
     use_tesseract = os.getenv("TESSERACT_OCT", "False").lower() == "true"
 
-    if use_tesseract:
-        logger.info("🔍 Using Tesseract OCR for passport data extraction")
-        return extract_using_tesseract(temp_file_path)
-    else:
-        logger.info("📸 Using PassportEye OCR for passport data extraction")
-        return extract_using_passporteye(temp_file_path)
+    # if use_tesseract:
+    #     logger.info("🔍 Using Tesseract OCR for passport data extraction")
+    #     return extract_using_tesseract(temp_file_path)
+    # else:
+    logger.info("📸 Using PassportEye OCR for passport data extraction")
+    return extract_using_passporteye(temp_file_path)
