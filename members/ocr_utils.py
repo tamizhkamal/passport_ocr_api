@@ -3,17 +3,12 @@ import os
 import platform
 import tempfile
 import logging
-import pytesseract
 from members.utils.extract_passport_passport_eye import extract_using_passporteye
 # from members.utils.extract_using_tesseract import extract_using_tesseract
 
 from logging_config import setup_logging
 setup_logging()
 logger = logging.getLogger(__name__)
-
-# Set Tesseract path on Windows
-if platform.system() == 'Windows':
-    pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 def extract_passport_data(passport_file):
     """
