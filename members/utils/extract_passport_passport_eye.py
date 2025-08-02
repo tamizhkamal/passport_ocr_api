@@ -1,6 +1,3 @@
-import cv2
-import re
-import pycountry
 from passporteye import read_mrz
 from datetime import datetime
 from logging_config import setup_logging

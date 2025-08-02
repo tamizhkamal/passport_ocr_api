@@ -49,7 +49,7 @@ RUN apt-get update && apt-get install -y libgl1-mesa-glx
 
 
 FROM python:3.11-slim
-
+    
 # Collect static files (if needed)
 # RUN python manage.py collectstatic --noinput
 

@@ -1,6 +1,5 @@
 # utils.py
 import os
-import platform
 import tempfile
 import logging
 from members.utils.extract_passport_passport_eye import extract_using_passporteye
@@ -26,7 +25,7 @@ def extract_passport_data(passport_file):
         temp_file_path = tmp.name
 
     # Check which OCR method to use
-    use_tesseract = os.getenv("TESSERACT_OCT", "False").lower() == "true"
+    # use_tesseract = os.getenv("TESSERACT_OCT", "False").lower() == "true"
 
     # if use_tesseract:
     #     logger.info("🔍 Using Tesseract OCR for passport data extraction")
