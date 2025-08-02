@@ -6,4 +6,5 @@ passporteye==2.2.2
 Pillow==11.3.0
 pycountry==24.6.1
 django-cors-headers==4.3.1
+gunicorn
 
