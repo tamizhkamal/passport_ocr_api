@@ -16,6 +16,7 @@ import uuid
 from django.core.files.base import ContentFile
 from logging_config import setup_logging
 import logging
+from deep_translator import GoogleTranslator
 
 setup_logging()
 logger = logging.getLogger(__name__)
@@ -300,6 +301,161 @@ class CrossLanguage_Passport_CompareAPIView(APIView):
                 "english_name_extracted": english_name,
                 "arabic_keyword_found": arabic_name_found,
                 "comparison_status": "Matched" if english_name and arabic_name_found else "Mismatch or Not Found"
+            }
+
+            return Response(result, status=200)
+
+        except Exception as e:
+            return Response({"error": "Processing failed", "details": str(e)}, status=500)
+
+
+# class Overall_CompareAPIView(APIView):
+#     def post(self, request, *args, **kwargs):
+#         base64_image = request.data.get("images_base64")
+
+#         if not base64_image:
+#             return Response({"error": "images_base64 is required"}, status=status.HTTP_400_BAD_REQUEST)
+
+#         try:
+#             # Clean and decode base64 image
+#             if "," in base64_image:
+#                 base64_image = base64_image.split(",")[1]
+#             image_data = base64.b64decode(base64_image)
+#             image = Image.open(io.BytesIO(image_data)).convert("RGB")
+#         except Exception as e:
+#             return Response({"error": "Invalid base64 image", "details": str(e)}, status=400)
+
+#         try:
+#             # Save to temp file
+#             with tempfile.NamedTemporaryFile(suffix=".jpg", delete=False) as temp_file:
+#                 image.save(temp_file, format="JPEG")
+#                 temp_path = temp_file.name
+
+#             # 1. MRZ extraction (using passporteye)
+#             mrz_obj = read_mrz(temp_path)
+#             mrz_data = mrz_obj.to_dict() if mrz_obj else {}
+
+#             # 2. Arabic text OCR
+#             arabic_text = pytesseract.image_to_string(image, lang="ara").strip()
+
+#             # 3. Translation (Arabic to English)
+#             translated_text = GoogleTranslator(source='ar', target='en').translate(arabic_text)
+
+#             result = {
+#                 "mrz_data": mrz_data,
+#                 "passporteye_raw_data": str(mrz_obj) if mrz_obj else None,
+#                 "arabic_ocr_text": arabic_text,
+#                 "translated_english_text": translated_text,
+#             }
+
+#             return Response(result, status=200)
+
+#         except Exception as e:
+#             return Response({"error": "Processing failed", "details": str(e)}, status=500)
+
+
+
+import base64
+import io
+import tempfile
+from PIL import Image
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+from passporteye import read_mrz
+import pytesseract
+from deep_translator import GoogleTranslator
+from datetime import datetime
+import re
+
+
+def format_date(date_str):
+    try:
+        dt = datetime.strptime(date_str, "%y%m%d")
+        if dt.year > datetime.now().year:
+            dt = dt.replace(year=dt.year - 100)
+        return dt.strftime("%Y-%m-%d")
+    except Exception:
+        return date_str
+
+
+def parse_passporteye_object(mrz_obj, address=None):
+    if not mrz_obj:
+        return None
+
+    result = {}
+    for k, v in mrz_obj.__dict__.items():
+        if not k.startswith("_"):
+            if k in ["date_of_birth", "expiration_date"] and isinstance(v, str):
+                result[k] = format_date(v)
+            else:
+                result[k] = v
+
+    if address:
+        result["arabic_address"] = address
+
+    return result
+
+
+def extract_probable_arabic_address(arabic_text):
+    lines = arabic_text.split('\n')
+    address_candidates = []
+
+    for line in lines:
+        line = line.strip()
+        if len(line) >= 8 and re.search(r'\d', line) and re.search(r'[\u0600-\u06FF]', line):
+            address_candidates.append(line)
+
+    return address_candidates[0] if address_candidates else None
+
+
+class Overall_CompareAPIView(APIView):
+    def post(self, request, *args, **kwargs):
+        base64_image = request.data.get("images_base64")
+
+        if not base64_image:
+            return Response({"error": "images_base64 is required"}, status=status.HTTP_400_BAD_REQUEST)
+
+        try:
+            if "," in base64_image:
+                base64_image = base64_image.split(",")[1]
+            image_data = base64.b64decode(base64_image)
+            image = Image.open(io.BytesIO(image_data)).convert("RGB")
+        except Exception as e:
+            return Response({"error": "Invalid base64 image", "details": str(e)}, status=400)
+
+        try:
+            with tempfile.NamedTemporaryFile(suffix=".jpg", delete=False) as temp_file:
+                image.save(temp_file, format="JPEG")
+                temp_path = temp_file.name
+
+            # 1. MRZ Extraction
+            mrz_obj = read_mrz(temp_path)
+            mrz_data = mrz_obj.to_dict() if mrz_obj else {}
+
+            if "date_of_birth" in mrz_data:
+                mrz_data["date_of_birth"] = format_date(mrz_data["date_of_birth"])
+            if "expiration_date" in mrz_data:
+                mrz_data["expiration_date"] = format_date(mrz_data["expiration_date"])
+
+            # 2. Arabic OCR
+            arabic_text = pytesseract.image_to_string(image, lang="ara").strip()
+
+            # 3. Translate
+            translated_text = GoogleTranslator(source='ar', target='en').translate(arabic_text)
+
+            # 4. Address extraction – NEW logic (no keywords)
+            address_line = extract_probable_arabic_address(arabic_text)
+
+            # 5. Final result
+            result = {
+                "mrz_data": {
+                    **mrz_data,
+                    "arabic_address": address_line
+                },
+                "passporteye_data": parse_passporteye_object(mrz_obj, address=address_line),
+                "arabic_ocr_text": arabic_text,
+                "translated_english_text": translated_text
             }
 
             return Response(result, status=200)
