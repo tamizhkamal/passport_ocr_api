@@ -462,3 +462,97 @@ class Overall_CompareAPIView(APIView):
 
         except Exception as e:
             return Response({"error": "Processing failed", "details": str(e)}, status=500)
+
+
+class MergedPassportCompareAPIView(APIView):
+    def post(self, request, *args, **kwargs):
+        base64_image = request.data.get("images_base64")
+
+        if not base64_image:
+            return Response({"error": "images_base64 is required"}, status=status.HTTP_400_BAD_REQUEST)
+
+        # Step 1: Convert image from base64
+        try:
+            if "," in base64_image:
+                base64_image = base64_image.split(",")[1]
+            image_data = base64.b64decode(base64_image)
+            image = Image.open(io.BytesIO(image_data)).convert("RGB")
+        except Exception as e:
+            return Response({"error": "Invalid base64 image", "details": str(e)}, status=400)
+
+        # -----------------------------
+        # Step 2: Cross Language Compare
+        # -----------------------------
+        try:
+            # Set env for Arabic OCR
+            original_flag = os.environ.get("TESSERACT_OCT", "")
+            os.environ["TESSERACT_OCT"] = "true"
+            arabic_data = extract_passport_data(image)
+
+            # Set env for English OCR
+            os.environ["TESSERACT_OCT"] = "false"
+            english_data = extract_passport_data(image)
+            os.environ["TESSERACT_OCT"] = original_flag
+
+            # Merge comparison result
+            comparison_result = {}
+            all_keys = set(english_data.keys()) | set(arabic_data.keys())
+            for key in all_keys:
+                en_val = str(english_data.get(key, "") or "").strip()
+                ar_val = str(arabic_data.get(key, "") or "").strip()
+
+                translated_ar_key = translate_key_to_english(key)
+                translated_en_key = translate_key_to_arabic(key)
+
+                similarity = difflib.SequenceMatcher(None, en_val.lower(), ar_val.lower()).ratio()
+
+                comparison_result[key] = {
+                    "english_value": en_val,
+                    "arabic_value": ar_val,
+                    "similarity": round(similarity, 2),
+                    "english_field": translated_en_key,
+                    "arabic_field": translated_ar_key,
+                    "match": en_val.lower() == ar_val.lower()
+                }
+
+        except Exception as e:
+            return Response({"error": "Cross language OCR failed", "details": str(e)}, status=500)
+
+        # -----------------------------
+        # Step 3: MRZ and Arabic OCR block
+        # -----------------------------
+        try:
+            with tempfile.NamedTemporaryFile(suffix=".jpg", delete=False) as temp_file:
+                image.save(temp_file, format="JPEG")
+                temp_path = temp_file.name
+
+            # MRZ
+            mrz_obj = read_mrz(temp_path)
+            mrz_data = mrz_obj.to_dict() if mrz_obj else {}
+
+            if "date_of_birth" in mrz_data:
+                mrz_data["date_of_birth"] = format_date(mrz_data["date_of_birth"])
+            if "expiration_date" in mrz_data:
+                mrz_data["expiration_date"] = format_date(mrz_data["expiration_date"])
+
+            # Arabic OCR and translation
+            arabic_text = pytesseract.image_to_string(image, lang="ara").strip()
+            translated_text = GoogleTranslator(source='ar', target='en').translate(arabic_text)
+            address_line = extract_probable_arabic_address(arabic_text)
+
+        except Exception as e:
+            return Response({"error": "MRZ or OCR processing failed", "details": str(e)}, status=500)
+
+        # Final merged result
+        final_result = {
+            "mrz_data": {
+                **mrz_data,
+                "arabic_address": address_line
+            },
+            "OCR_data": parse_passporteye_object(mrz_obj, address=address_line),
+            "comparison_result": comparison_result,
+            "arabic_ocr_text": arabic_text,
+            "translated_english_text": translated_text
+        }
+
+        return Response(final_result, status=200)
