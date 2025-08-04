@@ -26,16 +26,11 @@ logger.info("Logging started!")
 
 class PassportOCRView(APIView):
     def post(self, request):
-        # print("Received request data:", request.data)
         # Validate the request data using the serializer
         serializer = PassportBase64ImageSerializer(data=request.data)
-        # print(serializer.is_valid(),"--------------------------------------------> serializer.is_valid()")
-        # print(request.data)
-        print(type(request.data['image_base64']))
 
         if serializer.is_valid():
             logger.info("serializer is valid")
-            # print(serializer.validated_data, "--------------------------------------------> serializer.validated_data")
             image_data = serializer.validated_data['image_base64']
             
             # Decode base64 to image
@@ -46,12 +41,10 @@ class PassportOCRView(APIView):
             except Exception as e:
                 return Response({'error': 'Invalid image format'}, status=status.HTTP_400_BAD_REQUEST)
             # Extract text from the image
-            print(image, "--------------------------------------------> image")
             text_data = extract_passport_data(image)
             logger.success("Passport data extracted successfully")
             return Response({"extracted_data": text_data})
         logger.error("Failed to extract passport data")
-        print(serializer.errors, "--------------------------------------------> serializer.errors")
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class UploadMultipleBase64ImagesView(APIView):
@@ -109,7 +102,6 @@ class ComparePassportOCRView(APIView):
         base64_image = request.data.get("images_base64")
         passport_file = request.FILES.get("passport_file")  # ✅ uncommented and added back
 
-        print("Received base64_image:", base64_image)
 
         if not passport_file and not base64_image:
             return Response({"error": "passport_file or images_base64 is required"}, status=status.HTTP_400_BAD_REQUEST)

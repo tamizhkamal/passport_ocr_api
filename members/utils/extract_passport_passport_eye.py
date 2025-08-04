@@ -11,7 +11,6 @@ logger = logging.getLogger(__name__)
 def extract_using_passporteye(temp_file_path, passport_file=None):
     print("📸 Using PassportEye OCR")
     mrz_data = extract_mrz_from_image(temp_file_path)
-    print("MRZ Data:", mrz_data, "<------------ MRZ Extraction Output")
 
     extracted_info = extract_custom_fields_from_passport(temp_file_path)
 
@@ -78,5 +77,4 @@ def extract_custom_fields_from_passport(temp_file_path):
             else:
                 extracted_info["address"] = line.strip()
 
-    print(extracted_info, "<----- extracted_info")
     return extracted_info
