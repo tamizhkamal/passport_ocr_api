@@ -1,4 +1,5 @@
 import base64
+from concurrent.futures import ThreadPoolExecutor
 from io import BytesIO
 import os
 from urllib import request
@@ -26,43 +27,72 @@ logger.info("Logging started!")
 
 class PassportOCRView(APIView):
     def post(self, request):
-        # Validate the request data using the serializer
-        serializer = PassportBase64ImageSerializer(data=request.data)
+        uploaded_file = request.FILES.get("passport_image")
 
-        if serializer.is_valid():
-            logger.info("serializer is valid")
-            image_data = serializer.validated_data['image_base64']
-            
-            # Decode base64 to image
-            try:
-                image_data = image_data.split(',')[-1]  # remove "data:image/png;base64,"
-                image_bytes = base64.b64decode(image_data)
-                image = Image.open(BytesIO(image_bytes))
-            except Exception as e:
-                return Response({'error': 'Invalid image format'}, status=status.HTTP_400_BAD_REQUEST)
-            # Extract text from the image
-            text_data = extract_passport_data(image)
-            logger.success("Passport data extracted successfully")
-            return Response({"extracted_data": text_data})
-        logger.error("Failed to extract passport data")
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        if not uploaded_file:
+            return Response({"error": "passport_image is required"}, status=status.HTTP_400_BAD_REQUEST)
 
-class UploadMultipleBase64ImagesView(APIView):
+        try:
+            image = Image.open(uploaded_file).convert("RGB")
+        except Exception as e:
+            return Response({"error": "Invalid image file", "details": str(e)}, status=400)
+
+        with tempfile.NamedTemporaryFile(suffix=".jpg", delete=False) as temp_file:
+            image.save(temp_file, format="JPEG")
+            temp_path = temp_file.name
+
+        # Arabic OCR
+        original_flag = os.environ.get("TESSERACT_OCT", "")
+        try:
+            os.environ["TESSERACT_OCT"] = "true"
+            arabic_data = extract_passport_data(image)
+
+            os.environ["TESSERACT_OCT"] = "false"
+            english_data = extract_passport_data(image)
+        finally:
+            os.environ["TESSERACT_OCT"] = original_flag
+
+        result = {}
+        all_keys = set(english_data.keys()) | set(arabic_data.keys())
+
+        for key in all_keys:
+            en_val = str(english_data.get(key, "") or "").strip()
+            ar_val = str(arabic_data.get(key, "") or "").strip()
+
+            translated_ar_key = translate_key_to_english(key)
+            translated_en_key = translate_key_to_arabic(key)
+
+            similarity = difflib.SequenceMatcher(None, en_val.lower(), ar_val.lower()).ratio()
+
+            result[key] = {
+                "english_value": en_val,
+                "arabic_value": ar_val,
+                "similarity": round(similarity, 2),
+                "english_field": translated_en_key,
+                "arabic_field": translated_ar_key,
+                "match": en_val.lower() == ar_val.lower()
+            }
+
+        return Response({
+            "comparison_result": result,
+            "note": "Arabic ↔ English OCR verification completed"
+        }, status=status.HTTP_200_OK)
+    
+class UploadMultipleImageFilesView(APIView):
     def post(self, request):
-        images_data = request.data.get('images_base64', [])
-        logger.info("Received request data for multiple images")
-        if not isinstance(images_data, list):
-            return Response({'error': 'images_base64 should be a list'}, status=status.HTTP_400_BAD_REQUEST)
+        # Get multiple uploaded files
+        image_files = request.FILES.getlist('passport_image')
+
+        if not image_files:
+            return Response({'error': 'passport_files is required'}, status=status.HTTP_400_BAD_REQUEST)
 
         extracted_results = []
 
-        for index, image_base64 in enumerate(images_data):
+        for index, image_file in enumerate(image_files):
             try:
-                base64_str = image_base64.split(',')[-1]  # remove data:image/jpeg;base64,...
-                image_bytes = base64.b64decode(base64_str)
-                image = Image.open(BytesIO(image_bytes))
+                image = Image.open(image_file)
 
-                logger.info(f"[{index}] Image decoded successfully")
+                logger.info(f"[{index}] Image uploaded and opened successfully")
 
                 # Extract data from image
                 text_data = extract_passport_data(image)
@@ -71,18 +101,17 @@ class UploadMultipleBase64ImagesView(APIView):
                     'status': 'success',
                     'extracted_data': text_data
                 })
-                logging.info(f"[{index}] Data extracted successfully")
 
             except Exception as e:
-                logger.error(f"[{index}] Failed to decode image: {str(e)}")
+                logger.error(f"[{index}] Failed to process image: {str(e)}")
                 extracted_results.append({
                     'index': index,
                     'status': 'error',
                     'message': str(e)
                 })
-        logger.info("All images processed")
-        return Response({'results': extracted_results}, status=status.HTTP_200_OK)
-    
+
+        logger.info("All uploaded image files processed")
+        return Response({'results': extracted_results}, status=status.HTTP_200_OK)    
 
 
 import base64
@@ -99,43 +128,34 @@ class ComparePassportOCRView(APIView):
     def post(self, request, *args, **kwargs):
         print("Received request to OCR comparison")
 
-        base64_image = request.data.get("images_base64")
-        passport_file = request.FILES.get("passport_file")  # ✅ uncommented and added back
+        passport_file = request.FILES.get("passport_image")
 
+        if not passport_file:
+            return Response(
+                {"error": "passport_image is required"},
+                status=status.HTTP_400_BAD_REQUEST
+            )
 
-        if not passport_file and not base64_image:
-            return Response({"error": "passport_file or images_base64 is required"}, status=status.HTTP_400_BAD_REQUEST)
+        try:
+            image = Image.open(passport_file)
+        except Exception as e:
+            return Response(
+                {"error": "Uploaded file is not a valid image", "details": str(e)},
+                status=status.HTTP_400_BAD_REQUEST
+            )
 
-        # Convert base64 to PIL.Image
-        if base64_image:
-            try:
-                if "," in base64_image:
-                    base64_image = base64_image.split(",")[1]
-
-                image_data = base64.b64decode(base64_image)
-                image = Image.open(io.BytesIO(image_data))
-                passport_file = image  # Now this is PIL.Image
-            except Exception as e:
-                return Response({"error": "Invalid base64 image", "details": str(e)}, status=status.HTTP_400_BAD_REQUEST)
-
-        elif passport_file:
-            try:
-                image = Image.open(passport_file)
-                passport_file = image
-            except Exception as e:
-                return Response({"error": "Uploaded file is not a valid image", "details": str(e)}, status=status.HTTP_400_BAD_REQUEST)
-
-        # Now passport_file is PIL.Image — safe to pass
+        # Extract using two different OCR engines (Dummy examples below)
         original_flag = os.environ.get("TESSERACT_OCT", "")
         try:
             os.environ["TESSERACT_OCT"] = "true"
-            tesseract_data = extract_passport_data(passport_file)
+            tesseract_data = extract_passport_data(image)
 
             os.environ["TESSERACT_OCT"] = "false"
-            passporteye_data = extract_passport_data(passport_file)
+            passporteye_data = extract_passport_data(image)
         finally:
             os.environ["TESSERACT_OCT"] = original_flag
 
+        # Compare fields
         comparison = {}
         all_keys = set(tesseract_data.keys()) | set(passporteye_data.keys())
         for key in all_keys:
@@ -144,14 +164,13 @@ class ComparePassportOCRView(APIView):
             is_match = val1.lower() == val2.lower()
             similarity = difflib.SequenceMatcher(None, val1, val2).ratio()
             comparison[key] = {
-                "tesseract": val1,
-                "passporteye": val2,
+                "ocr_date_1": val1,
+                "ocr_date_2": val2,
                 "match": is_match,
                 "similarity": round(similarity, 2)
             }
 
         return Response({"comparison_result": comparison}, status=status.HTTP_200_OK)
-
 # views.py
 
 import base64
@@ -181,19 +200,21 @@ def normalize_data(input_data, to_lang="en"):
 
 class CrossLanguagePassportCompareAPIView(APIView):
     def post(self, request, *args, **kwargs):
-        base64_image = request.data.get("images_base64")
+        uploaded_file = request.FILES.get("passport_image")
+        # print(uploaded_file,"<---------------------------------- uploaded_file")
+        if not uploaded_file:
+            return Response({"error": "passport_image is required"}, status=status.HTTP_400_BAD_REQUEST)
 
-        if not base64_image:
-            return Response({"error": "images_base64 is required"}, status=status.HTTP_400_BAD_REQUEST)
-
-        # Convert base64 to PIL.Image
         try:
-            if "," in base64_image:
-                base64_image = base64_image.split(",")[1]
-            image_data = base64.b64decode(base64_image)
-            image = Image.open(io.BytesIO(image_data))
+            image = Image.open(uploaded_file).convert("RGB")
         except Exception as e:
-            return Response({"error": "Invalid base64 image", "details": str(e)}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"error": "Invalid image file", "details": str(e)}, status=400)
+
+
+        with tempfile.NamedTemporaryFile(suffix=".jpg", delete=False) as temp_file:
+            image.save(temp_file, format="JPEG")
+            temp_path = temp_file.name
+
 
         # Extract Arabic and English separately using env flags (mocking logic)
         original_flag = os.environ.get("TESSERACT_OCT", "")
@@ -234,6 +255,8 @@ class CrossLanguagePassportCompareAPIView(APIView):
             "note": "Arabic ↔ English OCR verification completed"
         }, status=status.HTTP_200_OK)
 
+import os
+os.environ['TESSDATA_PREFIX'] = '/usr/share/tesseract-ocr/5/'
 
 
 import base64
@@ -248,29 +271,24 @@ from rest_framework import status
 
 class CrossLanguage_Passport_CompareAPIView(APIView):
     def post(self, request, *args, **kwargs):
-        base64_image = request.data.get("images_base64")
+        uploaded_file = request.FILES.get("passport_image")
 
-        if not base64_image:
-            return Response({"error": "images_base64 is required"}, status=status.HTTP_400_BAD_REQUEST)
+        if not uploaded_file:
+            return Response({"error": "passport_image is required"}, status=status.HTTP_400_BAD_REQUEST)
 
         try:
-            # Strip base64 header if present
-            if "," in base64_image:
-                base64_image = base64_image.split(",")[1]
-
-            # Decode and convert to image
-            image_data = base64.b64decode(base64_image)
-            image = Image.open(io.BytesIO(image_data)).convert("RGB")
+            # Convert uploaded file to RGB image
+            image = Image.open(uploaded_file).convert("RGB")
         except Exception as e:
-            return Response({"error": "Invalid base64 image", "details": str(e)}, status=400)
+            return Response({"error": "Invalid image file", "details": str(e)}, status=400)
 
         try:
-            # Save image to temp file
+            # Save to temp file
             with tempfile.NamedTemporaryFile(suffix=".jpg", delete=False) as temp_file:
                 image.save(temp_file, format="JPEG")
                 temp_path = temp_file.name
 
-            # MRZ extraction using passporteye
+            # Extract MRZ
             mrz = read_mrz(temp_path)
             mrz_data = mrz.to_dict() if mrz else {}
 
@@ -280,11 +298,10 @@ class CrossLanguage_Passport_CompareAPIView(APIView):
                 surname = mrz_data.get("surname", "")
                 english_name = f"{given_names} {surname}".strip()
 
-            # Arabic text extraction using pytesseract
+            # Extract Arabic text using Tesseract
             arabic_text = pytesseract.image_to_string(image, lang="ara").strip()
 
-            # Basic check for Arabic word "name" in text
-            arabic_keywords = ["الاسم", "اسم", "اللقب"]  # try to cover more keywords
+            arabic_keywords = ["الاسم", "اسم", "اللقب"]
             arabic_name_found = any(keyword in arabic_text for keyword in arabic_keywords)
 
             result = {
@@ -299,6 +316,7 @@ class CrossLanguage_Passport_CompareAPIView(APIView):
 
         except Exception as e:
             return Response({"error": "Processing failed", "details": str(e)}, status=500)
+        
 
 
 # class Overall_CompareAPIView(APIView):
@@ -403,23 +421,24 @@ def extract_probable_arabic_address(arabic_text):
 
 class Overall_CompareAPIView(APIView):
     def post(self, request, *args, **kwargs):
-        base64_image = request.data.get("images_base64")
+        uploaded_file = request.FILES.get("passport_image")
+        print(uploaded_file,"<---------------------------------- uploaded_file")
+        if not uploaded_file:
+            return Response({"error": "passport_image is required"}, status=status.HTTP_400_BAD_REQUEST)
 
-        if not base64_image:
-            return Response({"error": "images_base64 is required"}, status=status.HTTP_400_BAD_REQUEST)
+        # Set Tesseract path (once)
+        os.environ['TESSDATA_PREFIX'] = '/usr/share/tesseract-ocr/5/'
 
         try:
-            if "," in base64_image:
-                base64_image = base64_image.split(",")[1]
-            image_data = base64.b64decode(base64_image)
-            image = Image.open(io.BytesIO(image_data)).convert("RGB")
+            image = Image.open(uploaded_file).convert("RGB")
         except Exception as e:
-            return Response({"error": "Invalid base64 image", "details": str(e)}, status=400)
+            return Response({"error": "Invalid image file", "details": str(e)}, status=400)
 
         try:
             with tempfile.NamedTemporaryFile(suffix=".jpg", delete=False) as temp_file:
                 image.save(temp_file, format="JPEG")
                 temp_path = temp_file.name
+
 
             # 1. MRZ Extraction
             mrz_obj = read_mrz(temp_path)
@@ -456,37 +475,145 @@ class Overall_CompareAPIView(APIView):
             return Response({"error": "Processing failed", "details": str(e)}, status=500)
 
 
+# class MergedPassportCompareAPIView(APIView):
+#     def post(self, request, *args, **kwargs):
+#         # base64_image = request.data.get("images_base64")
+#         uploaded_file = request.FILES.get("passport_image")
+
+#         if not uploaded_file:
+#             return Response({"error": "passport_image is required"}, status=status.HTTP_400_BAD_REQUEST)
+
+#         # Step 1: Convert image from base64
+#         try:
+#             image = Image.open(uploaded_file)
+
+#             # Save image to a BytesIO buffer
+#             buffered = io.BytesIO()
+#             image.save(buffered, format="JPEG")
+#             buffered.seek(0)
+
+#         except Exception as e:
+#             return Response({"error": "Invalid base64 image", "details": str(e)}, status=400)
+
+#         # -----------------------------
+#         # Step 2: Cross Language Compare
+#         # -----------------------------
+#         try:
+#             # Set env for Arabic OCR
+#             original_flag = os.environ.get("TESSERACT_OCT", "")
+#             os.environ["TESSERACT_OCT"] = "true"
+#             arabic_data = extract_passport_data(image)
+
+#             # Set env for English OCR
+#             os.environ["TESSERACT_OCT"] = "false"
+#             english_data = extract_passport_data(image)
+#             os.environ["TESSERACT_OCT"] = original_flag
+
+#             # Merge comparison result
+#             comparison_result = {}
+#             all_keys = set(english_data.keys()) | set(arabic_data.keys())
+#             for key in all_keys:
+#                 en_val = str(english_data.get(key, "") or "").strip()
+#                 ar_val = str(arabic_data.get(key, "") or "").strip()
+
+#                 translated_ar_key = translate_key_to_english(key)
+#                 translated_en_key = translate_key_to_arabic(key)
+
+#                 similarity = difflib.SequenceMatcher(None, en_val.lower(), ar_val.lower()).ratio()
+
+#                 comparison_result[key] = {
+#                     "english_value": en_val,
+#                     "arabic_value": ar_val,
+#                     "similarity": round(similarity, 2),
+#                     "english_field": translated_en_key,
+#                     "arabic_field": translated_ar_key,
+#                     "match": en_val.lower() == ar_val.lower()
+#                 }
+
+#         except Exception as e:
+#             return Response({"error": "Cross language OCR failed", "details": str(e)}, status=500)
+
+#         # -----------------------------
+#         # Step 3: MRZ and Arabic OCR block
+#         # -----------------------------
+#         try:
+#             with tempfile.NamedTemporaryFile(suffix=".jpg", delete=False) as temp_file:
+#                 image.save(temp_file, format="JPEG")
+#                 temp_path = temp_file.name
+
+#             # MRZ
+#             mrz_obj = read_mrz(temp_path)
+#             mrz_data = mrz_obj.to_dict() if mrz_obj else {}
+
+#             if "date_of_birth" in mrz_data:
+#                 mrz_data["date_of_birth"] = format_date(mrz_data["date_of_birth"])
+#             if "expiration_date" in mrz_data:
+#                 mrz_data["expiration_date"] = format_date(mrz_data["expiration_date"])
+
+#             # Arabic OCR and translation
+#             arabic_text = pytesseract.image_to_string(image, lang="ara").strip()
+#             translated_text = GoogleTranslator(source='ar', target='en').translate(arabic_text)
+#             address_line = extract_probable_arabic_address(arabic_text)
+
+#         except Exception as e:
+#             return Response({"error": "MRZ or OCR processing failed", "details": str(e)}, status=500)
+
+#         # Final merged result
+#         final_result = {
+#             "mrz_data": {
+#                 **mrz_data,
+#                 "arabic_address": address_line
+#             },
+#             "OCR_data": parse_passporteye_object(mrz_obj, address=address_line),
+#             "comparison_result": comparison_result,
+#             "arabic_ocr_text": arabic_text,
+#             "translated_english_text": translated_text
+#         }
+
+#         return Response(final_result, status=200)
+
+
+
 class MergedPassportCompareAPIView(APIView):
     def post(self, request, *args, **kwargs):
-        base64_image = request.data.get("images_base64")
+        uploaded_file = request.FILES.get("passport_image")
+        if not uploaded_file:
+            return Response({"error": "passport_image is required"}, status=status.HTTP_400_BAD_REQUEST)
 
-        if not base64_image:
-            return Response({"error": "images_base64 is required"}, status=status.HTTP_400_BAD_REQUEST)
+        # Set Tesseract path (once)
+        os.environ['TESSDATA_PREFIX'] = '/usr/share/tesseract-ocr/5/'
 
-        # Step 1: Convert image from base64
         try:
-            if "," in base64_image:
-                base64_image = base64_image.split(",")[1]
-            image_data = base64.b64decode(base64_image)
-            image = Image.open(io.BytesIO(image_data)).convert("RGB")
+            image = Image.open(uploaded_file).convert("RGB")
         except Exception as e:
-            return Response({"error": "Invalid base64 image", "details": str(e)}, status=400)
+            return Response({"error": "Invalid image file", "details": str(e)}, status=400)
 
-        # -----------------------------
-        # Step 2: Cross Language Compare
-        # -----------------------------
+        # Step 1: Get Arabic OCR text early to reuse
         try:
-            # Set env for Arabic OCR
+            arabic_text = pytesseract.image_to_string(image, lang="ara").strip()
+        except Exception as e:
+            return Response({"error": "Arabic OCR failed", "details": str(e)}, status=500)
+
+        # Step 2: Translate Arabic text (optional)
+        translated_text = ""
+        if request.query_params.get("translate", "true").lower() == "true":
+            try:
+                with ThreadPoolExecutor() as executor:
+                    future = executor.submit(GoogleTranslator(source='ar', target='en').translate, arabic_text)
+                    translated_text = future.result()
+            except Exception as e:
+                translated_text = "Translation failed: " + str(e)
+
+        # Step 3: Cross Language OCR Compare
+        try:
             original_flag = os.environ.get("TESSERACT_OCT", "")
             os.environ["TESSERACT_OCT"] = "true"
             arabic_data = extract_passport_data(image)
 
-            # Set env for English OCR
             os.environ["TESSERACT_OCT"] = "false"
             english_data = extract_passport_data(image)
             os.environ["TESSERACT_OCT"] = original_flag
 
-            # Merge comparison result
             comparison_result = {}
             all_keys = set(english_data.keys()) | set(arabic_data.keys())
             for key in all_keys:
@@ -510,15 +637,12 @@ class MergedPassportCompareAPIView(APIView):
         except Exception as e:
             return Response({"error": "Cross language OCR failed", "details": str(e)}, status=500)
 
-        # -----------------------------
-        # Step 3: MRZ and Arabic OCR block
-        # -----------------------------
+        # Step 4: MRZ + Address Extraction
         try:
             with tempfile.NamedTemporaryFile(suffix=".jpg", delete=False) as temp_file:
                 image.save(temp_file, format="JPEG")
                 temp_path = temp_file.name
 
-            # MRZ
             mrz_obj = read_mrz(temp_path)
             mrz_data = mrz_obj.to_dict() if mrz_obj else {}
 
@@ -527,15 +651,12 @@ class MergedPassportCompareAPIView(APIView):
             if "expiration_date" in mrz_data:
                 mrz_data["expiration_date"] = format_date(mrz_data["expiration_date"])
 
-            # Arabic OCR and translation
-            arabic_text = pytesseract.image_to_string(image, lang="ara").strip()
-            translated_text = GoogleTranslator(source='ar', target='en').translate(arabic_text)
             address_line = extract_probable_arabic_address(arabic_text)
 
         except Exception as e:
-            return Response({"error": "MRZ or OCR processing failed", "details": str(e)}, status=500)
+            return Response({"error": "MRZ or address processing failed", "details": str(e)}, status=500)
 
-        # Final merged result
+        # Final Response
         final_result = {
             "mrz_data": {
                 **mrz_data,

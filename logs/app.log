@@ -4547,3 +4547,939 @@ django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000
 2025-08-04 19:02:44,069 [DEBUG] urllib3.connectionpool: https://translate.google.com:443 "GET /m?tl=en&sl=ar&q=%D9%84%D8%A7%D9%82+%D9%84%D8%B7+111101%2F01111%D8%A6111+%2F+%D9%86%D8%B71+11+10101+%2F%2F%2F%D8%B1%D8%A7%D8%B1%D8%A7%D8%A8%2F.+%2F+%D9%85%D8%A6%D8%AD%D8%A7%D8%AB%D9%A1%E2%80%8F+%D8%A701+%D8%AB%D8%A7%D9%86%D8%A7+%D8%B7%D8%AA%D9%84%D8%BA1%0A%0A145300171715195%0A%0A%D8%AA%D8%B1%D9%85%D8%B9%D9%86%D8%A9%2F+%D9%85%D9%84%D9%84+%D8%A7%23%D8%A7%D8%B1%D9%88%D9%8A%D9%8A%D8%A7%2F+%D8%A8%D8%B1+%D8%A7%D8%A8%D8%B3%D9%8A%D8%B7%D8%A7%D8%B1+%D9%85%D9%84%D8%A7+%D8%A7%D8%A8%D9%81%D9%88%D9%85%D8%A9%D8%A7+%D8%AF%D9%85%D8%A7+%D9%8A%D9%87+%D8%B2%D8%A7%D9%8A%D8%A7+%D9%88+%D8%A7%D8%B3%D9%84%D8%B3%D8%A7%D9%85%D8%A7%D8%B3+%D8%AC%D8%B5%D9%8A%D8%B5+.+%D9%88%D8%AA%D8%B3%D8%A7%D8%B3%D9%8A%D8%B1%D8%A7%0A%0A3%D9%85+%D8%A7%D9%86%D8%A7+%D9%8A%D8%B3%0A%D8%A7%D8%B3%D8%A7%D8%AD%D8%B3%D9%83+%D9%86%D8%A7+%D8%B3%D9%84%D9%85%D9%88%D9%85%D9%88%D8%B3%D9%8A%D9%8A%0A01018%0A%0A%D8%A9%D8%AF%D8%B1%D9%88%D8%A7%D9%84%D8%A7+%D9%85%D8%B3%D8%AA%D8%B2%D9%86%D9%83%D8%A7%D8%AA%D9%87%D8%B5%D8%B3%D8%B3%D9%84%D8%A7+%D9%85%D8%B7%D9%84%0A1+%D9%8510+011208860%0A%0A%23%D8%A7%D8%AA%D9%84%D9%85+%D8%B9%D8%AA%D9%85%D8%A7+%D8%B1%D8%B2+%D9%8A%D8%AA%D9%84%D9%85+%D9%85%D8%AA%D9%85%0A%0A%D8%A7%D9%84%D8%AD+%D9%84%D8%A7%D8%B9+%C2%BB%D8%A7%0A%0A%D8%A7%D9%84%D9%85%D8%AA%D8%B3%D9%85%D9%8A%D8%B7+%D8%AE%D8%B3%D9%81+%D8%A8%D8%B1+%D8%A7%D8%B3%D8%A7%D8%B3%D8%A7%D8%A7%D8%B1%D9%85%D9%84%D8%A7+%D9%84%D9%85%D9%85%D9%85%D8%B5%D9%8A%D8%B7+%D9%85%D8%AA%D8%A7%D9%85+%D9%85%D9%83+%D9%85%D8%AA%D9%85%D8%AF%D8%A7%D8%B3+%D8%A7%D9%85%D8%B9+%D8%B3%D8%B1+%D9%85%D9%85%D8%B3%D8%AA%D8%B7%D8%A7%D9%85%D8%A7+%D8%A7%D9%87+%D8%B9%D9%86%D9%85%D8%A7%0A13837+6+06%D9%85+28%0A%D9%85%D8%A7%D9%85%D8%A7+%D9%85%D8%A7+%D9%86%D8%A7%D9%87+%D8%A7%D9%85%D9%8A%D9%85+%D9%85%D8%B1+%D9%84%D9%84%D9%85%D9%84%D9%8A%2F%D8%A7%D9%86%D8%B7%D9%85%D8%AA%D8%B7%D8%A7+%D8%A5%D9%86+%D8%B9%D9%85%D8%A7%D9%84+%D9%85%D8%B5%D9%85%D8%AA%D8%B3%D8%A7%D9%84%D9%8A%D8%B5%D8%A9%0A%0A%D9%84%D8%A7+%2C00108858+%D8%B9%0A%0A%D8%BA%D8%A7%D9%84%D9%85%D8%A7%D8%AA%D8%AF%D9%8A7+%D9%85%D9%85%D8%B3%D8%B7+%D9%88%D8%B1+%D9%85%D9%84%D9%85%D8%A7%D8%B3%D9%83+%D9%84+%D8%A8%D9%8A%D8%A7%D8%B6%D9%85%D8%B7%D8%B3%D9%85+%D9%8A%D9%85%D8%AA%D9%87%D8%A7+%E2%80%8E%D9%A0%E2%80%8F+%D9%85%D8%AA%D8%B9%D9%88%D8%A7%D9%81%D8%B7%D8%A7+%D9%85%D9%84+%D9%85%D9%84%D9%85%D8%AA%D8%A7%D9%8A%D9%85%D8%A7%D9%85%D8%B3%D9%85+%D9%85%D8%B1+%D9%85%D8%B3%D8%AA%D8%A9%D9%85%D9%87%D9%87%D8%A7+%D8%A7%D9%87+%D9%85%D8%A8%D9%8A%D9%82%D8%A7%0A8+%D8%B90+601%2F85800507+9+%D9%8805+22%0A%D8%AA%D9%84%D8%B9%D9%8A%D8%A9+%D9%85%D8%AF%D8%A7+%D9%85%D8%B1+%D8%A7%D9%85%D8%A7%D9%85%D8%AA+%D8%A8%D9%85%D8%B3%D8%B5%D8%B3%D9%88%D9%865+%D9%84%D8%A7%D9%85%D8%A7+%C2%AB%D9%85%D8%A7%D8%A7%D8%A8%D8%AC%D8%AA%D8%A8%D9%88%D8%B8+%D9%83%D8%A7%D9%84%D8%AA%D9%85%D8%A7%D9%84+%D8%A8%D8%B1+%D9%84%D8%B9%D8%A7+%D9%8A%D9%88%D8%A7%D9%88%D8%AA%D8%A7+%D9%84%D9%87+%D8%B9%D8%A7%D9%85%D8%B7%0A%0A100+%D9%85+%D8%A8%D9%85%D9%85%D9%85%D9%8A%D9%8A%D8%A7%D9%83+2029+0217+21%0A%0A-%D9%85%D8%AA%D8%AD%D8%AA%D8%AC%0A%0A%2B%3E%3E%E2%80%9C%3E%C2%BB%3E%E2%80%9C%C2%BB%3E%3E%3E%3E%3E%3E%3E%3E1110%3E6007101%3E+860+10%3E+%3E1+6010110+%C2%BB%3E+%D8%B7%D9%85%0A16057844376%C2%BB8607608287%2B1291021913877806%3E%3E%3E%3E%3E%3E00%D9%85 HTTP/1.1" 200 None
 2025-08-04 19:52:21,225 [WARNING] django.request: Not Found: /transfer_dec_details/3e0c5678-6f88-41c8-a193-91edaecf0ca0/
 2025-08-04 19:52:21,299 [WARNING] django.request: Not Found: /favicon.ico
+2025-08-04 22:19:37,817 [INFO] members.views: Logging started!
+2025-08-04 22:19:37,822 [INFO] members.views: Logging started!
+2025-08-04 22:19:37,827 [INFO] members.views: Logging started!
+2025-08-04 22:20:16,607 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-04 22:20:26,087 [INFO] members.views: Logging started!
+2025-08-04 22:23:37,408 [WARNING] django.request: Bad Request: /api/passport-merged-compare/
+2025-08-04 22:24:19,580 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-04 22:24:19,580 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-04 22:24:19,581 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-04 22:24:19,581 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-04 22:24:19,581 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-04 22:24:19,581 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-04 22:24:19,581 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-04 22:24:19,581 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-04 22:24:19,581 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-04 22:24:19,581 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-04 22:24:19,708 [DEBUG] PIL.Image: Importing AvifImagePlugin
+2025-08-04 22:24:19,708 [DEBUG] PIL.Image: Importing BlpImagePlugin
+2025-08-04 22:24:19,716 [DEBUG] PIL.Image: Importing BmpImagePlugin
+2025-08-04 22:24:19,716 [DEBUG] PIL.Image: Importing BufrStubImagePlugin
+2025-08-04 22:24:19,718 [DEBUG] PIL.Image: Importing CurImagePlugin
+2025-08-04 22:24:19,718 [DEBUG] PIL.Image: Importing DcxImagePlugin
+2025-08-04 22:24:19,722 [DEBUG] PIL.Image: Importing DdsImagePlugin
+2025-08-04 22:24:19,729 [DEBUG] PIL.Image: Importing EpsImagePlugin
+2025-08-04 22:24:19,729 [DEBUG] PIL.Image: Importing FitsImagePlugin
+2025-08-04 22:24:19,729 [DEBUG] PIL.Image: Importing FliImagePlugin
+2025-08-04 22:24:19,729 [DEBUG] PIL.Image: Importing FpxImagePlugin
+2025-08-04 22:24:19,729 [DEBUG] PIL.Image: Image: failed to import FpxImagePlugin: No module named 'olefile'
+2025-08-04 22:24:19,729 [DEBUG] PIL.Image: Importing FtexImagePlugin
+2025-08-04 22:24:19,729 [DEBUG] PIL.Image: Importing GbrImagePlugin
+2025-08-04 22:24:19,729 [DEBUG] PIL.Image: Importing GifImagePlugin
+2025-08-04 22:24:19,729 [DEBUG] PIL.Image: Importing GribStubImagePlugin
+2025-08-04 22:24:19,739 [DEBUG] PIL.Image: Importing Hdf5StubImagePlugin
+2025-08-04 22:24:19,739 [DEBUG] PIL.Image: Importing IcnsImagePlugin
+2025-08-04 22:24:19,739 [DEBUG] PIL.Image: Importing IcoImagePlugin
+2025-08-04 22:24:19,739 [DEBUG] PIL.Image: Importing ImImagePlugin
+2025-08-04 22:24:19,748 [DEBUG] PIL.Image: Importing ImtImagePlugin
+2025-08-04 22:24:19,749 [DEBUG] PIL.Image: Importing IptcImagePlugin
+2025-08-04 22:24:19,749 [DEBUG] PIL.Image: Importing JpegImagePlugin
+2025-08-04 22:24:19,749 [DEBUG] PIL.Image: Importing Jpeg2KImagePlugin
+2025-08-04 22:24:19,749 [DEBUG] PIL.Image: Importing McIdasImagePlugin
+2025-08-04 22:24:19,749 [DEBUG] PIL.Image: Importing MicImagePlugin
+2025-08-04 22:24:19,749 [DEBUG] PIL.Image: Image: failed to import MicImagePlugin: No module named 'olefile'
+2025-08-04 22:24:19,749 [DEBUG] PIL.Image: Importing MpegImagePlugin
+2025-08-04 22:24:19,749 [DEBUG] PIL.Image: Importing MpoImagePlugin
+2025-08-04 22:24:19,760 [DEBUG] PIL.Image: Importing MspImagePlugin
+2025-08-04 22:24:19,760 [DEBUG] PIL.Image: Importing PalmImagePlugin
+2025-08-04 22:24:19,760 [DEBUG] PIL.Image: Importing PcdImagePlugin
+2025-08-04 22:24:19,760 [DEBUG] PIL.Image: Importing PcxImagePlugin
+2025-08-04 22:24:19,760 [DEBUG] PIL.Image: Importing PdfImagePlugin
+2025-08-04 22:24:19,768 [DEBUG] PIL.Image: Importing PixarImagePlugin
+2025-08-04 22:24:19,768 [DEBUG] PIL.Image: Importing PngImagePlugin
+2025-08-04 22:24:19,768 [DEBUG] PIL.Image: Importing PpmImagePlugin
+2025-08-04 22:24:19,768 [DEBUG] PIL.Image: Importing PsdImagePlugin
+2025-08-04 22:24:19,768 [DEBUG] PIL.Image: Importing QoiImagePlugin
+2025-08-04 22:24:19,768 [DEBUG] PIL.Image: Importing SgiImagePlugin
+2025-08-04 22:24:19,768 [DEBUG] PIL.Image: Importing SpiderImagePlugin
+2025-08-04 22:24:19,782 [DEBUG] PIL.Image: Importing SunImagePlugin
+2025-08-04 22:24:19,784 [DEBUG] PIL.Image: Importing TgaImagePlugin
+2025-08-04 22:24:19,784 [DEBUG] PIL.Image: Importing TiffImagePlugin
+2025-08-04 22:24:19,784 [DEBUG] PIL.Image: Importing WebPImagePlugin
+2025-08-04 22:24:19,784 [DEBUG] PIL.Image: Importing WmfImagePlugin
+2025-08-04 22:24:19,790 [DEBUG] PIL.Image: Importing XbmImagePlugin
+2025-08-04 22:24:19,792 [DEBUG] PIL.Image: Importing XpmImagePlugin
+2025-08-04 22:24:19,792 [DEBUG] PIL.Image: Importing XVThumbImagePlugin
+2025-08-04 22:24:19,792 [DEBUG] pytesseract: ['tesseract', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_tm1yotqr.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_ozx6iwvb', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-08-04 22:24:20,112 [WARNING] easyocr.easyocr: Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-04 22:24:23,762 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-04 22:24:23,762 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-04 22:24:23,762 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-04 22:24:23,762 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-04 22:24:23,766 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-04 22:24:23,766 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-04 22:24:23,768 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-04 22:24:23,768 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-04 22:24:23,768 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-04 22:24:23,768 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-04 22:24:35,338 [INFO] members.utils.extract_passport_passport_eye: PassportEye + EasyOCR Extraction Complete
+2025-08-04 22:24:35,516 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-04 22:24:35,516 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-04 22:24:35,516 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-04 22:24:35,518 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-04 22:24:35,518 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-04 22:24:35,518 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-04 22:24:35,518 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-04 22:24:35,518 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-04 22:24:35,518 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-04 22:24:35,518 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-04 22:24:35,618 [DEBUG] pytesseract: ['tesseract', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_sh0r667_.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_5yk65yjh', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-08-04 22:24:35,952 [WARNING] easyocr.easyocr: Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-04 22:24:38,964 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-04 22:24:38,964 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-04 22:24:38,964 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-04 22:24:38,967 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-04 22:24:38,967 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-04 22:24:38,967 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-04 22:24:38,968 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-04 22:24:38,968 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-04 22:24:38,968 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-04 22:24:38,968 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-04 22:24:50,350 [INFO] members.utils.extract_passport_passport_eye: PassportEye + EasyOCR Extraction Complete
+2025-08-04 22:24:50,496 [DEBUG] pytesseract: ['tesseract', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_r06n468m.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_xsa7a_m2', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-08-04 22:24:50,838 [DEBUG] pytesseract: ['tesseract', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_ub_hj3u__input.JPEG', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_ub_hj3u_', '-l', 'ara', 'txt']
+2025-08-04 22:24:52,428 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-08-04 22:24:52,600 [DEBUG] urllib3.connectionpool: https://translate.google.com:443 "GET /m?tl=en&sl=ar&q=%D8%A7%D9%86%D8%AF%D8%B6+%D8%B9%D9%84%D8%B7+%D8%AA%D8%A7%D9%84%D8%A7%D9%88%D8%B2%D9%82%D8%A7%D9%86%29%D9%85%D9%86%D8%A7%D8%A7+%2F+%D9%86%D8%A7%D9%82%D8%AA%D8%A7+1%D9%84%D8%A7+%D8%A8%D9%82%D8%A7%D8%AA%D8%A7%D9%84%D8%B1%D8%A7%D8%B1%D8%A7%D8%B1%D8%A7%D8%A8%D8%A7.+%E2%80%8E%D9%A1%E2%80%8F+%D9%85%D9%86%D8%AD%D8%A7%D8%AA%D9%84%D9%A1%E2%80%8F+%D9%84%D8%A7+%D8%A7%D9%86%D8%AA%D9%86%D8%A7%D9%86%D8%A7+%D9%84%D8%B9%D8%B2%0A%0A580011%2F%2F151%2F135%2F%2F0%2F1%D9%8A%D8%B7%0A%0A%D9%88%D9%85%D9%8A%D9%86+%D9%85%D8%A7%D9%84+%23%D8%A7%D8%B1%D9%88%D9%8A%D9%88%D8%A7%2F+%D9%88%D8%B1+%D9%84%D8%B2%D9%8A%D8%A7+%D9%85%D8%A7+%D9%85%D8%A8%D9%81%D9%88%D8%B6%D8%A9%D8%A7+.+%D9%85%D9%82%D8%A7%D9%84+%D9%8A%D9%84+%D8%A7%D9%84%D8%B3%D8%A7%D9%81%D8%A7%D9%85%D8%A7%D8%A7+%D8%B9+%D8%A7%D8%B3%D9%84%D8%B3%D8%B7%D8%A7%D9%87%D8%A7%D8%B6%D9%89+%D8%B5%D8%B5%D8%B5+%D9%88%D8%A7%D8%B3%D8%A7%D8%B3%D8%B1%D9%8A%D8%A7%0A%0A3%D9%85+%D8%A8%22+%D8%B9%0A%D9%84%D9%81%D8%B3%D8%A7+%D9%86%D8%A7+%D8%B3%D9%8A%D8%A7%0A01018%0A%0A%D8%B5+%D9%8A%D9%88%D8%A7+%D9%85%D8%B3%D8%A7%D8%B2%D9%85%D9%8B%D8%A7%D8%AA%D9%88%D8%B5%D8%B3%D8%A7+%D9%85%D8%B7%D9%84%0A1+8%D9%8510+011208860%0A%0A%D8%A7%23%D9%84%D9%84%D9%84%D9%85+%D8%B3%D9%85%D8%A7+%D9%8A%D8%B1%D9%87+%29%D9%84%D8%A7%D9%85+%D9%85%D9%8A%D9%85%0A%0A%D8%A7%D9%84%D9%85+%D9%84%D8%A7%D8%B9+%C2%BB%D8%A7%0A%0A%D8%A7%D9%85%D8%AA%D8%AA%D8%B3%D9%85%D8%AF%D9%87%D8%B7+%23%D8%A7%D9%84%D8%B1%D9%85%D9%88%D8%A7%D8%B7%D8%A7+%D8%A8%D8%B1+%D8%A7%D9%87%D9%8A%D8%A7%D8%B1+%D9%85%D9%84%D8%A7+%D9%84%D9%85%D9%85%D9%85%D8%AF%D9%8A+%D9%85%D8%AA%D8%A7%D9%85+%D9%85%D9%83+%D9%85%D9%84%D8%A7%D8%B3+%D8%A7%D9%85%D8%B9+%D8%B3%D8%B1+%D9%85%D8%B3%D8%AA%D8%AA%D9%85%D8%A7%D8%B3%D8%A7+%D8%A7%D9%87+%D8%B9%D8%A7%D9%85%D8%B7%0A%0A18387+6+06%D9%85+28%0A%0A%D9%85%D9%85%D8%B3%D8%AA%D9%84%D8%A7+%D9%85%D9%83+%D8%AA%D9%85%D9%84%D8%A7%D9%87%D9%81%D8%A7%D9%85%D8%B9%D9%8A%D9%85+%D9%85%D8%B1+%D8%A7%D9%84%D9%85%D9%84%D9%85+%D8%B7%D8%A7%D9%85%D8%B7+%D8%A3%D9%87+%D8%B9%D9%85%D8%A7%D9%84+%23%D9%85%D9%85%D9%84%D9%85%D8%AA%D8%B3%D8%A7%D9%84%D9%8A%D8%AF%D8%A9%0A%0A%C2%BB%D8%A7+%2C0008858+%D8%B9%0A%0A%23%D9%84%D8%B5%D9%85%D8%B3%D8%A7%D9%8A%D8%AA%D8%AF%D9%857+%D9%85%D9%85%D9%8A%D9%8A%D8%B7%D8%A9+%D9%88%D8%B1+%D9%85%D9%84%D9%85%D9%84%D8%B3%D9%83%D9%85+%D9%86%D9%85%D8%B7%D9%85+%D9%88%D9%85%D8%AA%D9%88%D8%A7+%D9%85%D8%B7%D8%A7%D9%81+%D9%85%D9%84+%D9%85%D8%A7%D9%85%D8%AA%D8%A7%D9%8A%D8%A9%D9%85%D9%85%D8%A7%D9%85%D9%84%D9%8A%D8%B7%D9%85+%D9%85%D8%B1+%D9%85%D8%B3%D8%AA%D8%A7%D9%8A%D9%85%D9%8A%D8%B3%D9%85%D8%A7+%D8%A3%D9%87+%D8%B9%D9%84%D8%B7%D8%A7%0A%D8%B90+601%2F88108601+9+00685+2+.%0A%0A%D8%A8%D9%85%D9%88+%D8%B10%2F+%D8%B3%D8%B1+%D8%A8%D8%A7%D8%B3%D9%83+%D8%A8%D9%85%D8%B3%D8%B3%D9%85%D9%8A%D9%86%D8%A9+%D8%AC%D8%B3%D9%84%D8%A7%D9%85%D8%A7%D8%B2+%C2%AB%D9%85%D8%A7%D8%A7%D9%85%D8%AC%D8%AA%D8%A8%D9%88%D8%B8+%D9%84+%D8%B9%D9%85%D9%84%D8%A7+%D9%84%D8%A7%D9%82%D9%84+%D9%85%D8%B1+%C2%AB%D9%84%D9%85%D8%A7%D8%A8%D9%8A%D9%85%D8%A7%D9%88%D9%88%D8%A7+%D9%84%D9%87+%D8%B9%D8%A7%D9%85%D8%B7%0A%0A1+%D8%B9%D9%84+%23%D9%85%D8%B7%D9%85%D9%88%D8%B1%D8%A7%D9%83+9+027+21%0A%0A-%D9%85%D8%AA%D9%84%D8%AD%D8%AA%D8%AC%0A%0A4%3E%C2%BB%3E%2B%3E%3E%3E%D9%83%3E%3E%3E%3E600101%D9%85%3E1110%3E+60+1%3E%3E11108+86010110+%C2%BB%3E6%0A00%3E+%3E+%3E%D9%83%3E%3E%3E6057844376%C2%BB8607608287%2B1291021913877806%D8%A7%D9%85 HTTP/1.1" 200 None
+2025-08-04 22:28:39,250 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-04 22:28:48,807 [INFO] members.views: Logging started!
+2025-08-04 22:30:24,692 [DEBUG] pytesseract: ['tesseract', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_c24ggk6k_input.PNG', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_c24ggk6k', '-l', 'ara', 'txt']
+2025-08-04 22:30:26,550 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-04 22:30:26,551 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-04 22:30:26,551 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-04 22:30:26,551 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-04 22:30:26,551 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-04 22:30:26,551 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-04 22:30:26,551 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-04 22:30:26,552 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-04 22:30:26,552 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-04 22:30:26,552 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-04 22:30:26,676 [DEBUG] PIL.Image: Importing AvifImagePlugin
+2025-08-04 22:30:26,676 [DEBUG] PIL.Image: Importing BlpImagePlugin
+2025-08-04 22:30:26,689 [DEBUG] PIL.Image: Importing BmpImagePlugin
+2025-08-04 22:30:26,689 [DEBUG] PIL.Image: Importing BufrStubImagePlugin
+2025-08-04 22:30:26,689 [DEBUG] PIL.Image: Importing CurImagePlugin
+2025-08-04 22:30:26,689 [DEBUG] PIL.Image: Importing DcxImagePlugin
+2025-08-04 22:30:26,696 [DEBUG] PIL.Image: Importing DdsImagePlugin
+2025-08-04 22:30:26,705 [DEBUG] PIL.Image: Importing EpsImagePlugin
+2025-08-04 22:30:26,706 [DEBUG] PIL.Image: Importing FitsImagePlugin
+2025-08-04 22:30:26,706 [DEBUG] PIL.Image: Importing FliImagePlugin
+2025-08-04 22:30:26,712 [DEBUG] PIL.Image: Importing FpxImagePlugin
+2025-08-04 22:30:26,713 [DEBUG] PIL.Image: Image: failed to import FpxImagePlugin: No module named 'olefile'
+2025-08-04 22:30:26,713 [DEBUG] PIL.Image: Importing FtexImagePlugin
+2025-08-04 22:30:26,716 [DEBUG] PIL.Image: Importing GbrImagePlugin
+2025-08-04 22:30:26,716 [DEBUG] PIL.Image: Importing GifImagePlugin
+2025-08-04 22:30:26,716 [DEBUG] PIL.Image: Importing GribStubImagePlugin
+2025-08-04 22:30:26,716 [DEBUG] PIL.Image: Importing Hdf5StubImagePlugin
+2025-08-04 22:30:26,716 [DEBUG] PIL.Image: Importing IcnsImagePlugin
+2025-08-04 22:30:26,722 [DEBUG] PIL.Image: Importing IcoImagePlugin
+2025-08-04 22:30:26,722 [DEBUG] PIL.Image: Importing ImImagePlugin
+2025-08-04 22:30:26,726 [DEBUG] PIL.Image: Importing ImtImagePlugin
+2025-08-04 22:30:26,730 [DEBUG] PIL.Image: Importing IptcImagePlugin
+2025-08-04 22:30:26,730 [DEBUG] PIL.Image: Importing JpegImagePlugin
+2025-08-04 22:30:26,730 [DEBUG] PIL.Image: Importing Jpeg2KImagePlugin
+2025-08-04 22:30:26,730 [DEBUG] PIL.Image: Importing McIdasImagePlugin
+2025-08-04 22:30:26,730 [DEBUG] PIL.Image: Importing MicImagePlugin
+2025-08-04 22:30:26,730 [DEBUG] PIL.Image: Image: failed to import MicImagePlugin: No module named 'olefile'
+2025-08-04 22:30:26,730 [DEBUG] PIL.Image: Importing MpegImagePlugin
+2025-08-04 22:30:26,736 [DEBUG] PIL.Image: Importing MpoImagePlugin
+2025-08-04 22:30:26,739 [DEBUG] PIL.Image: Importing MspImagePlugin
+2025-08-04 22:30:26,739 [DEBUG] PIL.Image: Importing PalmImagePlugin
+2025-08-04 22:30:26,746 [DEBUG] PIL.Image: Importing PcdImagePlugin
+2025-08-04 22:30:26,746 [DEBUG] PIL.Image: Importing PcxImagePlugin
+2025-08-04 22:30:26,746 [DEBUG] PIL.Image: Importing PdfImagePlugin
+2025-08-04 22:30:26,756 [DEBUG] PIL.Image: Importing PixarImagePlugin
+2025-08-04 22:30:26,756 [DEBUG] PIL.Image: Importing PngImagePlugin
+2025-08-04 22:30:26,756 [DEBUG] PIL.Image: Importing PpmImagePlugin
+2025-08-04 22:30:26,756 [DEBUG] PIL.Image: Importing PsdImagePlugin
+2025-08-04 22:30:26,763 [DEBUG] PIL.Image: Importing QoiImagePlugin
+2025-08-04 22:30:26,763 [DEBUG] PIL.Image: Importing SgiImagePlugin
+2025-08-04 22:30:26,766 [DEBUG] PIL.Image: Importing SpiderImagePlugin
+2025-08-04 22:30:26,766 [DEBUG] PIL.Image: Importing SunImagePlugin
+2025-08-04 22:30:26,766 [DEBUG] PIL.Image: Importing TgaImagePlugin
+2025-08-04 22:30:26,766 [DEBUG] PIL.Image: Importing TiffImagePlugin
+2025-08-04 22:30:26,766 [DEBUG] PIL.Image: Importing WebPImagePlugin
+2025-08-04 22:30:26,771 [DEBUG] PIL.Image: Importing WmfImagePlugin
+2025-08-04 22:30:26,771 [DEBUG] PIL.Image: Importing XbmImagePlugin
+2025-08-04 22:30:26,776 [DEBUG] PIL.Image: Importing XpmImagePlugin
+2025-08-04 22:30:26,779 [DEBUG] PIL.Image: Importing XVThumbImagePlugin
+2025-08-04 22:30:26,779 [DEBUG] pytesseract: ['tesseract', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_jbpw14uv.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_fo6s6qc_', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-08-04 22:30:27,178 [WARNING] easyocr.easyocr: Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-04 22:30:31,413 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-04 22:30:31,413 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-04 22:30:31,413 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-04 22:30:31,413 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-04 22:30:31,415 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-04 22:30:31,415 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-04 22:30:31,416 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-04 22:30:31,416 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-04 22:30:31,416 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-04 22:30:31,416 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-04 22:30:43,981 [INFO] members.utils.extract_passport_passport_eye: PassportEye + EasyOCR Extraction Complete
+2025-08-04 22:30:44,176 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-04 22:30:44,176 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-04 22:30:44,176 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-04 22:30:44,176 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-04 22:30:44,176 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-04 22:30:44,176 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-04 22:30:44,181 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-04 22:30:44,181 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-04 22:30:44,181 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-04 22:30:44,181 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-04 22:30:44,305 [DEBUG] pytesseract: ['tesseract', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_i52mj42n.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_o66eg35t', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-08-04 22:30:44,631 [WARNING] easyocr.easyocr: Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-04 22:30:47,382 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-04 22:30:47,382 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-04 22:30:47,382 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-04 22:30:47,386 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-04 22:30:47,386 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-04 22:30:47,386 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-04 22:30:47,386 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-04 22:30:47,388 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-04 22:30:47,388 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-04 22:30:47,388 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-04 22:30:58,720 [INFO] members.utils.extract_passport_passport_eye: PassportEye + EasyOCR Extraction Complete
+2025-08-04 22:30:58,903 [DEBUG] pytesseract: ['tesseract', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_i7uwu706.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_qqr49wmo', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-08-04 22:31:45,427 [INFO] members.views: Logging started!
+2025-08-04 22:31:48,927 [DEBUG] pytesseract: ['tesseract', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_b4b0kxy5_input.PNG', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_b4b0kxy5', '-l', 'ara', 'txt']
+2025-08-04 22:31:51,006 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-04 22:31:51,006 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-04 22:31:51,006 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-04 22:31:51,006 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-04 22:31:51,006 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-04 22:31:51,006 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-04 22:31:51,006 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-04 22:31:51,006 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-04 22:31:51,006 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-04 22:31:51,006 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-04 22:31:51,141 [DEBUG] PIL.Image: Importing AvifImagePlugin
+2025-08-04 22:31:51,146 [DEBUG] PIL.Image: Importing BlpImagePlugin
+2025-08-04 22:31:51,147 [DEBUG] PIL.Image: Importing BmpImagePlugin
+2025-08-04 22:31:51,147 [DEBUG] PIL.Image: Importing BufrStubImagePlugin
+2025-08-04 22:31:51,149 [DEBUG] PIL.Image: Importing CurImagePlugin
+2025-08-04 22:31:51,152 [DEBUG] PIL.Image: Importing DcxImagePlugin
+2025-08-04 22:31:51,156 [DEBUG] PIL.Image: Importing DdsImagePlugin
+2025-08-04 22:31:51,157 [DEBUG] PIL.Image: Importing EpsImagePlugin
+2025-08-04 22:31:51,157 [DEBUG] PIL.Image: Importing FitsImagePlugin
+2025-08-04 22:31:51,157 [DEBUG] PIL.Image: Importing FliImagePlugin
+2025-08-04 22:31:51,157 [DEBUG] PIL.Image: Importing FpxImagePlugin
+2025-08-04 22:31:51,166 [DEBUG] PIL.Image: Image: failed to import FpxImagePlugin: No module named 'olefile'
+2025-08-04 22:31:51,166 [DEBUG] PIL.Image: Importing FtexImagePlugin
+2025-08-04 22:31:51,166 [DEBUG] PIL.Image: Importing GbrImagePlugin
+2025-08-04 22:31:51,166 [DEBUG] PIL.Image: Importing GifImagePlugin
+2025-08-04 22:31:51,166 [DEBUG] PIL.Image: Importing GribStubImagePlugin
+2025-08-04 22:31:51,166 [DEBUG] PIL.Image: Importing Hdf5StubImagePlugin
+2025-08-04 22:31:51,166 [DEBUG] PIL.Image: Importing IcnsImagePlugin
+2025-08-04 22:31:51,166 [DEBUG] PIL.Image: Importing IcoImagePlugin
+2025-08-04 22:31:51,180 [DEBUG] PIL.Image: Importing ImImagePlugin
+2025-08-04 22:31:51,186 [DEBUG] PIL.Image: Importing ImtImagePlugin
+2025-08-04 22:31:51,189 [DEBUG] PIL.Image: Importing IptcImagePlugin
+2025-08-04 22:31:51,191 [DEBUG] PIL.Image: Importing JpegImagePlugin
+2025-08-04 22:31:51,192 [DEBUG] PIL.Image: Importing Jpeg2KImagePlugin
+2025-08-04 22:31:51,192 [DEBUG] PIL.Image: Importing McIdasImagePlugin
+2025-08-04 22:31:51,193 [DEBUG] PIL.Image: Importing MicImagePlugin
+2025-08-04 22:31:51,196 [DEBUG] PIL.Image: Image: failed to import MicImagePlugin: No module named 'olefile'
+2025-08-04 22:31:51,196 [DEBUG] PIL.Image: Importing MpegImagePlugin
+2025-08-04 22:31:51,198 [DEBUG] PIL.Image: Importing MpoImagePlugin
+2025-08-04 22:31:51,205 [DEBUG] PIL.Image: Importing MspImagePlugin
+2025-08-04 22:31:51,206 [DEBUG] PIL.Image: Importing PalmImagePlugin
+2025-08-04 22:31:51,206 [DEBUG] PIL.Image: Importing PcdImagePlugin
+2025-08-04 22:31:51,206 [DEBUG] PIL.Image: Importing PcxImagePlugin
+2025-08-04 22:31:51,206 [DEBUG] PIL.Image: Importing PdfImagePlugin
+2025-08-04 22:31:51,206 [DEBUG] PIL.Image: Importing PixarImagePlugin
+2025-08-04 22:31:51,221 [DEBUG] PIL.Image: Importing PngImagePlugin
+2025-08-04 22:31:51,221 [DEBUG] PIL.Image: Importing PpmImagePlugin
+2025-08-04 22:31:51,221 [DEBUG] PIL.Image: Importing PsdImagePlugin
+2025-08-04 22:31:51,221 [DEBUG] PIL.Image: Importing QoiImagePlugin
+2025-08-04 22:31:51,226 [DEBUG] PIL.Image: Importing SgiImagePlugin
+2025-08-04 22:31:51,227 [DEBUG] PIL.Image: Importing SpiderImagePlugin
+2025-08-04 22:31:51,228 [DEBUG] PIL.Image: Importing SunImagePlugin
+2025-08-04 22:31:51,229 [DEBUG] PIL.Image: Importing TgaImagePlugin
+2025-08-04 22:31:51,229 [DEBUG] PIL.Image: Importing TiffImagePlugin
+2025-08-04 22:31:51,229 [DEBUG] PIL.Image: Importing WebPImagePlugin
+2025-08-04 22:31:51,229 [DEBUG] PIL.Image: Importing WmfImagePlugin
+2025-08-04 22:31:51,229 [DEBUG] PIL.Image: Importing XbmImagePlugin
+2025-08-04 22:31:51,236 [DEBUG] PIL.Image: Importing XpmImagePlugin
+2025-08-04 22:31:51,236 [DEBUG] PIL.Image: Importing XVThumbImagePlugin
+2025-08-04 22:31:51,236 [DEBUG] pytesseract: ['tesseract', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_x45csajr.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_5fsln_dm', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-08-04 22:31:51,569 [WARNING] easyocr.easyocr: Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-04 22:31:55,116 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-04 22:31:55,116 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-04 22:31:55,116 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-04 22:31:55,118 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-04 22:31:55,118 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-04 22:31:55,118 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-04 22:31:55,120 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-04 22:31:55,120 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-04 22:31:55,120 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-04 22:31:55,120 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-04 22:32:08,182 [INFO] members.utils.extract_passport_passport_eye: PassportEye + EasyOCR Extraction Complete
+2025-08-04 22:32:08,376 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-04 22:32:08,376 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-04 22:32:08,376 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-04 22:32:08,376 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-04 22:32:08,376 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-04 22:32:08,376 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-04 22:32:08,376 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-04 22:32:08,376 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-04 22:32:08,376 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-04 22:32:08,376 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-04 22:32:08,533 [DEBUG] pytesseract: ['tesseract', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_jmhgm55f.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_fifio_nm', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-08-04 22:32:08,958 [WARNING] easyocr.easyocr: Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-04 22:32:12,320 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-04 22:32:12,320 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-04 22:32:12,320 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-04 22:32:12,320 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-04 22:32:12,320 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-04 22:32:12,320 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-04 22:32:12,320 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-04 22:32:12,325 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-04 22:32:12,325 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-04 22:32:12,326 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-04 22:32:24,456 [INFO] members.utils.extract_passport_passport_eye: PassportEye + EasyOCR Extraction Complete
+2025-08-04 22:32:24,606 [DEBUG] pytesseract: ['tesseract', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_fp5j4q4n.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_98bt6_2e', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-08-04 22:34:06,961 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-04 22:34:17,878 [INFO] members.views: Logging started!
+2025-08-05 08:11:23,987 [INFO] members.views: Logging started!
+2025-08-05 08:11:33,187 [ERROR] django.request: Internal Server Error: /api/Overall_api/
+2025-08-05 08:13:36,649 [ERROR] django.request: Internal Server Error: /api/Overall_api/
+2025-08-05 08:18:20,301 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-05 08:18:42,311 [INFO] members.views: Logging started!
+2025-08-05 08:20:37,978 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-05 08:21:00,884 [INFO] members.views: Logging started!
+2025-08-05 08:26:49,254 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-05 08:27:31,879 [INFO] members.views: Logging started!
+2025-08-05 08:27:37,783 [ERROR] django.request: Internal Server Error: /api/Overall_api/
+2025-08-05 08:29:56,999 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-05 08:30:19,094 [INFO] members.views: Logging started!
+2025-08-05 08:30:39,557 [DEBUG] PIL.Image: Importing AvifImagePlugin
+2025-08-05 08:30:39,741 [DEBUG] PIL.Image: Importing BlpImagePlugin
+2025-08-05 08:30:39,754 [DEBUG] PIL.Image: Importing BmpImagePlugin
+2025-08-05 08:30:39,754 [DEBUG] PIL.Image: Importing BufrStubImagePlugin
+2025-08-05 08:30:39,756 [DEBUG] PIL.Image: Importing CurImagePlugin
+2025-08-05 08:30:39,759 [DEBUG] PIL.Image: Importing DcxImagePlugin
+2025-08-05 08:30:39,768 [DEBUG] PIL.Image: Importing DdsImagePlugin
+2025-08-05 08:30:39,783 [DEBUG] PIL.Image: Importing EpsImagePlugin
+2025-08-05 08:30:39,789 [DEBUG] PIL.Image: Importing FitsImagePlugin
+2025-08-05 08:30:39,792 [DEBUG] PIL.Image: Importing FliImagePlugin
+2025-08-05 08:30:39,795 [DEBUG] PIL.Image: Importing FpxImagePlugin
+2025-08-05 08:30:39,804 [DEBUG] PIL.Image: Image: failed to import FpxImagePlugin: No module named 'olefile'
+2025-08-05 08:30:39,804 [DEBUG] PIL.Image: Importing FtexImagePlugin
+2025-08-05 08:30:39,809 [DEBUG] PIL.Image: Importing GbrImagePlugin
+2025-08-05 08:30:39,813 [DEBUG] PIL.Image: Importing GifImagePlugin
+2025-08-05 08:30:39,813 [DEBUG] PIL.Image: Importing GribStubImagePlugin
+2025-08-05 08:30:39,819 [DEBUG] PIL.Image: Importing Hdf5StubImagePlugin
+2025-08-05 08:30:39,823 [DEBUG] PIL.Image: Importing IcnsImagePlugin
+2025-08-05 08:30:39,843 [DEBUG] PIL.Image: Importing IcoImagePlugin
+2025-08-05 08:30:39,854 [DEBUG] PIL.Image: Importing ImImagePlugin
+2025-08-05 08:30:39,857 [DEBUG] PIL.Image: Importing ImtImagePlugin
+2025-08-05 08:30:39,876 [DEBUG] PIL.Image: Importing IptcImagePlugin
+2025-08-05 08:30:39,909 [DEBUG] PIL.Image: Importing JpegImagePlugin
+2025-08-05 08:30:39,911 [DEBUG] PIL.Image: Importing Jpeg2KImagePlugin
+2025-08-05 08:30:39,914 [DEBUG] PIL.Image: Importing McIdasImagePlugin
+2025-08-05 08:30:39,922 [DEBUG] PIL.Image: Importing MicImagePlugin
+2025-08-05 08:30:39,929 [DEBUG] PIL.Image: Image: failed to import MicImagePlugin: No module named 'olefile'
+2025-08-05 08:30:39,936 [DEBUG] PIL.Image: Importing MpegImagePlugin
+2025-08-05 08:30:39,943 [DEBUG] PIL.Image: Importing MpoImagePlugin
+2025-08-05 08:30:39,987 [DEBUG] PIL.Image: Importing MspImagePlugin
+2025-08-05 08:30:39,997 [DEBUG] PIL.Image: Importing PalmImagePlugin
+2025-08-05 08:30:40,004 [DEBUG] PIL.Image: Importing PcdImagePlugin
+2025-08-05 08:30:40,007 [DEBUG] PIL.Image: Importing PcxImagePlugin
+2025-08-05 08:30:40,007 [DEBUG] PIL.Image: Importing PdfImagePlugin
+2025-08-05 08:30:40,037 [DEBUG] PIL.Image: Importing PixarImagePlugin
+2025-08-05 08:30:40,041 [DEBUG] PIL.Image: Importing PngImagePlugin
+2025-08-05 08:30:40,041 [DEBUG] PIL.Image: Importing PpmImagePlugin
+2025-08-05 08:30:40,041 [DEBUG] PIL.Image: Importing PsdImagePlugin
+2025-08-05 08:30:40,045 [DEBUG] PIL.Image: Importing QoiImagePlugin
+2025-08-05 08:30:40,056 [DEBUG] PIL.Image: Importing SgiImagePlugin
+2025-08-05 08:30:40,060 [DEBUG] PIL.Image: Importing SpiderImagePlugin
+2025-08-05 08:30:40,071 [DEBUG] PIL.Image: Importing SunImagePlugin
+2025-08-05 08:30:40,075 [DEBUG] PIL.Image: Importing TgaImagePlugin
+2025-08-05 08:30:40,078 [DEBUG] PIL.Image: Importing TiffImagePlugin
+2025-08-05 08:30:40,081 [DEBUG] PIL.Image: Importing WebPImagePlugin
+2025-08-05 08:30:40,207 [DEBUG] PIL.Image: Importing WmfImagePlugin
+2025-08-05 08:30:40,214 [DEBUG] PIL.Image: Importing XbmImagePlugin
+2025-08-05 08:30:40,218 [DEBUG] PIL.Image: Importing XpmImagePlugin
+2025-08-05 08:30:40,224 [DEBUG] PIL.Image: Importing XVThumbImagePlugin
+2025-08-05 08:30:40,237 [DEBUG] pytesseract: ['tesseract', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_zvs4ryjd.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_ozobeobm', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-08-05 08:30:41,857 [DEBUG] pytesseract: ['tesseract', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_6g464jbl_input.PNG', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_6g464jbl', '-l', 'ara', 'txt']
+2025-08-05 08:30:46,786 [DEBUG] urllib3.connectionpool: Starting new HTTPS connection (1): translate.google.com:443
+2025-08-05 08:30:46,971 [DEBUG] urllib3.connectionpool: https://translate.google.com:443 "GET /m?tl=en&sl=ar&q=%D9%84%D8%A7%D9%82+%D9%84%D8%B7+111101%2F01111%D8%A6111+%2F+%D9%86%D8%B71+11+10101+%2F%2F%2F%D8%B1%D8%A7%D8%B1%D8%A7%D8%A8%2F.+%2F+%D9%85%D8%A6%D8%AD%D8%A7%D8%AB%D9%A1%E2%80%8F+%D8%A701+%D8%AB%D8%A7%D9%86%D8%A7+%D8%B7%D8%AA%D9%84%D8%BA1%0A%0A145300171715195%0A%0A%D8%AA%D8%B1%D9%85%D8%B9%D9%86%D8%A9%2F+%D9%85%D9%84%D9%84+%D8%A7%23%D8%A7%D8%B1%D9%88%D9%8A%D9%8A%D8%A7%2F+%D8%A8%D8%B1+%D8%A7%D8%A8%D8%B3%D9%8A%D8%B7%D8%A7%D8%B1+%D9%85%D9%84%D8%A7+%D8%A7%D8%A8%D9%81%D9%88%D9%85%D8%A9%D8%A7+%D8%AF%D9%85%D8%A7+%D9%8A%D9%87+%D8%B2%D8%A7%D9%8A%D8%A7+%D9%88+%D8%A7%D8%B3%D9%84%D8%B3%D8%A7%D9%85%D8%A7%D8%B3+%D8%AC%D8%B5%D9%8A%D8%B5+.+%D9%88%D8%AA%D8%B3%D8%A7%D8%B3%D9%8A%D8%B1%D8%A7%0A%0A3%D9%85+%D8%A7%D9%86%D8%A7+%D9%8A%D8%B3%0A%D8%A7%D8%B3%D8%A7%D8%AD%D8%B3%D9%83+%D9%86%D8%A7+%D8%B3%D9%84%D9%85%D9%88%D9%85%D9%88%D8%B3%D9%8A%D9%8A%0A01018%0A%0A%D8%A9%D8%AF%D8%B1%D9%88%D8%A7%D9%84%D8%A7+%D9%85%D8%B3%D8%AA%D8%B2%D9%86%D9%83%D8%A7%D8%AA%D9%87%D8%B5%D8%B3%D8%B3%D9%84%D8%A7+%D9%85%D8%B7%D9%84%0A1+%D9%8510+011208860%0A%0A%23%D8%A7%D8%AA%D9%84%D9%85+%D8%B9%D8%AA%D9%85%D8%A7+%D8%B1%D8%B2+%D9%8A%D8%AA%D9%84%D9%85+%D9%85%D8%AA%D9%85%0A%0A%D8%A7%D9%84%D8%AD+%D9%84%D8%A7%D8%B9+%C2%BB%D8%A7%0A%0A%D8%A7%D9%84%D9%85%D8%AA%D8%B3%D9%85%D9%8A%D8%B7+%D8%AE%D8%B3%D9%81+%D8%A8%D8%B1+%D8%A7%D8%B3%D8%A7%D8%B3%D8%A7%D8%A7%D8%B1%D9%85%D9%84%D8%A7+%D9%84%D9%85%D9%85%D9%85%D8%B5%D9%8A%D8%B7+%D9%85%D8%AA%D8%A7%D9%85+%D9%85%D9%83+%D9%85%D8%AA%D9%85%D8%AF%D8%A7%D8%B3+%D8%A7%D9%85%D8%B9+%D8%B3%D8%B1+%D9%85%D9%85%D8%B3%D8%AA%D8%B7%D8%A7%D9%85%D8%A7+%D8%A7%D9%87+%D8%B9%D9%86%D9%85%D8%A7%0A13837+6+06%D9%85+28%0A%D9%85%D8%A7%D9%85%D8%A7+%D9%85%D8%A7+%D9%86%D8%A7%D9%87+%D8%A7%D9%85%D9%8A%D9%85+%D9%85%D8%B1+%D9%84%D9%84%D9%85%D9%84%D9%8A%2F%D8%A7%D9%86%D8%B7%D9%85%D8%AA%D8%B7%D8%A7+%D8%A5%D9%86+%D8%B9%D9%85%D8%A7%D9%84+%D9%85%D8%B5%D9%85%D8%AA%D8%B3%D8%A7%D9%84%D9%8A%D8%B5%D8%A9%0A%0A%D9%84%D8%A7+%2C00108858+%D8%B9%0A%0A%D8%BA%D8%A7%D9%84%D9%85%D8%A7%D8%AA%D8%AF%D9%8A7+%D9%85%D9%85%D8%B3%D8%B7+%D9%88%D8%B1+%D9%85%D9%84%D9%85%D8%A7%D8%B3%D9%83+%D9%84+%D8%A8%D9%8A%D8%A7%D8%B6%D9%85%D8%B7%D8%B3%D9%85+%D9%8A%D9%85%D8%AA%D9%87%D8%A7+%E2%80%8E%D9%A0%E2%80%8F+%D9%85%D8%AA%D8%B9%D9%88%D8%A7%D9%81%D8%B7%D8%A7+%D9%85%D9%84+%D9%85%D9%84%D9%85%D8%AA%D8%A7%D9%8A%D9%85%D8%A7%D9%85%D8%B3%D9%85+%D9%85%D8%B1+%D9%85%D8%B3%D8%AA%D8%A9%D9%85%D9%87%D9%87%D8%A7+%D8%A7%D9%87+%D9%85%D8%A8%D9%8A%D9%82%D8%A7%0A8+%D8%B90+601%2F85800507+9+%D9%8805+22%0A%D8%AA%D9%84%D8%B9%D9%8A%D8%A9+%D9%85%D8%AF%D8%A7+%D9%85%D8%B1+%D8%A7%D9%85%D8%A7%D9%85%D8%AA+%D8%A8%D9%85%D8%B3%D8%B5%D8%B3%D9%88%D9%865+%D9%84%D8%A7%D9%85%D8%A7+%C2%AB%D9%85%D8%A7%D8%A7%D8%A8%D8%AC%D8%AA%D8%A8%D9%88%D8%B8+%D9%83%D8%A7%D9%84%D8%AA%D9%85%D8%A7%D9%84+%D8%A8%D8%B1+%D9%84%D8%B9%D8%A7+%D9%8A%D9%88%D8%A7%D9%88%D8%AA%D8%A7+%D9%84%D9%87+%D8%B9%D8%A7%D9%85%D8%B7%0A%0A100+%D9%85+%D8%A8%D9%85%D9%85%D9%85%D9%8A%D9%8A%D8%A7%D9%83+2029+0217+21%0A%0A-%D9%85%D8%AA%D8%AD%D8%AA%D8%AC%0A%0A%2B%3E%3E%E2%80%9C%3E%C2%BB%3E%E2%80%9C%C2%BB%3E%3E%3E%3E%3E%3E%3E%3E1110%3E6007101%3E+860+10%3E+%3E1+6010110+%C2%BB%3E+%D8%B7%D9%85%0A16057844376%C2%BB8607608287%2B1291021913877806%3E%3E%3E%3E%3E%3E00%D9%85 HTTP/1.1" 200 None
+2025-08-05 08:38:30,346 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-05 08:39:13,449 [INFO] members.views: Logging started!
+2025-08-05 08:39:27,243 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-05 08:39:38,579 [INFO] members.views: Logging started!
+2025-08-05 08:40:00,930 [WARNING] django.request: Bad Request: /api/passport_compare_cross_lang/
+2025-08-05 08:40:44,771 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-05 08:40:56,776 [INFO] members.views: Logging started!
+2025-08-05 08:42:01,081 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-05 08:42:11,439 [INFO] members.views: Logging started!
+2025-08-05 08:42:17,571 [DEBUG] PIL.Image: Importing AvifImagePlugin
+2025-08-05 08:42:17,690 [DEBUG] PIL.Image: Importing BlpImagePlugin
+2025-08-05 08:42:17,694 [DEBUG] PIL.Image: Importing BmpImagePlugin
+2025-08-05 08:42:17,695 [DEBUG] PIL.Image: Importing BufrStubImagePlugin
+2025-08-05 08:42:17,698 [DEBUG] PIL.Image: Importing CurImagePlugin
+2025-08-05 08:42:17,702 [DEBUG] PIL.Image: Importing DcxImagePlugin
+2025-08-05 08:42:17,720 [DEBUG] PIL.Image: Importing DdsImagePlugin
+2025-08-05 08:42:17,726 [DEBUG] PIL.Image: Importing EpsImagePlugin
+2025-08-05 08:42:17,731 [DEBUG] PIL.Image: Importing FitsImagePlugin
+2025-08-05 08:42:17,735 [DEBUG] PIL.Image: Importing FliImagePlugin
+2025-08-05 08:42:17,738 [DEBUG] PIL.Image: Importing FpxImagePlugin
+2025-08-05 08:42:17,740 [DEBUG] PIL.Image: Image: failed to import FpxImagePlugin: No module named 'olefile'
+2025-08-05 08:42:17,740 [DEBUG] PIL.Image: Importing FtexImagePlugin
+2025-08-05 08:42:17,742 [DEBUG] PIL.Image: Importing GbrImagePlugin
+2025-08-05 08:42:17,744 [DEBUG] PIL.Image: Importing GifImagePlugin
+2025-08-05 08:42:17,746 [DEBUG] PIL.Image: Importing GribStubImagePlugin
+2025-08-05 08:42:17,748 [DEBUG] PIL.Image: Importing Hdf5StubImagePlugin
+2025-08-05 08:42:17,753 [DEBUG] PIL.Image: Importing IcnsImagePlugin
+2025-08-05 08:42:17,761 [DEBUG] PIL.Image: Importing IcoImagePlugin
+2025-08-05 08:42:17,765 [DEBUG] PIL.Image: Importing ImImagePlugin
+2025-08-05 08:42:17,770 [DEBUG] PIL.Image: Importing ImtImagePlugin
+2025-08-05 08:42:17,772 [DEBUG] PIL.Image: Importing IptcImagePlugin
+2025-08-05 08:42:17,774 [DEBUG] PIL.Image: Importing JpegImagePlugin
+2025-08-05 08:42:17,774 [DEBUG] PIL.Image: Importing Jpeg2KImagePlugin
+2025-08-05 08:42:17,774 [DEBUG] PIL.Image: Importing McIdasImagePlugin
+2025-08-05 08:42:17,776 [DEBUG] PIL.Image: Importing MicImagePlugin
+2025-08-05 08:42:17,778 [DEBUG] PIL.Image: Image: failed to import MicImagePlugin: No module named 'olefile'
+2025-08-05 08:42:17,778 [DEBUG] PIL.Image: Importing MpegImagePlugin
+2025-08-05 08:42:17,781 [DEBUG] PIL.Image: Importing MpoImagePlugin
+2025-08-05 08:42:17,798 [DEBUG] PIL.Image: Importing MspImagePlugin
+2025-08-05 08:42:17,802 [DEBUG] PIL.Image: Importing PalmImagePlugin
+2025-08-05 08:42:17,805 [DEBUG] PIL.Image: Importing PcdImagePlugin
+2025-08-05 08:42:17,806 [DEBUG] PIL.Image: Importing PcxImagePlugin
+2025-08-05 08:42:17,808 [DEBUG] PIL.Image: Importing PdfImagePlugin
+2025-08-05 08:42:17,821 [DEBUG] PIL.Image: Importing PixarImagePlugin
+2025-08-05 08:42:17,824 [DEBUG] PIL.Image: Importing PngImagePlugin
+2025-08-05 08:42:17,824 [DEBUG] PIL.Image: Importing PpmImagePlugin
+2025-08-05 08:42:17,824 [DEBUG] PIL.Image: Importing PsdImagePlugin
+2025-08-05 08:42:17,826 [DEBUG] PIL.Image: Importing QoiImagePlugin
+2025-08-05 08:42:17,830 [DEBUG] PIL.Image: Importing SgiImagePlugin
+2025-08-05 08:42:17,833 [DEBUG] PIL.Image: Importing SpiderImagePlugin
+2025-08-05 08:42:17,838 [DEBUG] PIL.Image: Importing SunImagePlugin
+2025-08-05 08:42:17,841 [DEBUG] PIL.Image: Importing TgaImagePlugin
+2025-08-05 08:42:17,842 [DEBUG] PIL.Image: Importing TiffImagePlugin
+2025-08-05 08:42:17,843 [DEBUG] PIL.Image: Importing WebPImagePlugin
+2025-08-05 08:42:17,900 [DEBUG] PIL.Image: Importing WmfImagePlugin
+2025-08-05 08:42:17,904 [DEBUG] PIL.Image: Importing XbmImagePlugin
+2025-08-05 08:42:17,906 [DEBUG] PIL.Image: Importing XpmImagePlugin
+2025-08-05 08:42:17,908 [DEBUG] PIL.Image: Importing XVThumbImagePlugin
+2025-08-05 08:42:17,912 [DEBUG] pytesseract: ['tesseract', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_7soe5_he.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_p3_ebn1e', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-08-05 08:42:18,693 [DEBUG] pytesseract: ['tesseract', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_a46e65m4_input.PNG', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_a46e65m4', '-l', 'ara', 'txt']
+2025-08-05 08:44:51,397 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-05 08:45:02,138 [INFO] members.views: Logging started!
+2025-08-05 08:46:30,574 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-05 08:46:43,467 [INFO] members.views: Logging started!
+2025-08-05 08:46:56,842 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 08:46:56,843 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 08:46:56,843 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 08:46:56,844 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 08:46:56,844 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 08:46:56,845 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 08:46:56,845 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 08:46:56,846 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 08:46:56,846 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 08:46:56,847 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 08:46:57,043 [DEBUG] PIL.Image: Importing AvifImagePlugin
+2025-08-05 08:46:57,048 [DEBUG] PIL.Image: Importing BlpImagePlugin
+2025-08-05 08:46:57,051 [DEBUG] PIL.Image: Importing BmpImagePlugin
+2025-08-05 08:46:57,051 [DEBUG] PIL.Image: Importing BufrStubImagePlugin
+2025-08-05 08:46:57,052 [DEBUG] PIL.Image: Importing CurImagePlugin
+2025-08-05 08:46:57,054 [DEBUG] PIL.Image: Importing DcxImagePlugin
+2025-08-05 08:46:57,060 [DEBUG] PIL.Image: Importing DdsImagePlugin
+2025-08-05 08:46:57,066 [DEBUG] PIL.Image: Importing EpsImagePlugin
+2025-08-05 08:46:57,068 [DEBUG] PIL.Image: Importing FitsImagePlugin
+2025-08-05 08:46:57,070 [DEBUG] PIL.Image: Importing FliImagePlugin
+2025-08-05 08:46:57,074 [DEBUG] PIL.Image: Importing FpxImagePlugin
+2025-08-05 08:46:57,077 [DEBUG] PIL.Image: Image: failed to import FpxImagePlugin: No module named 'olefile'
+2025-08-05 08:46:57,078 [DEBUG] PIL.Image: Importing FtexImagePlugin
+2025-08-05 08:46:57,080 [DEBUG] PIL.Image: Importing GbrImagePlugin
+2025-08-05 08:46:57,082 [DEBUG] PIL.Image: Importing GifImagePlugin
+2025-08-05 08:46:57,083 [DEBUG] PIL.Image: Importing GribStubImagePlugin
+2025-08-05 08:46:57,084 [DEBUG] PIL.Image: Importing Hdf5StubImagePlugin
+2025-08-05 08:46:57,086 [DEBUG] PIL.Image: Importing IcnsImagePlugin
+2025-08-05 08:46:57,090 [DEBUG] PIL.Image: Importing IcoImagePlugin
+2025-08-05 08:46:57,093 [DEBUG] PIL.Image: Importing ImImagePlugin
+2025-08-05 08:46:57,095 [DEBUG] PIL.Image: Importing ImtImagePlugin
+2025-08-05 08:46:57,098 [DEBUG] PIL.Image: Importing IptcImagePlugin
+2025-08-05 08:46:57,099 [DEBUG] PIL.Image: Importing JpegImagePlugin
+2025-08-05 08:46:57,101 [DEBUG] PIL.Image: Importing Jpeg2KImagePlugin
+2025-08-05 08:46:57,101 [DEBUG] PIL.Image: Importing McIdasImagePlugin
+2025-08-05 08:46:57,103 [DEBUG] PIL.Image: Importing MicImagePlugin
+2025-08-05 08:46:57,105 [DEBUG] PIL.Image: Image: failed to import MicImagePlugin: No module named 'olefile'
+2025-08-05 08:46:57,106 [DEBUG] PIL.Image: Importing MpegImagePlugin
+2025-08-05 08:46:57,109 [DEBUG] PIL.Image: Importing MpoImagePlugin
+2025-08-05 08:46:57,117 [DEBUG] PIL.Image: Importing MspImagePlugin
+2025-08-05 08:46:57,119 [DEBUG] PIL.Image: Importing PalmImagePlugin
+2025-08-05 08:46:57,123 [DEBUG] PIL.Image: Importing PcdImagePlugin
+2025-08-05 08:46:57,127 [DEBUG] PIL.Image: Importing PcxImagePlugin
+2025-08-05 08:46:57,127 [DEBUG] PIL.Image: Importing PdfImagePlugin
+2025-08-05 08:46:57,137 [DEBUG] PIL.Image: Importing PixarImagePlugin
+2025-08-05 08:46:57,139 [DEBUG] PIL.Image: Importing PngImagePlugin
+2025-08-05 08:46:57,139 [DEBUG] PIL.Image: Importing PpmImagePlugin
+2025-08-05 08:46:57,141 [DEBUG] PIL.Image: Importing PsdImagePlugin
+2025-08-05 08:46:57,144 [DEBUG] PIL.Image: Importing QoiImagePlugin
+2025-08-05 08:46:57,146 [DEBUG] PIL.Image: Importing SgiImagePlugin
+2025-08-05 08:46:57,148 [DEBUG] PIL.Image: Importing SpiderImagePlugin
+2025-08-05 08:46:57,151 [DEBUG] PIL.Image: Importing SunImagePlugin
+2025-08-05 08:46:57,152 [DEBUG] PIL.Image: Importing TgaImagePlugin
+2025-08-05 08:46:57,154 [DEBUG] PIL.Image: Importing TiffImagePlugin
+2025-08-05 08:46:57,154 [DEBUG] PIL.Image: Importing WebPImagePlugin
+2025-08-05 08:46:57,159 [DEBUG] PIL.Image: Importing WmfImagePlugin
+2025-08-05 08:46:57,162 [DEBUG] PIL.Image: Importing XbmImagePlugin
+2025-08-05 08:46:57,165 [DEBUG] PIL.Image: Importing XpmImagePlugin
+2025-08-05 08:46:57,167 [DEBUG] PIL.Image: Importing XVThumbImagePlugin
+2025-08-05 08:46:57,171 [DEBUG] pytesseract: ['tesseract', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_t0o97gow.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_5j_r9q6x', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-08-05 08:46:57,611 [WARNING] easyocr.easyocr: Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-05 08:47:04,100 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 08:47:04,101 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 08:47:04,101 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 08:47:04,102 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 08:47:04,102 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 08:47:04,103 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 08:47:04,104 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 08:47:04,104 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 08:47:04,104 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 08:47:04,104 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 08:47:17,878 [INFO] members.utils.extract_passport_passport_eye: PassportEye + EasyOCR Extraction Complete
+2025-08-05 08:47:18,052 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 08:47:18,052 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 08:47:18,053 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 08:47:18,053 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 08:47:18,053 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 08:47:18,053 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 08:47:18,054 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 08:47:18,054 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 08:47:18,054 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 08:47:18,054 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 08:47:18,186 [DEBUG] pytesseract: ['tesseract', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_wjv2s802.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_b2u1xg4z', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-08-05 08:47:18,503 [WARNING] easyocr.easyocr: Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-05 08:47:21,733 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 08:47:21,733 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 08:47:21,734 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 08:47:21,734 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 08:47:21,734 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 08:47:21,735 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 08:47:21,735 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 08:47:21,735 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 08:47:21,735 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 08:47:21,736 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 08:47:35,787 [INFO] members.utils.extract_passport_passport_eye: PassportEye + EasyOCR Extraction Complete
+2025-08-05 08:50:46,301 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-05 08:50:57,147 [INFO] members.views: Logging started!
+2025-08-05 08:51:31,663 [WARNING] django.request: Bad Request: /api/compare-passport-ocr/
+2025-08-05 08:53:23,063 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-05 08:53:37,420 [INFO] members.views: Logging started!
+2025-08-05 08:53:39,899 [WARNING] django.request: Bad Request: /api/compare-passport-ocr/
+2025-08-05 08:54:25,608 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-05 08:54:39,504 [INFO] members.views: Logging started!
+2025-08-05 08:54:52,122 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-05 08:55:04,352 [INFO] members.views: Logging started!
+2025-08-05 08:55:19,587 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-05 08:55:32,134 [INFO] members.views: Logging started!
+2025-08-05 08:55:48,852 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-05 08:56:01,274 [INFO] members.views: Logging started!
+2025-08-05 08:56:05,547 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-05 08:56:15,790 [INFO] members.views: Logging started!
+2025-08-05 09:03:02,238 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-05 09:03:26,659 [INFO] members.views: Logging started!
+2025-08-05 09:03:30,264 [WARNING] django.request: Bad Request: /api/compare-passport-ocr/
+2025-08-05 09:05:35,685 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-05 09:05:46,228 [INFO] members.views: Logging started!
+2025-08-05 09:06:11,687 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-05 09:06:23,590 [INFO] members.views: Logging started!
+2025-08-05 09:06:41,943 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 09:06:41,943 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 09:06:41,943 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 09:06:41,944 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 09:06:41,945 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 09:06:41,946 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 09:06:41,946 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 09:06:41,946 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 09:06:41,947 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 09:06:41,947 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 09:06:42,550 [DEBUG] PIL.Image: Importing AvifImagePlugin
+2025-08-05 09:06:42,624 [DEBUG] PIL.Image: Importing BlpImagePlugin
+2025-08-05 09:06:42,634 [DEBUG] PIL.Image: Importing BmpImagePlugin
+2025-08-05 09:06:42,635 [DEBUG] PIL.Image: Importing BufrStubImagePlugin
+2025-08-05 09:06:42,637 [DEBUG] PIL.Image: Importing CurImagePlugin
+2025-08-05 09:06:42,638 [DEBUG] PIL.Image: Importing DcxImagePlugin
+2025-08-05 09:06:42,644 [DEBUG] PIL.Image: Importing DdsImagePlugin
+2025-08-05 09:06:42,649 [DEBUG] PIL.Image: Importing EpsImagePlugin
+2025-08-05 09:06:42,651 [DEBUG] PIL.Image: Importing FitsImagePlugin
+2025-08-05 09:06:42,653 [DEBUG] PIL.Image: Importing FliImagePlugin
+2025-08-05 09:06:42,654 [DEBUG] PIL.Image: Importing FpxImagePlugin
+2025-08-05 09:06:42,656 [DEBUG] PIL.Image: Image: failed to import FpxImagePlugin: No module named 'olefile'
+2025-08-05 09:06:42,657 [DEBUG] PIL.Image: Importing FtexImagePlugin
+2025-08-05 09:06:42,660 [DEBUG] PIL.Image: Importing GbrImagePlugin
+2025-08-05 09:06:42,662 [DEBUG] PIL.Image: Importing GifImagePlugin
+2025-08-05 09:06:42,663 [DEBUG] PIL.Image: Importing GribStubImagePlugin
+2025-08-05 09:06:42,665 [DEBUG] PIL.Image: Importing Hdf5StubImagePlugin
+2025-08-05 09:06:42,666 [DEBUG] PIL.Image: Importing IcnsImagePlugin
+2025-08-05 09:06:42,670 [DEBUG] PIL.Image: Importing IcoImagePlugin
+2025-08-05 09:06:42,672 [DEBUG] PIL.Image: Importing ImImagePlugin
+2025-08-05 09:06:42,676 [DEBUG] PIL.Image: Importing ImtImagePlugin
+2025-08-05 09:06:42,679 [DEBUG] PIL.Image: Importing IptcImagePlugin
+2025-08-05 09:06:42,681 [DEBUG] PIL.Image: Importing JpegImagePlugin
+2025-08-05 09:06:42,681 [DEBUG] PIL.Image: Importing Jpeg2KImagePlugin
+2025-08-05 09:06:42,682 [DEBUG] PIL.Image: Importing McIdasImagePlugin
+2025-08-05 09:06:42,683 [DEBUG] PIL.Image: Importing MicImagePlugin
+2025-08-05 09:06:42,685 [DEBUG] PIL.Image: Image: failed to import MicImagePlugin: No module named 'olefile'
+2025-08-05 09:06:42,685 [DEBUG] PIL.Image: Importing MpegImagePlugin
+2025-08-05 09:06:42,687 [DEBUG] PIL.Image: Importing MpoImagePlugin
+2025-08-05 09:06:42,705 [DEBUG] PIL.Image: Importing MspImagePlugin
+2025-08-05 09:06:42,706 [DEBUG] PIL.Image: Importing PalmImagePlugin
+2025-08-05 09:06:42,710 [DEBUG] PIL.Image: Importing PcdImagePlugin
+2025-08-05 09:06:42,712 [DEBUG] PIL.Image: Importing PcxImagePlugin
+2025-08-05 09:06:42,713 [DEBUG] PIL.Image: Importing PdfImagePlugin
+2025-08-05 09:06:42,721 [DEBUG] PIL.Image: Importing PixarImagePlugin
+2025-08-05 09:06:42,723 [DEBUG] PIL.Image: Importing PngImagePlugin
+2025-08-05 09:06:42,723 [DEBUG] PIL.Image: Importing PpmImagePlugin
+2025-08-05 09:06:42,723 [DEBUG] PIL.Image: Importing PsdImagePlugin
+2025-08-05 09:06:42,725 [DEBUG] PIL.Image: Importing QoiImagePlugin
+2025-08-05 09:06:42,728 [DEBUG] PIL.Image: Importing SgiImagePlugin
+2025-08-05 09:06:42,730 [DEBUG] PIL.Image: Importing SpiderImagePlugin
+2025-08-05 09:06:42,731 [DEBUG] PIL.Image: Importing SunImagePlugin
+2025-08-05 09:06:42,733 [DEBUG] PIL.Image: Importing TgaImagePlugin
+2025-08-05 09:06:42,736 [DEBUG] PIL.Image: Importing TiffImagePlugin
+2025-08-05 09:06:42,737 [DEBUG] PIL.Image: Importing WebPImagePlugin
+2025-08-05 09:06:42,749 [DEBUG] PIL.Image: Importing WmfImagePlugin
+2025-08-05 09:06:42,751 [DEBUG] PIL.Image: Importing XbmImagePlugin
+2025-08-05 09:06:42,752 [DEBUG] PIL.Image: Importing XpmImagePlugin
+2025-08-05 09:06:42,754 [DEBUG] PIL.Image: Importing XVThumbImagePlugin
+2025-08-05 09:06:42,759 [DEBUG] pytesseract: ['tesseract', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_sqz9dgxz.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_5_90at1a', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-08-05 09:06:43,145 [WARNING] easyocr.easyocr: Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-05 09:06:48,429 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 09:06:48,429 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 09:06:48,429 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 09:06:48,430 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 09:06:48,431 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 09:06:48,431 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 09:06:48,432 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 09:06:48,432 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 09:06:48,432 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 09:06:48,432 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 09:07:02,698 [INFO] members.utils.extract_passport_passport_eye: PassportEye + EasyOCR Extraction Complete
+2025-08-05 09:07:02,888 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 09:07:02,889 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 09:07:02,889 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 09:07:02,889 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 09:07:02,890 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 09:07:02,890 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 09:07:02,890 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 09:07:02,890 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 09:07:02,891 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 09:07:02,891 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 09:07:03,012 [DEBUG] pytesseract: ['tesseract', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_6dt7hbv0.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_ylx1gvkh', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-08-05 09:07:03,337 [WARNING] easyocr.easyocr: Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-05 09:07:06,578 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 09:07:06,578 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 09:07:06,579 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 09:07:06,579 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 09:07:06,579 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 09:07:06,580 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 09:07:06,580 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 09:07:06,580 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 09:07:06,581 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 09:07:06,581 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 09:07:19,185 [INFO] members.utils.extract_passport_passport_eye: PassportEye + EasyOCR Extraction Complete
+2025-08-05 09:11:47,897 [WARNING] django.request: Not Found: /api/compare-passport-oc/
+2025-08-05 09:12:01,915 [WARNING] django.request: Bad Request: /api/compare-passport-ocr/
+2025-08-05 09:33:10,480 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-05 09:33:20,333 [INFO] members.views: Logging started!
+2025-08-05 09:33:23,824 [WARNING] django.request: Bad Request: /api/compare-passport-ocr/
+2025-08-05 09:33:51,611 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-05 09:34:00,280 [INFO] members.views: Logging started!
+2025-08-05 09:34:02,374 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 09:34:02,374 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 09:34:02,374 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 09:34:02,375 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 09:34:02,375 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 09:34:02,376 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 09:34:02,376 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 09:34:02,376 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 09:34:02,377 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 09:34:02,377 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 09:34:02,518 [DEBUG] PIL.Image: Importing AvifImagePlugin
+2025-08-05 09:34:02,523 [DEBUG] PIL.Image: Importing BlpImagePlugin
+2025-08-05 09:34:02,525 [DEBUG] PIL.Image: Importing BmpImagePlugin
+2025-08-05 09:34:02,526 [DEBUG] PIL.Image: Importing BufrStubImagePlugin
+2025-08-05 09:34:02,528 [DEBUG] PIL.Image: Importing CurImagePlugin
+2025-08-05 09:34:02,530 [DEBUG] PIL.Image: Importing DcxImagePlugin
+2025-08-05 09:34:02,533 [DEBUG] PIL.Image: Importing DdsImagePlugin
+2025-08-05 09:34:02,537 [DEBUG] PIL.Image: Importing EpsImagePlugin
+2025-08-05 09:34:02,539 [DEBUG] PIL.Image: Importing FitsImagePlugin
+2025-08-05 09:34:02,539 [DEBUG] PIL.Image: Importing FliImagePlugin
+2025-08-05 09:34:02,542 [DEBUG] PIL.Image: Importing FpxImagePlugin
+2025-08-05 09:34:02,545 [DEBUG] PIL.Image: Image: failed to import FpxImagePlugin: No module named 'olefile'
+2025-08-05 09:34:02,545 [DEBUG] PIL.Image: Importing FtexImagePlugin
+2025-08-05 09:34:02,547 [DEBUG] PIL.Image: Importing GbrImagePlugin
+2025-08-05 09:34:02,548 [DEBUG] PIL.Image: Importing GifImagePlugin
+2025-08-05 09:34:02,549 [DEBUG] PIL.Image: Importing GribStubImagePlugin
+2025-08-05 09:34:02,550 [DEBUG] PIL.Image: Importing Hdf5StubImagePlugin
+2025-08-05 09:34:02,551 [DEBUG] PIL.Image: Importing IcnsImagePlugin
+2025-08-05 09:34:02,553 [DEBUG] PIL.Image: Importing IcoImagePlugin
+2025-08-05 09:34:02,555 [DEBUG] PIL.Image: Importing ImImagePlugin
+2025-08-05 09:34:02,557 [DEBUG] PIL.Image: Importing ImtImagePlugin
+2025-08-05 09:34:02,560 [DEBUG] PIL.Image: Importing IptcImagePlugin
+2025-08-05 09:34:02,562 [DEBUG] PIL.Image: Importing JpegImagePlugin
+2025-08-05 09:34:02,562 [DEBUG] PIL.Image: Importing Jpeg2KImagePlugin
+2025-08-05 09:34:02,563 [DEBUG] PIL.Image: Importing McIdasImagePlugin
+2025-08-05 09:34:02,564 [DEBUG] PIL.Image: Importing MicImagePlugin
+2025-08-05 09:34:02,566 [DEBUG] PIL.Image: Image: failed to import MicImagePlugin: No module named 'olefile'
+2025-08-05 09:34:02,566 [DEBUG] PIL.Image: Importing MpegImagePlugin
+2025-08-05 09:34:02,566 [DEBUG] PIL.Image: Importing MpoImagePlugin
+2025-08-05 09:34:02,570 [DEBUG] PIL.Image: Importing MspImagePlugin
+2025-08-05 09:34:02,570 [DEBUG] PIL.Image: Importing PalmImagePlugin
+2025-08-05 09:34:02,570 [DEBUG] PIL.Image: Importing PcdImagePlugin
+2025-08-05 09:34:02,570 [DEBUG] PIL.Image: Importing PcxImagePlugin
+2025-08-05 09:34:02,570 [DEBUG] PIL.Image: Importing PdfImagePlugin
+2025-08-05 09:34:02,583 [DEBUG] PIL.Image: Importing PixarImagePlugin
+2025-08-05 09:34:02,585 [DEBUG] PIL.Image: Importing PngImagePlugin
+2025-08-05 09:34:02,585 [DEBUG] PIL.Image: Importing PpmImagePlugin
+2025-08-05 09:34:02,585 [DEBUG] PIL.Image: Importing PsdImagePlugin
+2025-08-05 09:34:02,588 [DEBUG] PIL.Image: Importing QoiImagePlugin
+2025-08-05 09:34:02,589 [DEBUG] PIL.Image: Importing SgiImagePlugin
+2025-08-05 09:34:02,590 [DEBUG] PIL.Image: Importing SpiderImagePlugin
+2025-08-05 09:34:02,593 [DEBUG] PIL.Image: Importing SunImagePlugin
+2025-08-05 09:34:02,594 [DEBUG] PIL.Image: Importing TgaImagePlugin
+2025-08-05 09:34:02,596 [DEBUG] PIL.Image: Importing TiffImagePlugin
+2025-08-05 09:34:02,596 [DEBUG] PIL.Image: Importing WebPImagePlugin
+2025-08-05 09:34:02,598 [DEBUG] PIL.Image: Importing WmfImagePlugin
+2025-08-05 09:34:02,600 [DEBUG] PIL.Image: Importing XbmImagePlugin
+2025-08-05 09:34:02,602 [DEBUG] PIL.Image: Importing XpmImagePlugin
+2025-08-05 09:34:02,603 [DEBUG] PIL.Image: Importing XVThumbImagePlugin
+2025-08-05 09:34:02,605 [DEBUG] pytesseract: ['tesseract', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_zqu_51j_.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_f5pvw7qi', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-08-05 09:34:02,937 [WARNING] easyocr.easyocr: Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-05 09:34:06,237 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 09:34:06,237 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 09:34:06,238 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 09:34:06,238 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 09:34:06,238 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 09:34:06,240 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 09:34:06,240 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 09:34:06,240 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 09:34:06,240 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 09:34:06,240 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 09:34:17,356 [INFO] members.utils.extract_passport_passport_eye: PassportEye + EasyOCR Extraction Complete
+2025-08-05 09:34:17,505 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 09:34:17,505 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 09:34:17,505 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 09:34:17,505 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 09:34:17,506 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 09:34:17,506 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 09:34:17,506 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 09:34:17,506 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 09:34:17,507 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 09:34:17,507 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 09:34:17,637 [DEBUG] pytesseract: ['tesseract', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_qk0ek656.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_5xnz6zoz', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-08-05 09:34:17,923 [WARNING] easyocr.easyocr: Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-05 09:34:20,558 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 09:34:20,558 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 09:34:20,559 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 09:34:20,559 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 09:34:20,559 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 09:34:20,560 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 09:34:20,560 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 09:34:20,560 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 09:34:20,562 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 09:34:20,562 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 09:34:31,920 [INFO] members.utils.extract_passport_passport_eye: PassportEye + EasyOCR Extraction Complete
+2025-08-05 09:35:09,602 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-05 09:35:19,101 [INFO] members.views: Logging started!
+2025-08-05 09:38:17,298 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-05 09:38:25,210 [INFO] members.views: Logging started!
+2025-08-05 09:38:35,080 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-05 09:38:43,639 [INFO] members.views: Logging started!
+2025-08-05 09:39:27,774 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\urls.py changed, reloading.
+2025-08-05 09:39:35,712 [INFO] members.views: Logging started!
+2025-08-05 09:39:48,881 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\urls.py changed, reloading.
+2025-08-05 09:39:57,044 [INFO] members.views: Logging started!
+2025-08-05 09:40:00,753 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\urls.py changed, reloading.
+2025-08-05 09:40:19,702 [INFO] members.views: Logging started!
+2025-08-05 09:40:32,869 [WARNING] django.request: Bad Request: /api/upload-multiple-image/
+2025-08-05 09:40:46,600 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-05 09:40:54,825 [INFO] members.views: Logging started!
+2025-08-05 09:40:56,996 [INFO] members.views: [0] Image uploaded and opened successfully
+2025-08-05 09:40:57,166 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 09:40:57,168 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 09:40:57,169 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 09:40:57,169 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 09:40:57,170 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 09:40:57,170 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 09:40:57,170 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 09:40:57,171 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 09:40:57,171 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 09:40:57,171 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 09:40:57,306 [DEBUG] PIL.Image: Importing AvifImagePlugin
+2025-08-05 09:40:57,310 [DEBUG] PIL.Image: Importing BlpImagePlugin
+2025-08-05 09:40:57,311 [DEBUG] PIL.Image: Importing BmpImagePlugin
+2025-08-05 09:40:57,312 [DEBUG] PIL.Image: Importing BufrStubImagePlugin
+2025-08-05 09:40:57,312 [DEBUG] PIL.Image: Importing CurImagePlugin
+2025-08-05 09:40:57,313 [DEBUG] PIL.Image: Importing DcxImagePlugin
+2025-08-05 09:40:57,316 [DEBUG] PIL.Image: Importing DdsImagePlugin
+2025-08-05 09:40:57,322 [DEBUG] PIL.Image: Importing EpsImagePlugin
+2025-08-05 09:40:57,324 [DEBUG] PIL.Image: Importing FitsImagePlugin
+2025-08-05 09:40:57,325 [DEBUG] PIL.Image: Importing FliImagePlugin
+2025-08-05 09:40:57,326 [DEBUG] PIL.Image: Importing FpxImagePlugin
+2025-08-05 09:40:57,328 [DEBUG] PIL.Image: Image: failed to import FpxImagePlugin: No module named 'olefile'
+2025-08-05 09:40:57,328 [DEBUG] PIL.Image: Importing FtexImagePlugin
+2025-08-05 09:40:57,329 [DEBUG] PIL.Image: Importing GbrImagePlugin
+2025-08-05 09:40:57,330 [DEBUG] PIL.Image: Importing GifImagePlugin
+2025-08-05 09:40:57,331 [DEBUG] PIL.Image: Importing GribStubImagePlugin
+2025-08-05 09:40:57,333 [DEBUG] PIL.Image: Importing Hdf5StubImagePlugin
+2025-08-05 09:40:57,339 [DEBUG] PIL.Image: Importing IcnsImagePlugin
+2025-08-05 09:40:57,342 [DEBUG] PIL.Image: Importing IcoImagePlugin
+2025-08-05 09:40:57,343 [DEBUG] PIL.Image: Importing ImImagePlugin
+2025-08-05 09:40:57,344 [DEBUG] PIL.Image: Importing ImtImagePlugin
+2025-08-05 09:40:57,346 [DEBUG] PIL.Image: Importing IptcImagePlugin
+2025-08-05 09:40:57,347 [DEBUG] PIL.Image: Importing JpegImagePlugin
+2025-08-05 09:40:57,347 [DEBUG] PIL.Image: Importing Jpeg2KImagePlugin
+2025-08-05 09:40:57,348 [DEBUG] PIL.Image: Importing McIdasImagePlugin
+2025-08-05 09:40:57,349 [DEBUG] PIL.Image: Importing MicImagePlugin
+2025-08-05 09:40:57,352 [DEBUG] PIL.Image: Image: failed to import MicImagePlugin: No module named 'olefile'
+2025-08-05 09:40:57,353 [DEBUG] PIL.Image: Importing MpegImagePlugin
+2025-08-05 09:40:57,354 [DEBUG] PIL.Image: Importing MpoImagePlugin
+2025-08-05 09:40:57,359 [DEBUG] PIL.Image: Importing MspImagePlugin
+2025-08-05 09:40:57,360 [DEBUG] PIL.Image: Importing PalmImagePlugin
+2025-08-05 09:40:57,362 [DEBUG] PIL.Image: Importing PcdImagePlugin
+2025-08-05 09:40:57,362 [DEBUG] PIL.Image: Importing PcxImagePlugin
+2025-08-05 09:40:57,362 [DEBUG] PIL.Image: Importing PdfImagePlugin
+2025-08-05 09:40:57,370 [DEBUG] PIL.Image: Importing PixarImagePlugin
+2025-08-05 09:40:57,372 [DEBUG] PIL.Image: Importing PngImagePlugin
+2025-08-05 09:40:57,372 [DEBUG] PIL.Image: Importing PpmImagePlugin
+2025-08-05 09:40:57,372 [DEBUG] PIL.Image: Importing PsdImagePlugin
+2025-08-05 09:40:57,373 [DEBUG] PIL.Image: Importing QoiImagePlugin
+2025-08-05 09:40:57,374 [DEBUG] PIL.Image: Importing SgiImagePlugin
+2025-08-05 09:40:57,377 [DEBUG] PIL.Image: Importing SpiderImagePlugin
+2025-08-05 09:40:57,377 [DEBUG] PIL.Image: Importing SunImagePlugin
+2025-08-05 09:40:57,379 [DEBUG] PIL.Image: Importing TgaImagePlugin
+2025-08-05 09:40:57,381 [DEBUG] PIL.Image: Importing TiffImagePlugin
+2025-08-05 09:40:57,381 [DEBUG] PIL.Image: Importing WebPImagePlugin
+2025-08-05 09:40:57,385 [DEBUG] PIL.Image: Importing WmfImagePlugin
+2025-08-05 09:40:57,386 [DEBUG] PIL.Image: Importing XbmImagePlugin
+2025-08-05 09:40:57,388 [DEBUG] PIL.Image: Importing XpmImagePlugin
+2025-08-05 09:40:57,390 [DEBUG] PIL.Image: Importing XVThumbImagePlugin
+2025-08-05 09:40:57,392 [DEBUG] pytesseract: ['tesseract', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_u8tsfoaf.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_zrjqkw5q', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-08-05 09:40:57,715 [WARNING] easyocr.easyocr: Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-05 09:41:00,806 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 09:41:01,029 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 09:41:01,029 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 09:41:01,030 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 09:41:01,031 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 09:41:01,031 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 09:41:01,032 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 09:41:01,032 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 09:41:01,032 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 09:41:01,033 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 09:41:12,862 [INFO] members.utils.extract_passport_passport_eye: PassportEye + EasyOCR Extraction Complete
+2025-08-05 09:41:12,863 [INFO] members.views: All uploaded image files processed
+2025-08-05 09:42:22,453 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-05 09:42:30,933 [INFO] members.views: Logging started!
+2025-08-05 09:47:49,362 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-05 09:47:57,942 [INFO] members.views: Logging started!
+2025-08-05 09:48:41,446 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 09:48:41,446 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 09:48:41,446 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 09:48:41,446 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 09:48:41,447 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 09:48:41,448 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 09:48:41,448 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 09:48:41,448 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 09:48:41,449 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 09:48:41,449 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 09:48:41,557 [DEBUG] PIL.Image: Importing AvifImagePlugin
+2025-08-05 09:48:41,561 [DEBUG] PIL.Image: Importing BlpImagePlugin
+2025-08-05 09:48:41,561 [DEBUG] PIL.Image: Importing BmpImagePlugin
+2025-08-05 09:48:41,562 [DEBUG] PIL.Image: Importing BufrStubImagePlugin
+2025-08-05 09:48:41,565 [DEBUG] PIL.Image: Importing CurImagePlugin
+2025-08-05 09:48:41,565 [DEBUG] PIL.Image: Importing DcxImagePlugin
+2025-08-05 09:48:41,569 [DEBUG] PIL.Image: Importing DdsImagePlugin
+2025-08-05 09:48:41,574 [DEBUG] PIL.Image: Importing EpsImagePlugin
+2025-08-05 09:48:41,575 [DEBUG] PIL.Image: Importing FitsImagePlugin
+2025-08-05 09:48:41,576 [DEBUG] PIL.Image: Importing FliImagePlugin
+2025-08-05 09:48:41,577 [DEBUG] PIL.Image: Importing FpxImagePlugin
+2025-08-05 09:48:41,578 [DEBUG] PIL.Image: Image: failed to import FpxImagePlugin: No module named 'olefile'
+2025-08-05 09:48:41,578 [DEBUG] PIL.Image: Importing FtexImagePlugin
+2025-08-05 09:48:41,580 [DEBUG] PIL.Image: Importing GbrImagePlugin
+2025-08-05 09:48:41,583 [DEBUG] PIL.Image: Importing GifImagePlugin
+2025-08-05 09:48:41,583 [DEBUG] PIL.Image: Importing GribStubImagePlugin
+2025-08-05 09:48:41,585 [DEBUG] PIL.Image: Importing Hdf5StubImagePlugin
+2025-08-05 09:48:41,586 [DEBUG] PIL.Image: Importing IcnsImagePlugin
+2025-08-05 09:48:41,588 [DEBUG] PIL.Image: Importing IcoImagePlugin
+2025-08-05 09:48:41,591 [DEBUG] PIL.Image: Importing ImImagePlugin
+2025-08-05 09:48:41,592 [DEBUG] PIL.Image: Importing ImtImagePlugin
+2025-08-05 09:48:41,592 [DEBUG] PIL.Image: Importing IptcImagePlugin
+2025-08-05 09:48:41,593 [DEBUG] PIL.Image: Importing JpegImagePlugin
+2025-08-05 09:48:41,593 [DEBUG] PIL.Image: Importing Jpeg2KImagePlugin
+2025-08-05 09:48:41,593 [DEBUG] PIL.Image: Importing McIdasImagePlugin
+2025-08-05 09:48:41,594 [DEBUG] PIL.Image: Importing MicImagePlugin
+2025-08-05 09:48:41,595 [DEBUG] PIL.Image: Image: failed to import MicImagePlugin: No module named 'olefile'
+2025-08-05 09:48:41,597 [DEBUG] PIL.Image: Importing MpegImagePlugin
+2025-08-05 09:48:41,599 [DEBUG] PIL.Image: Importing MpoImagePlugin
+2025-08-05 09:48:41,603 [DEBUG] PIL.Image: Importing MspImagePlugin
+2025-08-05 09:48:41,605 [DEBUG] PIL.Image: Importing PalmImagePlugin
+2025-08-05 09:48:41,606 [DEBUG] PIL.Image: Importing PcdImagePlugin
+2025-08-05 09:48:41,607 [DEBUG] PIL.Image: Importing PcxImagePlugin
+2025-08-05 09:48:41,607 [DEBUG] PIL.Image: Importing PdfImagePlugin
+2025-08-05 09:48:41,615 [DEBUG] PIL.Image: Importing PixarImagePlugin
+2025-08-05 09:48:41,616 [DEBUG] PIL.Image: Importing PngImagePlugin
+2025-08-05 09:48:41,616 [DEBUG] PIL.Image: Importing PpmImagePlugin
+2025-08-05 09:48:41,616 [DEBUG] PIL.Image: Importing PsdImagePlugin
+2025-08-05 09:48:41,617 [DEBUG] PIL.Image: Importing QoiImagePlugin
+2025-08-05 09:48:41,619 [DEBUG] PIL.Image: Importing SgiImagePlugin
+2025-08-05 09:48:41,621 [DEBUG] PIL.Image: Importing SpiderImagePlugin
+2025-08-05 09:48:41,621 [DEBUG] PIL.Image: Importing SunImagePlugin
+2025-08-05 09:48:41,622 [DEBUG] PIL.Image: Importing TgaImagePlugin
+2025-08-05 09:48:41,623 [DEBUG] PIL.Image: Importing TiffImagePlugin
+2025-08-05 09:48:41,623 [DEBUG] PIL.Image: Importing WebPImagePlugin
+2025-08-05 09:48:41,624 [DEBUG] PIL.Image: Importing WmfImagePlugin
+2025-08-05 09:48:41,625 [DEBUG] PIL.Image: Importing XbmImagePlugin
+2025-08-05 09:48:41,627 [DEBUG] PIL.Image: Importing XpmImagePlugin
+2025-08-05 09:48:41,627 [DEBUG] PIL.Image: Importing XVThumbImagePlugin
+2025-08-05 09:48:41,633 [DEBUG] pytesseract: ['tesseract', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_focdp4lo.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_zqx0y5xo', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-08-05 09:48:41,894 [WARNING] easyocr.easyocr: Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-05 09:48:44,784 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 09:48:44,784 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 09:48:44,785 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 09:48:44,785 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 09:48:44,785 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 09:48:44,786 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 09:48:44,786 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 09:48:44,787 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 09:48:44,787 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 09:48:44,787 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 09:48:55,291 [INFO] members.utils.extract_passport_passport_eye: PassportEye + EasyOCR Extraction Complete
+2025-08-05 09:48:55,473 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 09:48:55,474 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 09:48:55,474 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 09:48:55,474 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 09:48:55,474 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 09:48:55,474 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 09:48:55,474 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 09:48:55,475 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 09:48:55,475 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 09:48:55,475 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 09:48:55,593 [DEBUG] pytesseract: ['tesseract', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_3867gd9r.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_6q0azpfs', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-08-05 09:48:55,942 [WARNING] easyocr.easyocr: Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+2025-08-05 09:48:58,775 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 09:48:58,775 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 09:48:58,776 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 09:48:58,776 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 09:48:58,776 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 09:48:58,776 [DEBUG] PIL.PngImagePlugin: STREAM b'IHDR' 16 13
+2025-08-05 09:48:58,776 [DEBUG] PIL.PngImagePlugin: STREAM b'iCCP' 41 264
+2025-08-05 09:48:58,777 [DEBUG] PIL.PngImagePlugin: iCCP profile name b'ICC Profile'
+2025-08-05 09:48:58,777 [DEBUG] PIL.PngImagePlugin: Compression method 0
+2025-08-05 09:48:58,777 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
+2025-08-05 09:49:09,411 [INFO] members.utils.extract_passport_passport_eye: PassportEye + EasyOCR Extraction Complete
