@@ -19,7 +19,8 @@ from logging_config import setup_logging
 import logging
 from deep_translator import GoogleTranslator
 import os
-os.environ['TESSDATA_PREFIX'] = '/usr/share/tesseract-ocr/5/'
+os.environ['TESSDATA_PREFIX'] = '/usr/share/tesseract-ocr/5/tessdata/'
+
 
 setup_logging()
 logger = logging.getLogger(__name__)
@@ -32,7 +33,8 @@ class PassportOCRView(APIView):
         uploaded_file = request.FILES.get("passport_image")
 
         # Set Tesseract path (once)
-        os.environ['TESSDATA_PREFIX'] = '/usr/share/tesseract-ocr/5/'
+        os.environ['TESSDATA_PREFIX'] = '/usr/share/tesseract-ocr/5/tessdata/'
+
 
         if not uploaded_file:
             return Response({"error": "passport_image is required"}, status=status.HTTP_400_BAD_REQUEST)
@@ -291,6 +293,9 @@ class CrossLanguage_Passport_CompareAPIView(APIView):
                 image.save(temp_file, format="JPEG")
                 temp_path = temp_file.name
 
+
+            os.environ['TESSDATA_PREFIX'] = '/usr/share/tesseract-ocr/5/tessdata/'
+
             # Extract MRZ
             mrz = read_mrz(temp_path)
             mrz_data = mrz.to_dict() if mrz else {}
@@ -430,7 +435,8 @@ class Overall_CompareAPIView(APIView):
             return Response({"error": "passport_image is required"}, status=status.HTTP_400_BAD_REQUEST)
 
         # Set Tesseract path (once)
-        os.environ['TESSDATA_PREFIX'] = '/usr/share/tesseract-ocr/5/'
+        os.environ['TESSDATA_PREFIX'] = '/usr/share/tesseract-ocr/5/tessdata/'
+
 
         try:
             image = Image.open(uploaded_file).convert("RGB")
@@ -584,7 +590,8 @@ class MergedPassportCompareAPIView(APIView):
             return Response({"error": "passport_image is required"}, status=status.HTTP_400_BAD_REQUEST)
 
         # Set Tesseract path (once)
-        os.environ['TESSDATA_PREFIX'] = '/usr/share/tesseract-ocr/5/'
+        os.environ['TESSDATA_PREFIX'] = '/usr/share/tesseract-ocr/5/tessdata/'
+
 
         try:
             image = Image.open(uploaded_file).convert("RGB")
