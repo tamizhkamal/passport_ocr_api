@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure--#miy6!1m!7z77o%t#lkjw@lzekf_yt_r@s+6e7v=bu$-&9^fg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['passport-ocr-api.onrender.com','127.0.0.1','localhost','15.206.214.138']
+ALLOWED_HOSTS = ['passport-ocr-api.onrender.com','127.0.0.1','localhost','15.207.45.185']
 
 CORS_ALLOW_ALL_ORIGINS = True
 
