@@ -18,6 +18,8 @@ from django.core.files.base import ContentFile
 from logging_config import setup_logging
 import logging
 from deep_translator import GoogleTranslator
+import os
+os.environ['TESSDATA_PREFIX'] = '/usr/share/tesseract-ocr/5/'
 
 setup_logging()
 logger = logging.getLogger(__name__)
@@ -28,6 +30,9 @@ logger.info("Logging started!")
 class PassportOCRView(APIView):
     def post(self, request):
         uploaded_file = request.FILES.get("passport_image")
+
+        # Set Tesseract path (once)
+        os.environ['TESSDATA_PREFIX'] = '/usr/share/tesseract-ocr/5/'
 
         if not uploaded_file:
             return Response({"error": "passport_image is required"}, status=status.HTTP_400_BAD_REQUEST)
@@ -255,8 +260,6 @@ class CrossLanguagePassportCompareAPIView(APIView):
             "note": "Arabic ↔ English OCR verification completed"
         }, status=status.HTTP_200_OK)
 
-import os
-os.environ['TESSDATA_PREFIX'] = '/usr/share/tesseract-ocr/5/'
 
 
 import base64
