@@ -1,6 +1,6 @@
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
-import tempfile, cv2, pytesseract, re
+import tempfile, cv2, re
 from datetime import datetime
 from passporteye import read_mrz
 
