@@ -696,16 +696,12 @@ class Overall_CompareAPIView(APIView):
 #         return Response(final_result, status=200)
 
 import numpy as np
-
-import os
 import io
-import tempfile
 import difflib
 from PIL import Image
-import numpy as np
 from concurrent.futures import ThreadPoolExecutor
 
-import easyocr
+import pytesseract
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -718,8 +714,6 @@ from .utils.translate_utils import translate_key_to_arabic, translate_key_to_eng
 # from .utils.mrz_parser import parse_passporteye_object
 # from .utils.date_utils import format_date
 
-# 🧠 Cache reader globally (so it loads only once)
-easyocr_reader = easyocr.Reader(['ar'], gpu=False)
 
 class MergedPassportCompareAPIView(APIView):
     def post(self, request, *args, **kwargs):
@@ -729,31 +723,30 @@ class MergedPassportCompareAPIView(APIView):
 
         try:
             image = Image.open(uploaded_file).convert("RGB")
-            image_np = np.array(image)  # Convert only once
         except Exception as e:
             return Response({"error": "Invalid image file", "details": str(e)}, status=400)
 
-        # ✅ Step 1: Arabic OCR (Fast now due to cached reader)
+        # ✅ Step 1: Arabic OCR using Tesseract
         try:
-            results = easyocr_reader.readtext(image_np, detail=0)
-            arabic_text = " ".join(results).strip()
+            arabic_text = pytesseract.image_to_string(image, lang='ara', config='--psm 6').strip()
         except Exception as e:
-            return Response({"error": "Arabic OCR failed", "details": str(e)}, status=500)
+            arabic_text = ""
+            print("Arabic OCR failed:", e)
 
-        # ✅ Step 2: Optional Translation (in parallel thread)
+        # ✅ Step 2: Translation (if needed)
         translated_text = ""
-        if request.query_params.get("translate", "true").lower() == "true":
+        if request.query_params.get("translate", "true").lower() == "true" and arabic_text:
             try:
                 with ThreadPoolExecutor(max_workers=1) as executor:
                     future = executor.submit(GoogleTranslator(source='ar', target='en').translate, arabic_text)
-                    translated_text = future.result(timeout=5)  # prevent hanging
+                    translated_text = future.result(timeout=5)
             except Exception as e:
                 translated_text = "Translation failed: " + str(e)
 
-        # ✅ Step 3: OCR Field Extraction (run once, no TESSERACT_OCT switch)
+        # ✅ Step 3: OCR Field Extraction
         try:
             english_data = extract_passport_data(image)
-            arabic_data = {}  # or remove this entirely if unused
+            arabic_data = {}  # No structured arabic field extraction
         except Exception as e:
             return Response({"error": "Field extraction failed", "details": str(e)}, status=500)
 
@@ -778,7 +771,7 @@ class MergedPassportCompareAPIView(APIView):
                 "match": en_val.lower() == ar_val.lower()
             }
 
-        # ✅ Step 5: MRZ Extraction (no disk I/O, use in-memory)
+        # ✅ Step 5: MRZ Extraction
         try:
             buf = io.BytesIO()
             image.save(buf, format="JPEG")
