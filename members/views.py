@@ -264,7 +264,7 @@ class CrossLanguagePassportCompareAPIView(APIView):
         }, status=status.HTTP_200_OK)
 
 
-
+import os
 import base64
 import io
 import tempfile
@@ -273,6 +273,14 @@ from passporteye import read_mrz
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
+import easyocr
+import pytesseract
+
+# ✅ Explicitly set tesseract path
+pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
+
+# ✅ Set TESSDATA_PREFIX for Arabic language (optional but good)
+os.environ['TESSDATA_PREFIX'] = '/usr/share/tesseract-ocr/5/tessdata/'
 
 class CrossLanguage_Passport_CompareAPIView(APIView):
     def post(self, request, *args, **kwargs):
@@ -293,10 +301,7 @@ class CrossLanguage_Passport_CompareAPIView(APIView):
                 image.save(temp_file, format="JPEG")
                 temp_path = temp_file.name
 
-
-            os.environ['TESSDATA_PREFIX'] = '/usr/share/tesseract-ocr/5/tessdata/'
-
-            # Extract MRZ
+            # ✅ Extract MRZ
             mrz = read_mrz(temp_path)
             mrz_data = mrz.to_dict() if mrz else {}
 
@@ -306,14 +311,16 @@ class CrossLanguage_Passport_CompareAPIView(APIView):
                 surname = mrz_data.get("surname", "")
                 english_name = f"{given_names} {surname}".strip()
 
-            reader = easyocr.Reader(['ar'], gpu=False)  # or ['ar', 'en'] for both languages
-            results = reader.readtext(image, detail=0)  # detail=0 returns plain text lines
-
+            # ✅ Arabic OCR with EasyOCR
+            reader = easyocr.Reader(['ar'], gpu=False)
+            results = reader.readtext(image, detail=0)
             arabic_text = " ".join(results).strip()
 
+            # ✅ Simple keyword search
             arabic_keywords = ["الاسم", "اسم", "اللقب"]
             arabic_name_found = any(keyword in arabic_text for keyword in arabic_keywords)
-             
+
+            # ✅ Final response
             result = {
                 "english_mrz_data": mrz_data,
                 "arabic_text": arabic_text,
@@ -326,7 +333,8 @@ class CrossLanguage_Passport_CompareAPIView(APIView):
 
         except Exception as e:
             return Response({"error": "Processing failed", "details": str(e)}, status=500)
-        
+
+    
 
 
 # class Overall_CompareAPIView(APIView):
@@ -694,7 +702,6 @@ class Overall_CompareAPIView(APIView):
 #         }
 
 #         return Response(final_result, status=200)
-
 import numpy as np
 import io
 import difflib
@@ -714,6 +721,8 @@ from .utils.translate_utils import translate_key_to_arabic, translate_key_to_eng
 # from .utils.mrz_parser import parse_passporteye_object
 # from .utils.date_utils import format_date
 
+# ✅ Set Tesseract path
+pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
 
 class MergedPassportCompareAPIView(APIView):
     def post(self, request, *args, **kwargs):
