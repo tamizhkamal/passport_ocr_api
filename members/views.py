@@ -1,25 +1,32 @@
-import base64
 from concurrent.futures import ThreadPoolExecutor
-from io import BytesIO
 import os
-from urllib import request
 from PIL import Image
-import easyocr
+import pytesseract
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from .serializers import PassportBase64ImageSerializer
 from .ocr_utils import extract_passport_data
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-import base64
-import uuid
-from django.core.files.base import ContentFile
 from logging_config import setup_logging
 import logging
 from deep_translator import GoogleTranslator
 import os
+from .utils.translate_utils import translate_key_to_english, translate_key_to_arabic
+import tempfile
+from rest_framework.views import APIView
+from passporteye import read_mrz
+from deep_translator import GoogleTranslator
+from datetime import datetime
+import re
+
+
+
+
+pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
+
+
 os.environ['TESSDATA_PREFIX'] = '/usr/share/tesseract-ocr/5/tessdata/'
 
 
@@ -179,19 +186,6 @@ class ComparePassportOCRView(APIView):
             }
 
         return Response({"comparison_result": comparison}, status=status.HTTP_200_OK)
-# views.py
-
-import base64
-import io
-from PIL import Image
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework import status
-import os
-import difflib
-
-from members.ocr_utils import extract_passport_data
-from .utils.translate_utils import translate_key_to_english, translate_key_to_arabic
 
 
 def normalize_data(input_data, to_lang="en"):
@@ -204,7 +198,8 @@ def normalize_data(input_data, to_lang="en"):
             normalized_key = translate_key_to_arabic(key)
         normalized[normalized_key] = value
     return normalized
-# views.py
+
+
 
 class CrossLanguagePassportCompareAPIView(APIView):
     def post(self, request, *args, **kwargs):
@@ -264,24 +259,6 @@ class CrossLanguagePassportCompareAPIView(APIView):
         }, status=status.HTTP_200_OK)
 
 
-import os
-import base64
-import io
-import tempfile
-from PIL import Image
-from passporteye import read_mrz
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework import status
-import easyocr
-import pytesseract
-
-# ✅ Explicitly set tesseract path
-pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
-
-# ✅ Set TESSDATA_PREFIX for Arabic language (optional but good)
-os.environ['TESSDATA_PREFIX'] = '/usr/share/tesseract-ocr/5/tessdata/'
-
 class CrossLanguage_Passport_CompareAPIView(APIView):
     def post(self, request, *args, **kwargs):
         uploaded_file = request.FILES.get("passport_image")
@@ -301,6 +278,10 @@ class CrossLanguage_Passport_CompareAPIView(APIView):
                 image.save(temp_file, format="JPEG")
                 temp_path = temp_file.name
 
+            # ✅ Set Tesseract path (optional: adjust path if needed)
+            pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
+            os.environ['TESSDATA_PREFIX'] = '/usr/share/tesseract-ocr/5/tessdata/'
+
             # ✅ Extract MRZ
             mrz = read_mrz(temp_path)
             mrz_data = mrz.to_dict() if mrz else {}
@@ -311,10 +292,8 @@ class CrossLanguage_Passport_CompareAPIView(APIView):
                 surname = mrz_data.get("surname", "")
                 english_name = f"{given_names} {surname}".strip()
 
-            # ✅ Arabic OCR with EasyOCR
-            reader = easyocr.Reader(['ar'], gpu=False)
-            results = reader.readtext(image, detail=0)
-            arabic_text = " ".join(results).strip()
+            # ✅ Arabic OCR using pytesseract
+            arabic_text = pytesseract.image_to_string(image, lang='ara', config='--psm 6').strip()
 
             # ✅ Simple keyword search
             arabic_keywords = ["الاسم", "اسم", "اللقب"]
@@ -334,7 +313,6 @@ class CrossLanguage_Passport_CompareAPIView(APIView):
         except Exception as e:
             return Response({"error": "Processing failed", "details": str(e)}, status=500)
 
-    
 
 
 # class Overall_CompareAPIView(APIView):
@@ -382,20 +360,6 @@ class CrossLanguage_Passport_CompareAPIView(APIView):
 #             return Response({"error": "Processing failed", "details": str(e)}, status=500)
 
 
-
-import base64
-import io
-import tempfile
-from PIL import Image
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework import status
-from passporteye import read_mrz
-from deep_translator import GoogleTranslator
-from datetime import datetime
-import re
-
-
 def format_date(date_str):
     try:
         dt = datetime.strptime(date_str, "%y%m%d")
@@ -439,13 +403,13 @@ def extract_probable_arabic_address(arabic_text):
 class Overall_CompareAPIView(APIView):
     def post(self, request, *args, **kwargs):
         uploaded_file = request.FILES.get("passport_image")
-        print(uploaded_file,"<---------------------------------- uploaded_file")
+        print(uploaded_file, "<---------------------------------- uploaded_file")
+
         if not uploaded_file:
             return Response({"error": "passport_image is required"}, status=status.HTTP_400_BAD_REQUEST)
 
-        # Set Tesseract path (once)
+        # Set Tesseract path (optional if already in environment)
         os.environ['TESSDATA_PREFIX'] = '/usr/share/tesseract-ocr/5/tessdata/'
-
 
         try:
             image = Image.open(uploaded_file).convert("RGB")
@@ -453,12 +417,12 @@ class Overall_CompareAPIView(APIView):
             return Response({"error": "Invalid image file", "details": str(e)}, status=400)
 
         try:
+            # Save temp image for MRZ
             with tempfile.NamedTemporaryFile(suffix=".jpg", delete=False) as temp_file:
                 image.save(temp_file, format="JPEG")
                 temp_path = temp_file.name
 
-
-            # 1. MRZ Extraction
+            # ✅ 1. MRZ Extraction
             mrz_obj = read_mrz(temp_path)
             mrz_data = mrz_obj.to_dict() if mrz_obj else {}
 
@@ -467,24 +431,19 @@ class Overall_CompareAPIView(APIView):
             if "expiration_date" in mrz_data:
                 mrz_data["expiration_date"] = format_date(mrz_data["expiration_date"])
 
-            # 2. Arabic OCR
+            # ✅ 2. Arabic OCR using Tesseract
+            pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"  # adjust if needed
+            arabic_text = pytesseract.image_to_string(image, lang='ara', config='--psm 6').strip()
 
-            # Initialize EasyOCR reader for Arabic
-            reader = easyocr.Reader(['ar'], gpu=False)  # Use ['ar', 'en'] if both languages needed
+            # ✅ 3. Translate Arabic to English
+            translated_text = ""
+            if arabic_text:
+                translated_text = GoogleTranslator(source='ar', target='en').translate(arabic_text)
 
-            # Read Arabic text from the image
-            results = reader.readtext(image, detail=0)  # detail=0 returns plain lines of text
-
-            arabic_text = " ".join(results).strip()
-
-
-            # 3. Translate
-            translated_text = GoogleTranslator(source='ar', target='en').translate(arabic_text)
-
-            # 4. Address extraction – NEW logic (no keywords)
+            # ✅ 4. Extract Arabic Address
             address_line = extract_probable_arabic_address(arabic_text)
 
-            # 5. Final result
+            # ✅ 5. Final response
             result = {
                 "mrz_data": {
                     **mrz_data,
@@ -499,230 +458,8 @@ class Overall_CompareAPIView(APIView):
 
         except Exception as e:
             return Response({"error": "Processing failed", "details": str(e)}, status=500)
+        
 
-
-# class MergedPassportCompareAPIView(APIView):
-#     def post(self, request, *args, **kwargs):
-#         # base64_image = request.data.get("images_base64")
-#         uploaded_file = request.FILES.get("passport_image")
-
-#         if not uploaded_file:
-#             return Response({"error": "passport_image is required"}, status=status.HTTP_400_BAD_REQUEST)
-
-#         # Step 1: Convert image from base64
-#         try:
-#             image = Image.open(uploaded_file)
-
-#             # Save image to a BytesIO buffer
-#             buffered = io.BytesIO()
-#             image.save(buffered, format="JPEG")
-#             buffered.seek(0)
-
-#         except Exception as e:
-#             return Response({"error": "Invalid base64 image", "details": str(e)}, status=400)
-
-#         # -----------------------------
-#         # Step 2: Cross Language Compare
-#         # -----------------------------
-#         try:
-#             # Set env for Arabic OCR
-#             original_flag = os.environ.get("TESSERACT_OCT", "")
-#             os.environ["TESSERACT_OCT"] = "true"
-#             arabic_data = extract_passport_data(image)
-
-#             # Set env for English OCR
-#             os.environ["TESSERACT_OCT"] = "false"
-#             english_data = extract_passport_data(image)
-#             os.environ["TESSERACT_OCT"] = original_flag
-
-#             # Merge comparison result
-#             comparison_result = {}
-#             all_keys = set(english_data.keys()) | set(arabic_data.keys())
-#             for key in all_keys:
-#                 en_val = str(english_data.get(key, "") or "").strip()
-#                 ar_val = str(arabic_data.get(key, "") or "").strip()
-
-#                 translated_ar_key = translate_key_to_english(key)
-#                 translated_en_key = translate_key_to_arabic(key)
-
-#                 similarity = difflib.SequenceMatcher(None, en_val.lower(), ar_val.lower()).ratio()
-
-#                 comparison_result[key] = {
-#                     "english_value": en_val,
-#                     "arabic_value": ar_val,
-#                     "similarity": round(similarity, 2),
-#                     "english_field": translated_en_key,
-#                     "arabic_field": translated_ar_key,
-#                     "match": en_val.lower() == ar_val.lower()
-#                 }
-
-#         except Exception as e:
-#             return Response({"error": "Cross language OCR failed", "details": str(e)}, status=500)
-
-#         # -----------------------------
-#         # Step 3: MRZ and Arabic OCR block
-#         # -----------------------------
-#         try:
-#             with tempfile.NamedTemporaryFile(suffix=".jpg", delete=False) as temp_file:
-#                 image.save(temp_file, format="JPEG")
-#                 temp_path = temp_file.name
-
-#             # MRZ
-#             mrz_obj = read_mrz(temp_path)
-#             mrz_data = mrz_obj.to_dict() if mrz_obj else {}
-
-#             if "date_of_birth" in mrz_data:
-#                 mrz_data["date_of_birth"] = format_date(mrz_data["date_of_birth"])
-#             if "expiration_date" in mrz_data:
-#                 mrz_data["expiration_date"] = format_date(mrz_data["expiration_date"])
-
-#             # Arabic OCR and translation
-#             arabic_text = pytesseract.image_to_string(image, lang="ara").strip()
-#             translated_text = GoogleTranslator(source='ar', target='en').translate(arabic_text)
-#             address_line = extract_probable_arabic_address(arabic_text)
-
-#         except Exception as e:
-#             return Response({"error": "MRZ or OCR processing failed", "details": str(e)}, status=500)
-
-#         # Final merged result
-#         final_result = {
-#             "mrz_data": {
-#                 **mrz_data,
-#                 "arabic_address": address_line
-#             },
-#             "OCR_data": parse_passporteye_object(mrz_obj, address=address_line),
-#             "comparison_result": comparison_result,
-#             "arabic_ocr_text": arabic_text,
-#             "translated_english_text": translated_text
-#         }
-
-#         return Response(final_result, status=200)
-
-
-
-# class MergedPassportCompareAPIView(APIView):
-#     def post(self, request, *args, **kwargs):
-#         uploaded_file = request.FILES.get("passport_image")
-#         if not uploaded_file:
-#             return Response({"error": "passport_image is required"}, status=status.HTTP_400_BAD_REQUEST)
-
-#         # Set Tesseract path (once)
-#         os.environ['TESSDATA_PREFIX'] = '/usr/share/tesseract-ocr/5/tessdata/'
-
-
-#         try:
-#             image = Image.open(uploaded_file).convert("RGB")
-#         except Exception as e:
-#             return Response({"error": "Invalid image file", "details": str(e)}, status=400)
-
-#         # Step 1: Get Arabic OCR text early to reuse
-#         try:
-#             reader = easyocr.Reader(['ar'], gpu=False)  # Use ['ar', 'en'] if both languages needed
-
-#             # Read Arabic text from the image
-#             results = reader.readtext(image, detail=0)  # detail=0 returns plain lines of text
-
-#             arabic_text = " ".join(results).strip()
-#             # arabic_text = pytesseract.image_to_string(image, lang="ara").strip()
-#         except Exception as e:
-#             return Response({"error": "Arabic OCR failed", "details": str(e)}, status=500)
-
-#         # Step 2: Translate Arabic text (optional)
-#         translated_text = ""
-#         if request.query_params.get("translate", "true").lower() == "true":
-#             try:
-#                 with ThreadPoolExecutor() as executor:
-#                     future = executor.submit(GoogleTranslator(source='ar', target='en').translate, arabic_text)
-#                     translated_text = future.result()
-#             except Exception as e:
-#                 translated_text = "Translation failed: " + str(e)
-
-#         # Step 3: Cross Language OCR Compare
-#         try:
-#             original_flag = os.environ.get("TESSERACT_OCT", "")
-#             os.environ["TESSERACT_OCT"] = "true"
-#             arabic_data = extract_passport_data(image)
-
-#             os.environ["TESSERACT_OCT"] = "false"
-#             english_data = extract_passport_data(image)
-#             os.environ["TESSERACT_OCT"] = original_flag
-
-#             comparison_result = {}
-#             all_keys = set(english_data.keys()) | set(arabic_data.keys())
-#             for key in all_keys:
-#                 en_val = str(english_data.get(key, "") or "").strip()
-#                 ar_val = str(arabic_data.get(key, "") or "").strip()
-
-#                 translated_ar_key = translate_key_to_english(key)
-#                 translated_en_key = translate_key_to_arabic(key)
-
-#                 similarity = difflib.SequenceMatcher(None, en_val.lower(), ar_val.lower()).ratio()
-
-#                 comparison_result[key] = {
-#                     "english_value": en_val,
-#                     "arabic_value": ar_val,
-#                     "similarity": round(similarity, 2),
-#                     "english_field": translated_en_key,
-#                     "arabic_field": translated_ar_key,
-#                     "match": en_val.lower() == ar_val.lower()
-#                 }
-
-#         except Exception as e:
-#             return Response({"error": "Cross language OCR failed", "details": str(e)}, status=500)
-
-#         # Step 4: MRZ + Address Extraction
-#         try:
-#             with tempfile.NamedTemporaryFile(suffix=".jpg", delete=False) as temp_file:
-#                 image.save(temp_file, format="JPEG")
-#                 temp_path = temp_file.name
-
-#             mrz_obj = read_mrz(temp_path)
-#             mrz_data = mrz_obj.to_dict() if mrz_obj else {}
-
-#             if "date_of_birth" in mrz_data:
-#                 mrz_data["date_of_birth"] = format_date(mrz_data["date_of_birth"])
-#             if "expiration_date" in mrz_data:
-#                 mrz_data["expiration_date"] = format_date(mrz_data["expiration_date"])
-
-#             address_line = extract_probable_arabic_address(arabic_text)
-
-#         except Exception as e:
-#             return Response({"error": "MRZ or address processing failed", "details": str(e)}, status=500)
-
-#         # Final Response
-#         final_result = {
-#             "mrz_data": {
-#                 **mrz_data,
-#                 "arabic_address": address_line
-#             },
-#             "OCR_data": parse_passporteye_object(mrz_obj, address=address_line),
-#             "comparison_result": comparison_result,
-#             "arabic_ocr_text": arabic_text,
-#             "translated_english_text": translated_text
-#         }
-
-#         return Response(final_result, status=200)
-import numpy as np
-import io
-import difflib
-from PIL import Image
-from concurrent.futures import ThreadPoolExecutor
-
-import pytesseract
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework import status
-from passporteye import read_mrz
-from deep_translator import GoogleTranslator
-
-from .ocr_utils import extract_passport_data
-from .utils.translate_utils import translate_key_to_arabic, translate_key_to_english
-# from .utils.address import extract_probable_arabic_address
-# from .utils.mrz_parser import parse_passporteye_object
-# from .utils.date_utils import format_date
-
-# ✅ Set Tesseract path
-pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
 
 class MergedPassportCompareAPIView(APIView):
     def post(self, request, *args, **kwargs):

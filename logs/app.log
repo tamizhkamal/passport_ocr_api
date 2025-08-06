@@ -6240,3 +6240,80 @@ django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000
 2025-08-06 11:00:46,591 [DEBUG] PIL.PngImagePlugin: STREAM b'IDAT' 317 65536
 2025-08-06 11:00:57,693 [INFO] members.utils.extract_passport_passport_eye: PassportEye + EasyOCR Extraction Complete
 2025-08-06 11:00:57,812 [DEBUG] pytesseract: ['tesseract', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_d37t5uyd.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_vm0l8_6i', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-08-06 12:29:09,589 [INFO] members.views: Logging started!
+2025-08-06 12:29:59,090 [DEBUG] PIL.Image: Importing AvifImagePlugin
+2025-08-06 12:29:59,094 [DEBUG] PIL.Image: Importing BlpImagePlugin
+2025-08-06 12:29:59,097 [DEBUG] PIL.Image: Importing BmpImagePlugin
+2025-08-06 12:29:59,097 [DEBUG] PIL.Image: Importing BufrStubImagePlugin
+2025-08-06 12:29:59,098 [DEBUG] PIL.Image: Importing CurImagePlugin
+2025-08-06 12:29:59,099 [DEBUG] PIL.Image: Importing DcxImagePlugin
+2025-08-06 12:29:59,101 [DEBUG] PIL.Image: Importing DdsImagePlugin
+2025-08-06 12:29:59,108 [DEBUG] PIL.Image: Importing EpsImagePlugin
+2025-08-06 12:29:59,109 [DEBUG] PIL.Image: Importing FitsImagePlugin
+2025-08-06 12:29:59,110 [DEBUG] PIL.Image: Importing FliImagePlugin
+2025-08-06 12:29:59,111 [DEBUG] PIL.Image: Importing FpxImagePlugin
+2025-08-06 12:29:59,113 [DEBUG] PIL.Image: Image: failed to import FpxImagePlugin: No module named 'olefile'
+2025-08-06 12:29:59,113 [DEBUG] PIL.Image: Importing FtexImagePlugin
+2025-08-06 12:29:59,114 [DEBUG] PIL.Image: Importing GbrImagePlugin
+2025-08-06 12:29:59,115 [DEBUG] PIL.Image: Importing GifImagePlugin
+2025-08-06 12:29:59,116 [DEBUG] PIL.Image: Importing GribStubImagePlugin
+2025-08-06 12:29:59,117 [DEBUG] PIL.Image: Importing Hdf5StubImagePlugin
+2025-08-06 12:29:59,118 [DEBUG] PIL.Image: Importing IcnsImagePlugin
+2025-08-06 12:29:59,119 [DEBUG] PIL.Image: Importing IcoImagePlugin
+2025-08-06 12:29:59,125 [DEBUG] PIL.Image: Importing ImImagePlugin
+2025-08-06 12:29:59,127 [DEBUG] PIL.Image: Importing ImtImagePlugin
+2025-08-06 12:29:59,128 [DEBUG] PIL.Image: Importing IptcImagePlugin
+2025-08-06 12:29:59,129 [DEBUG] PIL.Image: Importing JpegImagePlugin
+2025-08-06 12:29:59,129 [DEBUG] PIL.Image: Importing Jpeg2KImagePlugin
+2025-08-06 12:29:59,129 [DEBUG] PIL.Image: Importing McIdasImagePlugin
+2025-08-06 12:29:59,130 [DEBUG] PIL.Image: Importing MicImagePlugin
+2025-08-06 12:29:59,132 [DEBUG] PIL.Image: Image: failed to import MicImagePlugin: No module named 'olefile'
+2025-08-06 12:29:59,133 [DEBUG] PIL.Image: Importing MpegImagePlugin
+2025-08-06 12:29:59,134 [DEBUG] PIL.Image: Importing MpoImagePlugin
+2025-08-06 12:29:59,141 [DEBUG] PIL.Image: Importing MspImagePlugin
+2025-08-06 12:29:59,143 [DEBUG] PIL.Image: Importing PalmImagePlugin
+2025-08-06 12:29:59,144 [DEBUG] PIL.Image: Importing PcdImagePlugin
+2025-08-06 12:29:59,145 [DEBUG] PIL.Image: Importing PcxImagePlugin
+2025-08-06 12:29:59,146 [DEBUG] PIL.Image: Importing PdfImagePlugin
+2025-08-06 12:29:59,166 [DEBUG] PIL.Image: Importing PixarImagePlugin
+2025-08-06 12:29:59,167 [DEBUG] PIL.Image: Importing PngImagePlugin
+2025-08-06 12:29:59,167 [DEBUG] PIL.Image: Importing PpmImagePlugin
+2025-08-06 12:29:59,167 [DEBUG] PIL.Image: Importing PsdImagePlugin
+2025-08-06 12:29:59,169 [DEBUG] PIL.Image: Importing QoiImagePlugin
+2025-08-06 12:29:59,171 [DEBUG] PIL.Image: Importing SgiImagePlugin
+2025-08-06 12:29:59,174 [DEBUG] PIL.Image: Importing SpiderImagePlugin
+2025-08-06 12:29:59,176 [DEBUG] PIL.Image: Importing SunImagePlugin
+2025-08-06 12:29:59,178 [DEBUG] PIL.Image: Importing TgaImagePlugin
+2025-08-06 12:29:59,179 [DEBUG] PIL.Image: Importing TiffImagePlugin
+2025-08-06 12:29:59,181 [DEBUG] PIL.Image: Importing WebPImagePlugin
+2025-08-06 12:29:59,182 [DEBUG] PIL.Image: Importing WmfImagePlugin
+2025-08-06 12:29:59,184 [DEBUG] PIL.Image: Importing XbmImagePlugin
+2025-08-06 12:29:59,186 [DEBUG] PIL.Image: Importing XpmImagePlugin
+2025-08-06 12:29:59,190 [DEBUG] PIL.Image: Importing XVThumbImagePlugin
+2025-08-06 12:29:59,195 [DEBUG] pytesseract: ['/usr/bin/tesseract', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_jg7r4vhf.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_m3ahz803', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
+2025-08-06 12:29:59,265 [ERROR] django.request: Internal Server Error: /api/Overall_api/
+2025-08-06 12:37:28,825 [INFO] members.views: Logging started!
+2025-08-06 12:42:19,329 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-06 12:42:28,662 [INFO] members.views: Logging started!
+2025-08-06 12:44:42,071 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-06 12:44:53,603 [INFO] members.views: Logging started!
+2025-08-06 12:45:03,445 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-06 12:45:14,849 [INFO] members.views: Logging started!
+2025-08-06 12:45:26,971 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-06 12:45:45,402 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-06 12:46:00,503 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-06 12:46:21,600 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-06 12:46:32,985 [INFO] members.views: Logging started!
+2025-08-06 12:46:36,540 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-06 12:46:47,598 [INFO] members.views: Logging started!
+2025-08-06 12:46:51,161 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-06 12:47:02,860 [INFO] members.views: Logging started!
+2025-08-06 12:47:06,512 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-06 12:47:21,772 [INFO] members.views: Logging started!
+2025-08-06 12:47:30,611 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-06 12:47:44,699 [INFO] members.views: Logging started!
+2025-08-06 12:47:48,547 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-06 12:48:03,359 [INFO] members.views: Logging started!
+2025-08-06 12:48:11,074 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-06 12:48:47,530 [INFO] members.views: Logging started!
+2025-08-06 12:55:09,117 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
