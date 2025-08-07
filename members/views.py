@@ -450,6 +450,16 @@ class Overall_CompareAPIView(APIView):
             # ✅ 4. Extract Arabic Address
             address_line = extract_probable_arabic_address(arabic_text)
 
+            try:
+                buf = io.BytesIO()
+                image.save(buf, format="JPEG")
+                buf.seek(0)
+                buf.seek(0)
+                cr_result = extract_using_tesseract(buf)
+            except Exception as e:
+                cr_result = {"error": "Failed to extract CR", "details": str(e)}
+
+
             # ✅ 5. Final response
             result = {
                 "mrz_data": {
@@ -457,6 +467,7 @@ class Overall_CompareAPIView(APIView):
                     "arabic_address": address_line
                 },
                 "OCR_data": parse_passporteye_object(mrz_obj, address=address_line),
+                "CR": cr_result,
                 "arabic_ocr_text": arabic_text,
                 "translated_english_text": translated_text
             }

@@ -1028,3 +1028,6 @@ AttributeError: 'NoneType' object has no attribute 'shape'
 2025-08-07 08:46:18,607 [DEBUG] pytesseract: ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_aa8d8b93.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_wfqyt891', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
 2025-08-07 08:46:18,971 [DEBUG] pytesseract: ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_pzhhhh5e.bmp', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_rx6si2hm', '--psm', '6', '-c', 'tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789><', '-c', 'load_system_dawg=F', '-c', 'load_freq_dawg=F', 'txt']
 2025-08-07 08:46:19,240 [DEBUG] pytesseract: ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_kp1wd2qe_input.JPEG', 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tess_kp1wd2qe', 'txt']
+2025-08-07 08:55:50,200 [INFO] members.views: Logging started!
+2025-08-07 08:57:41,928 [INFO] django.utils.autoreload: D:\Star tamizha info tech\codetez\Passport-OCR-api\members\views.py changed, reloading.
+2025-08-07 08:57:50,397 [INFO] members.views: Logging started!
