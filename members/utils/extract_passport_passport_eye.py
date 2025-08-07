@@ -2,19 +2,29 @@ from passporteye import read_mrz
 from datetime import datetime
 from logging_config import setup_logging
 import logging
-import easyocr
+import pytesseract
+from PIL import Image
+import os
 
 setup_logging()
 logger = logging.getLogger(__name__)
 
+# Optional: Setup Tesseract Path
+# pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"  # Linux
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"  # Windows
 
-def extract_using_passporteye(temp_file_path, passport_file=None):
-    print("📸 Using PassportEye OCR")
+def extract_using_passporteye(temp_file_path):
+    print("📸 Using PassportEye OCR + pytesseract")
+
+    # MRZ Extract
     mrz_data = extract_mrz_from_image(temp_file_path)
 
-    extracted_info = extract_custom_fields_from_passport(temp_file_path)
+    # Tesseract OCR
+    image = Image.open(temp_file_path).convert("RGB")
+    raw_text = pytesseract.image_to_string(image, lang='eng', config='--psm 6')
 
-    # Initialize fields
+    extracted_info = extract_custom_fields_from_text(raw_text)
+
     passport_data = {
         "fullname": f"{mrz_data.get('names', '')} {mrz_data.get('surname', '')}".strip(),
         "surname": mrz_data.get('surname'),
@@ -38,7 +48,7 @@ def extract_using_passporteye(temp_file_path, passport_file=None):
         "footerText": mrz_data.get('raw_text')
     }
 
-    logger.info("PassportEye + EasyOCR Extraction Complete")
+    logger.info("PassportEye + pytesseract Extraction Complete ✅")
     return passport_data
 
 
@@ -54,24 +64,21 @@ def parse_mrz_date(mrz_date):
         return None
 
 
-def extract_custom_fields_from_passport(temp_file_path):
-    reader = easyocr.Reader(['en'])
-    results = reader.readtext(temp_file_path, detail=0)
-
+def extract_custom_fields_from_text(text):
     extracted_info = {
         "fatherName": None,
         "motherName": None,
         "address": None
     }
 
-    for line in results:
+    for line in text.splitlines():
         clean_line = line.strip().lower()
 
         if 'father' in clean_line:
             extracted_info["fatherName"] = line.split(':')[-1].strip()
         elif 'mother' in clean_line:
             extracted_info["motherName"] = line.split(':')[-1].strip()
-        elif 'address' in clean_line or 'ADDRESS' in clean_line:
+        elif 'address' in clean_line:
             if extracted_info["address"]:
                 extracted_info["address"] += " " + line.strip()
             else:

@@ -285,8 +285,12 @@ class CrossLanguage_Passport_CompareAPIView(APIView):
                 image.save(temp_file, format="JPEG")
                 temp_path = temp_file.name
 
-            # ✅ Set Tesseract path (optional: adjust path if needed)
-            pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
+            if platform.system().lower() == 'windows':
+                pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+            else:
+                pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
+
+
             os.environ['TESSDATA_PREFIX'] = '/usr/share/tesseract-ocr/5/tessdata/'
 
             # ✅ Extract MRZ
@@ -416,7 +420,7 @@ class Overall_CompareAPIView(APIView):
             return Response({"error": "passport_image is required"}, status=status.HTTP_400_BAD_REQUEST)
 
         # Set Tesseract path (optional if already in environment)
-        os.environ['TESSDATA_PREFIX'] = '/usr/share/tesseract-ocr/5/tessdata/'
+        # os.environ['TESSDATA_PREFIX'] = '/usr/share/tesseract-ocr/5/tessdata/'
 
         try:
             image = Image.open(uploaded_file).convert("RGB")
@@ -439,7 +443,15 @@ class Overall_CompareAPIView(APIView):
                 mrz_data["expiration_date"] = format_date(mrz_data["expiration_date"])
 
             # ✅ 2. Arabic OCR using Tesseract
-            pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"  # adjust if needed
+            # pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"  # adjust if needed
+            if platform.system().lower() == 'windows':
+                pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+            else:
+                pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
+
+
+            os.environ['TESSDATA_PREFIX'] = '/usr/share/tesseract-ocr/5/tessdata/'
+
             arabic_text = pytesseract.image_to_string(image, lang='ara', config='--psm 6').strip()
 
             # ✅ 3. Translate Arabic to English
