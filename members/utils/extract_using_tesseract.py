@@ -381,37 +381,52 @@ def extract_name_nearby(lines, keyword):
     return None
 
 def extract_place_of_birth(lines):
+    print(lines,"<------------------------------------ lines")
     for i, line in enumerate(lines):
-        if "birth" in line.lower():
-            match = re.search(r"birth[:\-]?\s*(.*)", line, re.IGNORECASE)
+        if "place of birth" in line.lower():
+            # Remove "date of birth" if in same line
+            line_clean = re.sub(r"date\s+of\s+birth", "", line, flags=re.IGNORECASE)
+            
+            # Take text after "place of birth"
+            match = re.search(r"place\s+of\s+birth[:\-]?\s*(.*)", line_clean, re.IGNORECASE)
             if match and match.group(1).strip():
-                return match.group(1).strip()
-            if i + 1 < len(lines):
-                next_line = lines[i + 1].strip()
-                if next_line:
-                    return next_line
-    for line in lines:
-        if re.search(r"TAMIL\s+NADU", line, re.IGNORECASE) or "," in line:
-            return line
+                place = match.group(1)
+            else:
+                # If not in same line, check next line
+                place = lines[i + 1] if i + 1 < len(lines) else ""
+
+            # Remove dates & special chars, keep first word only
+            place = re.sub(r"\b\d{1,2}\/\d{1,2}\/\d{2,4}\b", "", place)  # remove date
+            place = place.replace("—", " ").replace("-", " ").strip()
+            place_words = place.split()
+            if place_words:
+                return place_words[0]  # First word only
+
     return None
 
 def extract_place_of_issue(lines):
     for i, line in enumerate(lines):
-        if "issue" in line.lower():
-            match = re.search(r"issue[:\-]?\s*(.*)", line, re.IGNORECASE)
+        if "place of issue" in line.lower():
+            match = re.search(r"place\s+of\s+issue[:\-]?\s*(.*)", line, re.IGNORECASE)
             if match and match.group(1).strip():
                 return match.group(1).strip()
+
             if i + 1 < len(lines):
                 return lines[i + 1].strip()
+
+    # If not explicitly found, try heuristic from uppercase location lines
     for line in reversed(lines):
         cleaned_line = line.strip().replace(":", "")
-        if re.match(r"^[A-Z\s]{3,}$", cleaned_line) and len(cleaned_line.split()) <= 2:
-            if not re.match(r'^[A-Z]+<', cleaned_line) and not any(
-                keyword in cleaned_line.upper() for keyword in ["SURNAME", "GIVEN NAME", "NATIONALITY", "SEX", "DATE", "AUTHORITY"]):
-                return cleaned_line.strip()
+        if (re.match(r"^[A-Z\s]{3,}$", cleaned_line) and 
+            len(cleaned_line.split()) <= 3 and 
+            not re.match(r'^[A-Z]+<', cleaned_line) and 
+            not any(keyword in cleaned_line.upper() for keyword in ["SURNAME", "GIVEN NAME", "NATIONALITY", "SEX", "DATE", "AUTHORITY", "BIRTH", "EXPIRY"])):
+            return cleaned_line.strip()
+
     return None
 
 def extract_date(text, pattern):
+    print(text,"<--------------------------- text")
     match = re.search(pattern, text, re.IGNORECASE)
     if match:
         return match.group(1).replace(".", "-").replace("/", "-")
